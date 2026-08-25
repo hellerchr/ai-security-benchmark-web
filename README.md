@@ -2,6 +2,8 @@
 
 A source-faithful browser for AI cybersecurity benchmark results. It keeps models, agent harnesses, evaluation harnesses, defenses, task context, and original metrics separate instead of manufacturing a universal score.
 
+Live site: <https://hellerchr.github.io/ai-security-benchmark-web/>
+
 ## Current snapshot
 
 - 40 cataloged public result sources
