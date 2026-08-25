@@ -1,33 +1,32 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Link, NavLink, Navigate, Route, Routes, useParams } from "react-router-dom";
 import { loadData } from "./data";
-import type { Benchmark, Category, DataBundle, Harness, Result, Source } from "./schema";
+import { harnessIndex, headlineScore, INDEX_SOURCES, INDEX_VERSION, modelIndex, type HarnessIndexScore, type IndexScore } from "./indexScore";
+import type { Category, DataBundle, Result, Source } from "./schema";
 
-const categoryNames: Record<Category, string> = {
-  offensive: "Offensive",
-  defensive: "Defensive",
-  "secure-coding": "Secure coding",
-  "ai-system-security": "AI system security",
-  knowledge: "Knowledge",
-};
-
+const categoryNames: Record<Category, string> = { offensive: "Offensive capability", defensive: "Defensive operations", "secure-coding": "Secure engineering", "ai-system-security": "AI resilience", knowledge: "Security knowledge" };
+const indexCategories = ["offensive", "secure-coding", "ai-system-security"] as const;
+type SortDirection = "asc" | "desc";
 const dateTime = (value: string): string => new Intl.DateTimeFormat("en", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }).format(new Date(value));
 const percent = (value: number): string => `${Math.round(value * 100)}%`;
+const scoreText = (value: number | null | undefined): string => value === null || value === undefined ? "—" : value.toFixed(1);
+const sortBy = <T,>(rows: T[], value: (row: T) => string | number, direction: SortDirection): T[] => [...rows].sort((a, b) => {
+  const left = value(a); const right = value(b);
+  const order = typeof left === "number" && typeof right === "number" ? left - right : String(left).localeCompare(String(right));
+  return direction === "asc" ? order : -order;
+});
 
 function Header(): ReactNode {
-  return <>
-    <header className="site-header">
-      <Link className="brand" to="/overview"><span className="brand-mark">AS</span><span>AI Security Index<small>Benchmark browser</small></span></Link>
-      <nav aria-label="Primary navigation">
-        {["Overview", "Benchmarks", "Models", "Harnesses", "Sources"].map((item) => <NavLink key={item} to={`/${item.toLowerCase()}`}>{item}</NavLink>)}
-      </nav>
-      <a className="github-link" href="https://github.com/hellerchr/ai-security-benchmark-web">GitHub ↗</a>
-    </header>
-  </>;
+  const links = [["Index", "/overview"], ["Models", "/models"], ["Harnesses", "/harnesses"], ["Benchmarks", "/benchmarks"], ["Sources", "/sources"], ["Compare", "/compare"]];
+  return <header className="site-header"><Link className="brand" to="/overview"><span className="brand-mark">⌁</span>Cybersecurity Index</Link><nav aria-label="Primary navigation">{links.map(([label, path]) => <NavLink key={path} to={path}>{label}</NavLink>)}</nav><Link className="method-link" to="/methodology">Methodology</Link><a className="github-link" href="https://github.com/hellerchr/ai-security-benchmark-web" aria-label="GitHub repository">↗</a></header>;
 }
 
-function PageHeader({ eyebrow, title, children }: { eyebrow: string; title: string; children: ReactNode }): ReactNode {
-  return <div className="page-head"><div><p className="eyebrow">{eyebrow}</p><h1>{title}</h1><p>{children}</p></div></div>;
+function PageHeader({ title, children, aside }: { title: string; children: ReactNode; aside?: ReactNode }): ReactNode {
+  return <section className="page-head"><div><h1>{title}</h1><p>{children}</p></div>{aside && <aside>{aside}</aside>}</section>;
+}
+
+function SortHeader({ label, name, active, direction, onSort, sub }: { label: string; name: string; active: string; direction: SortDirection; onSort: (name: string) => void; sub?: string }): ReactNode {
+  return <th><button className="sort-button" onClick={() => onSort(name)} aria-label={`Sort by ${label}`}>{label}<span>{active === name ? direction === "desc" ? "↓" : "↑" : "↕"}</span></button>{sub && <small>{sub}</small>}</th>;
 }
 
 function Search({ value, onChange, placeholder }: { value: string; onChange: (value: string) => void; placeholder: string }): ReactNode {
@@ -38,124 +37,120 @@ function Status({ status }: { status: Source["status"] | "success" | "retained" 
   return <span className={`status status-${status}`}>{status.replace("not-automated", "not automated")}</span>;
 }
 
+function CoverageBadge({ score }: { score: Pick<IndexScore, "coverage" | "eligible"> }): ReactNode {
+  return <span className={`coverage-badge ${score.eligible ? "coverage-ranked" : "coverage-provisional"}`}>{score.coverage}/6 {score.eligible ? "ranked" : "provisional"}</span>;
+}
+
+type ChartDatum = { id: string; label: string; value: number; sub?: string };
+function BarChart({ data, linkBase }: { data: ChartDatum[]; linkBase: string }): ReactNode {
+  if (!data.length) return <div className="empty compact">No eligible scores yet.</div>;
+  return <div className="bar-chart" style={{ gridTemplateColumns: `repeat(${data.length}, minmax(58px, 1fr))` }}>{data.map((item, index) => <Link to={`${linkBase}/${item.id}`} className="bar-column" key={item.id} title={`${item.label}: ${item.value.toFixed(1)}`}><span className="bar-value">{item.value.toFixed(1)}</span><span className="bar-track"><i style={{ height: `${Math.max(2, item.value)}%` }} data-rank={index + 1} /></span><b>{item.label}</b>{item.sub && <small>{item.sub}</small>}</Link>)}</div>;
+}
+
+function ScoreBars({ score }: { score: IndexScore }): ReactNode {
+  return <div className="score-bars">{indexCategories.map((category) => <div key={category}><span><b>{categoryNames[category]}</b><em>{scoreText(score.categoryScores[category])}</em></span><i><b style={{ width: `${score.categoryScores[category] ?? 0}%` }} /></i></div>)}</div>;
+}
+
+function ScatterChart({ data, labels }: { data: ChartDatum[]; labels: Map<string, string> }): ReactNode {
+  const width = 760; const height = 300; const left = 48; const bottom = 38; const top = 20; const right = 20;
+  const x = (coverage: number): number => left + (coverage / 6) * (width - left - right);
+  const y = (score: number): number => top + ((100 - score) / 100) * (height - top - bottom);
+  return <div className="scatter"><svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Cybersecurity Index score versus benchmark coverage"><g className="grid-lines">{[0, 25, 50, 75, 100].map((tick) => <g key={tick}><line x1={left} x2={width - right} y1={y(tick)} y2={y(tick)} /><text x={left - 9} y={y(tick) + 4}>{tick}</text></g>)}{[1, 2, 3, 4, 5, 6].map((tick) => <g key={tick}><line x1={x(tick)} x2={x(tick)} y1={top} y2={height - bottom} /><text x={x(tick)} y={height - 13}>{tick}</text></g>)}</g>{data.map((item) => <g key={item.id} className="scatter-point"><circle cx={x(Number(item.sub))} cy={y(item.value)} r="6"><title>{labels.get(item.id)} · {item.value.toFixed(1)} · {item.sub}/6 benchmarks</title></circle></g>)}<text className="axis-title" x={width / 2} y={height - 2}>Benchmarks measured →</text><text className="axis-title" transform={`translate(12 ${height / 2}) rotate(-90)`}>Cybersecurity Index →</text></svg></div>;
+}
+
+function IndexDefinition(): ReactNode {
+  return <div className="index-definition"><p>Cybersecurity Index v{INDEX_VERSION}</p><h2>Composite index of 6 benchmarks</h2><ul><li><b>Offensive capability</b><span>Wiz Arena · SEC-bench Pro</span></li><li><b>Secure engineering</b><span>CyberGym-E2E · Agent Security League</span></li><li><b>AI resilience</b><span>Cisco AI Defense · AgentDojo</span></li></ul><p>Three domains receive equal weight. Models need evidence in all three domains to rank. <Link to="/methodology">Scoring details →</Link></p></div>;
+}
+
+function Highlights({ bundle }: { bundle: DataBundle }): ReactNode {
+  const models = modelIndex(bundle).filter(({ eligible }) => eligible).sort((a, b) => b.score - a.score);
+  const harnesses = harnessIndex(bundle).filter(({ eligible }) => eligible).sort((a, b) => b.score - a.score);
+  const modelNames = new Map(bundle.catalog.models.map(({ id, name }) => [id, name])); const harnessNames = new Map(bundle.catalog.harnesses.map(({ id, name }) => [id, name]));
+  return <section id="highlights"><div className="section-label">Highlights</div><div className="highlights-grid"><article className="chart-card wide"><header><span className="swatch swatch-purple" /><div><h2>Model Cybersecurity Index</h2><p>Best published configuration per benchmark · Higher is better</p></div></header><BarChart linkBase="/models" data={models.slice(0, 10).map((score) => ({ id: score.id, label: modelNames.get(score.id) ?? score.id, value: score.score, sub: `${score.coverage}/6` }))} /></article><article className="chart-card"><header><span className="swatch swatch-orange" /><div><h2>Harness Cybersecurity Index</h2><p>Observed model + agent configurations · Higher is better</p></div></header><BarChart linkBase="/harnesses" data={harnesses.slice(0, 7).map((score) => ({ id: score.id, label: harnessNames.get(score.id) ?? score.id, value: score.score, sub: `${score.models} models` }))} /></article><article className="chart-card"><header><span className="swatch swatch-blue" /><div><h2>Score vs. coverage</h2><p>Upper-right has stronger and broader evidence</p></div></header><ScatterChart labels={modelNames} data={models.map((score) => ({ id: score.id, label: modelNames.get(score.id) ?? score.id, value: score.score, sub: String(score.coverage) }))} /></article></div></section>;
+}
+
+function ModelLeaderboard({ bundle, limit }: { bundle: DataBundle; limit?: number }): ReactNode {
+  const [query, setQuery] = useState(""); const [provider, setProvider] = useState("all"); const [coverage, setCoverage] = useState("ranked"); const [sort, setSort] = useState("score"); const [direction, setDirection] = useState<SortDirection>("desc");
+  const scores = new Map(modelIndex(bundle).map((score) => [score.id, score]));
+  const providers = [...new Set(bundle.catalog.models.map(({ provider: name }) => name).filter((name): name is string => name !== null))].sort();
+  const changeSort = (name: string): void => { if (sort === name) setDirection(direction === "desc" ? "asc" : "desc"); else { setSort(name); setDirection(name === "model" || name === "provider" ? "asc" : "desc"); } };
+  const rows = bundle.catalog.models.map((model) => ({ model, score: scores.get(model.id) })).filter(({ model, score }) => score && `${model.name} ${model.provider ?? ""}`.toLowerCase().includes(query.toLowerCase()) && (provider === "all" || model.provider === provider) && (coverage === "ranked" ? score.eligible : score.coverage >= Number(coverage)));
+  const sorted = sortBy(rows, (row) => sort === "model" ? row.model.name : sort === "provider" ? row.model.provider ?? "" : sort === "coverage" ? row.score?.coverage ?? 0 : sort === "offensive" ? row.score?.categoryScores.offensive ?? -1 : sort === "secure" ? row.score?.categoryScores["secure-coding"] ?? -1 : sort === "resilience" ? row.score?.categoryScores["ai-system-security"] ?? -1 : row.score?.score ?? -1, direction).slice(0, limit);
+  return <><div className="table-controls"><Search value={query} onChange={setQuery} placeholder="Filter, e.g. Claude, OpenAI" /><label>Provider<select value={provider} onChange={(event) => setProvider(event.target.value)}><option value="all">All</option>{providers.map((name) => <option key={name}>{name}</option>)}</select></label><label>Coverage<select value={coverage} onChange={(event) => setCoverage(event.target.value)}><option value="ranked">Ranked (all 3 domains)</option><option value="1">Any score</option><option value="2">2+ benchmarks</option><option value="4">4+ benchmarks</option></select></label><span>{sorted.length} models</span></div><div className="table-wrap"><table className="leaderboard"><thead><tr><th>#</th><SortHeader label="Model" name="model" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Provider" name="provider" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Cybersecurity Index" sub={`v${INDEX_VERSION} · higher is better`} name="score" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Offensive" name="offensive" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Secure engineering" name="secure" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="AI resilience" name="resilience" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Coverage" name="coverage" active={sort} direction={direction} onSort={changeSort} /></tr></thead><tbody>{sorted.map(({ model, score }, index) => score && <tr key={model.id}><td className="rank">{index + 1}</td><td><Link className="entity-link" to={`/models/${model.id}`}><i className="model-color" />{model.name}</Link></td><td>{model.provider ?? <span className="muted">Unresolved</span>}</td><td className="index-cell"><b>{scoreText(score.score)}</b>{!score.eligible && <small>provisional</small>}</td><td>{scoreText(score.categoryScores.offensive)}</td><td>{scoreText(score.categoryScores["secure-coding"])}</td><td>{scoreText(score.categoryScores["ai-system-security"])}</td><td><CoverageBadge score={score} /></td></tr>)}</tbody></table></div></>;
+}
+
+function HarnessLeaderboard({ bundle }: { bundle: DataBundle }): ReactNode {
+  const [query, setQuery] = useState(""); const [sort, setSort] = useState("score"); const [direction, setDirection] = useState<SortDirection>("desc");
+  const scoreMap = new Map(harnessIndex(bundle).map((score) => [score.id, score]));
+  const changeSort = (name: string): void => { if (sort === name) setDirection(direction === "desc" ? "asc" : "desc"); else { setSort(name); setDirection(name === "harness" ? "asc" : "desc"); } };
+  const rows = bundle.catalog.harnesses.filter(({ kind }) => kind === "agent").map((harness) => ({ harness, score: scoreMap.get(harness.id) })).filter(({ harness, score }) => score && harness.name.toLowerCase().includes(query.toLowerCase()));
+  const sorted = sortBy(rows, (row) => sort === "harness" ? row.harness.name : sort === "models" ? row.score?.models ?? 0 : sort === "coverage" ? row.score?.coverage ?? 0 : sort === "lift" ? row.score?.controlledLift ?? -999 : row.score?.score ?? -1, direction);
+  return <><div className="table-controls"><Search value={query} onChange={setQuery} placeholder="Filter agent harnesses" /><span>{sorted.length} agent harnesses</span></div><div className="table-wrap"><table className="leaderboard"><thead><tr><th>#</th><SortHeader label="Agent harness" name="harness" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Harness Index" sub="observed systems · higher is better" name="score" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Models" name="models" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Benchmarks" name="coverage" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Controlled lift" sub="same model + benchmark" name="lift" active={sort} direction={direction} onSort={changeSort} /></tr></thead><tbody>{sorted.map(({ harness, score }, index) => score && <tr key={harness.id}><td className="rank">{index + 1}</td><td><Link className="entity-link" to={`/harnesses/${harness.id}`}>{harness.name}</Link></td><td className="index-cell"><b>{scoreText(score.score)}</b>{!score.eligible && <small>provisional</small>}</td><td>{score.models}</td><td><CoverageBadge score={score} /></td><td>{score.controlledLift === null ? <span className="muted">No matched pair</span> : <><b className={score.controlledLift >= 0 ? "positive" : "negative"}>{score.controlledLift > 0 ? "+" : ""}{score.controlledLift.toFixed(1)} pp</b><small>{score.controlledComparisons} comparisons</small></>}</td></tr>)}</tbody></table></div></>;
+}
+
 function ResultsTable({ bundle, rows }: { bundle: DataBundle; rows: Result[] }): ReactNode {
-  const models = new Map(bundle.catalog.models.map((model) => [model.id, model]));
-  const harnesses = new Map(bundle.catalog.harnesses.map((harness) => [harness.id, harness]));
-  const sources = new Map(bundle.catalog.sources.map((source) => [source.id, source]));
+  const [sort, setSort] = useState("score"); const [direction, setDirection] = useState<SortDirection>("desc");
+  const models = new Map(bundle.catalog.models.map((model) => [model.id, model])); const harnesses = new Map(bundle.catalog.harnesses.map((harness) => [harness.id, harness])); const sources = new Map(bundle.catalog.sources.map((source) => [source.id, source]));
+  const changeSort = (name: string): void => { if (sort === name) setDirection(direction === "desc" ? "asc" : "desc"); else { setSort(name); setDirection(name === "model" || name === "benchmark" ? "asc" : "desc"); } };
+  const sorted = sortBy(rows, (row) => sort === "model" ? models.get(row.modelId)?.name ?? row.modelLabel : sort === "benchmark" ? sources.get(row.sourceId)?.name ?? row.sourceId : sort === "harness" ? row.harnessIds.map((id) => harnesses.get(id)?.name ?? id).join(" ") : headlineScore(row) ?? -1, direction);
   if (!rows.length) return <div className="empty"><strong>No normalized result rows.</strong><span>The source is cataloged, but its leaderboard is not automated yet.</span></div>;
-  return <div className="table-wrap"><table>
-    <thead><tr><th>Model</th><th>Harness configuration</th><th>Benchmark</th><th>Published metrics</th><th>Context</th></tr></thead>
-    <tbody>{rows.map((row) => <tr key={row.id}>
-      <td><Link className="entity-link" to={`/models/${row.modelId}`}>{models.get(row.modelId)?.name ?? row.modelLabel}</Link><small>{models.get(row.modelId)?.provider ?? "Provider unresolved"}</small></td>
-      <td><div className="tag-list">{row.harnessIds.map((id) => <Link className="tag" to={`/harnesses/${id}`} key={id}>{harnesses.get(id)?.name ?? id}</Link>)}</div></td>
-      <td><Link className="entity-link" to={`/benchmarks/${row.benchmarkId}`}>{sources.get(row.sourceId)?.name ?? row.sourceId}</Link></td>
-      <td><div className="metrics">{row.metrics.map((metric) => <span key={metric.name}><b>{metric.displayValue}</b>{metric.name}</span>)}</div></td>
-      <td><div className="context">{row.taskSet && <span>Task set {row.taskSet}</span>}{row.budget && <span>{row.budget}</span>}{row.backend && <span>Backend: {row.backend}</span>}{row.defense && <span>Defense: {row.defense}</span>}{row.attack && <span>Attack: {row.attack}</span>}{row.publishedAt && <span>{row.publishedAt}</span>}</div></td>
-    </tr>)}</tbody>
-  </table></div>;
+  return <div className="table-wrap"><table><thead><tr><SortHeader label="Model" name="model" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Harness configuration" name="harness" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Benchmark" name="benchmark" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Index component" sub="source headline metric" name="score" active={sort} direction={direction} onSort={changeSort} /><th>Published metrics</th></tr></thead><tbody>{sorted.map((row) => <tr key={row.id}><td><Link className="entity-link" to={`/models/${row.modelId}`}>{models.get(row.modelId)?.name ?? row.modelLabel}</Link><small>{models.get(row.modelId)?.provider ?? "Provider unresolved"}</small></td><td><div className="tag-list">{row.harnessIds.map((id) => <Link className="tag" to={`/harnesses/${id}`} key={id}>{harnesses.get(id)?.name ?? id}</Link>)}</div></td><td><Link className="entity-link" to={`/benchmarks/${row.benchmarkId}`}>{sources.get(row.sourceId)?.name ?? row.sourceId}</Link></td><td className="index-cell"><b>{scoreText(headlineScore(row))}</b></td><td><div className="metrics">{row.metrics.map((metric) => <span key={metric.name}><b>{metric.displayValue}</b>{metric.name}</span>)}</div></td></tr>)}</tbody></table></div>;
 }
 
 function Overview({ bundle }: { bundle: DataBundle }): ReactNode {
-  const summary = bundle.coverage.summary;
-  const automated = bundle.coverage.sources.filter((source) => source.automated);
-  return <>
-    <section className="hero">
-      <p className="eyebrow">Evidence, not a blended score</p>
-      <h1>Which models and harnesses perform best on AI cybersecurity benchmarks?</h1>
-      <p>Browse original published results by benchmark, model, agent harness, evaluation harness, and defense. Metrics remain in their source-defined context.</p>
-      <div className="hero-actions"><Link className="button" to="/benchmarks">Explore benchmarks</Link><Link className="button button-secondary" to="/harnesses">Compare harness evidence</Link></div>
-    </section>
-    <section className="kpis" aria-label="Dataset summary">
-      <article><span>Catalog</span><b>{summary.catalogSources}</b><small>known result sources</small></article>
-      <article><span>Automated</span><b>{summary.automatedSources}</b><small>source adapters</small></article>
-      <article><span>Snapshot</span><b>{summary.resultRows}</b><small>published result rows</small></article>
-      <article><span>Entities</span><b>{bundle.catalog.models.length} / {bundle.catalog.harnesses.length}</b><small>models / harnesses</small></article>
-    </section>
-    <section className="notice"><b>Coverage is the product question.</b><span>{summary.automatedSources} of {summary.catalogSources} cataloged sources are normalized today. A missing row means “not ingested,” not “poor performance.”</span><Link to="/sources">Inspect coverage →</Link></section>
-    <section className="section-head"><div><p className="eyebrow">Pipeline health</p><h2>Automated leaderboards</h2></div><span>Snapshot {dateTime(bundle.coverage.generatedAt)} UTC</span></section>
-    <div className="table-wrap"><table><thead><tr><th>Source</th><th>Category</th><th>Rows</th><th>Field completeness</th><th>Identity gaps</th><th>Health</th></tr></thead><tbody>
-      {automated.map((item) => {
-        const source = bundle.catalog.sources.find(({ id }) => id === item.sourceId);
-        return <tr key={item.sourceId}><td><Link className="entity-link" to={`/sources/${item.sourceId}`}>{source?.name}</Link></td><td>{source ? categoryNames[source.category] : "—"}</td><td className="number">{item.rowCount}</td><td><div className="bar"><i style={{ width: percent(item.fieldCompleteness) }} /></div><small>{percent(item.fieldCompleteness)}</small></td><td>{item.unresolvedModels} models · {item.unresolvedHarnesses} harnesses</td><td><Status status={item.crawlStatus} /></td></tr>;
-      })}
-    </tbody></table></div>
-    <section className="method"><p className="eyebrow">Reading the browser</p><h2>No universal winner is implied</h2><div><p>CyberGym patch rates, AgentDojo attack-success rates, and Cisco resistance scores measure different things. This browser makes configurations and overlap visible without pretending those values share a common scale.</p><p>Harnesses are typed as <b>agent</b>, <b>evaluation</b>, or <b>defense</b>. Compare evidence only where the same benchmark, task set, budget, and metric support it.</p></div></section>
-  </>;
-}
-
-function BenchmarksPage({ bundle }: { bundle: DataBundle }): ReactNode {
-  const [query, setQuery] = useState("");
-  const rows = bundle.catalog.benchmarks.filter((benchmark) => `${benchmark.name} ${benchmark.description} ${benchmark.category}`.toLowerCase().includes(query.toLowerCase()));
-  return <><PageHeader eyebrow="Benchmark directory" title="Cybersecurity benchmarks">Find the result boards, task categories, configurations, and current ingestion status behind each benchmark.</PageHeader><Search value={query} onChange={setQuery} placeholder="Search benchmarks" /><div className="table-wrap"><table><thead><tr><th>Benchmark</th><th>Category</th><th>Published rows</th><th>Models</th><th>Harnesses</th><th>Source status</th></tr></thead><tbody>{rows.map((benchmark) => {
-    const results = bundle.results.results.filter(({ benchmarkId }) => benchmarkId === benchmark.id);
-    const source = bundle.catalog.sources.find(({ id }) => id === benchmark.sourceId);
-    return <tr key={benchmark.id}><td><Link className="entity-link" to={`/benchmarks/${benchmark.id}`}>{benchmark.name}</Link><small>{benchmark.description}</small></td><td>{categoryNames[benchmark.category]}</td><td className="number">{results.length}</td><td>{new Set(results.map(({ modelId }) => modelId)).size}</td><td>{new Set(results.flatMap(({ harnessIds }) => harnessIds)).size}</td><td>{source && <Status status={source.status} />}</td></tr>;
-  })}</tbody></table></div></>;
+  const ranked = modelIndex(bundle).filter(({ eligible }) => eligible).sort((a, b) => b.score - a.score); const top = ranked[0]; const topModel = bundle.catalog.models.find(({ id }) => id === top?.id);
+  return <><PageHeader title="AI Cybersecurity Benchmarks & Leaderboard" aside={<IndexDefinition />}>Independent aggregation of public AI security evaluations. Compare models, agent harnesses, benchmark strengths, and evidence coverage without losing the original source context.</PageHeader><div className="subnav"><a href="#highlights">Highlights</a><a href="#performance">Performance</a><Link to="/harnesses">Harness comparison</Link><Link to="/methodology">Methodology</Link></div><section className="summary-strip"><article><span>Leading model</span><b>{topModel?.name ?? "—"}</b><small>Cybersecurity Index {scoreText(top?.score)}</small></article><article><span>Ranked models</span><b>{ranked.length} of {bundle.catalog.models.length}</b><small>Evidence in all 3 domains</small></article><article><span>Evidence base</span><b>{bundle.coverage.summary.resultRows} rows</b><small>{bundle.coverage.summary.healthySources}/6 index sources healthy</small></article><article><span>Index version</span><b>v{INDEX_VERSION}</b><small>Snapshot {dateTime(bundle.coverage.generatedAt)} UTC</small></article></section><Highlights bundle={bundle} /><section id="performance" className="performance"><div className="section-title"><span className="swatch swatch-black" /><div><h2>Performance</h2><p>Cybersecurity Index and domain breakdowns. Click any column heading to sort.</p></div></div><ModelLeaderboard bundle={bundle} limit={25} /></section><section className="method-note"><div><h2>What this metric means</h2><p>The Cybersecurity Index summarizes six public leaderboards into three equally weighted domains. Each source contributes its published 0–100 headline outcome; missing results are excluded, never counted as zero.</p></div><Link to="/methodology">Read methodology and limitations →</Link></section></>;
 }
 
 function ModelsPage({ bundle }: { bundle: DataBundle }): ReactNode {
-  const [query, setQuery] = useState("");
-  const rows = bundle.catalog.models.filter((model) => `${model.name} ${model.provider ?? ""}`.toLowerCase().includes(query.toLowerCase())).map((model) => ({ model, results: bundle.results.results.filter(({ modelId }) => modelId === model.id) })).sort((a, b) => b.results.length - a.results.length);
-  return <><PageHeader eyebrow="Model evidence" title="Models">See where each model appears and which harness configurations produced its published results.</PageHeader><Search value={query} onChange={setQuery} placeholder="Search models or providers" /><div className="table-wrap"><table><thead><tr><th>Model</th><th>Provider</th><th>Result rows</th><th>Benchmarks</th><th>Agent / defense harnesses</th></tr></thead><tbody>{rows.map(({ model, results }) => <tr key={model.id}><td><Link className="entity-link" to={`/models/${model.id}`}>{model.name}</Link></td><td>{model.provider ?? <span className="muted">Unresolved</span>}</td><td className="number">{results.length}</td><td>{new Set(results.map(({ benchmarkId }) => benchmarkId)).size}</td><td>{new Set(results.flatMap(({ harnessIds }) => harnessIds).filter((id) => bundle.catalog.harnesses.find((harness) => harness.id === id)?.kind !== "evaluation")).size}</td></tr>)}</tbody></table></div></>;
+  const scores = modelIndex(bundle).filter(({ eligible }) => eligible).sort((a, b) => b.score - a.score); const names = new Map(bundle.catalog.models.map(({ id, name }) => [id, name]));
+  return <><PageHeader title="Model Cybersecurity Index" aside={<div className="mini-definition"><b>{scores.length}</b><span>ranked models</span><p>Best published model configuration per benchmark. Higher is better.</p></div>}>Compare model performance across offensive capability, secure engineering, and resistance to attacks on AI systems.</PageHeader><section className="chart-card full"><header><span className="swatch swatch-purple" /><div><h2>Cybersecurity Index v{INDEX_VERSION}</h2><p>Equal-weighted domain score · Higher is better</p></div></header><BarChart linkBase="/models" data={scores.slice(0, 14).map((score) => ({ id: score.id, label: names.get(score.id) ?? score.id, value: score.score, sub: `${score.coverage}/6` }))} /></section><section className="performance"><div className="section-title"><span className="swatch swatch-black" /><div><h2>Model leaderboard</h2><p>Filter by provider and evidence coverage, then sort any metric.</p></div></div><ModelLeaderboard bundle={bundle} /></section></>;
 }
 
 function HarnessesPage({ bundle }: { bundle: DataBundle }): ReactNode {
-  const [query, setQuery] = useState("");
-  const rows = bundle.catalog.harnesses.filter((harness) => `${harness.name} ${harness.kind}`.toLowerCase().includes(query.toLowerCase())).map((harness) => ({ harness, results: bundle.results.results.filter(({ harnessIds }) => harnessIds.includes(harness.id)) })).sort((a, b) => b.results.length - a.results.length);
-  return <><PageHeader eyebrow="Harness evidence" title="Harnesses">Separate model capability from the agent, evaluator, or defense configuration wrapped around it.</PageHeader><div className="callout"><b>Three harness types</b><span><b>Agent</b> runs the model and tools. <b>Evaluation</b> defines tasks and scoring. <b>Defense</b> changes the agent’s security posture.</span></div><Search value={query} onChange={setQuery} placeholder="Search harnesses" /><div className="table-wrap"><table><thead><tr><th>Harness</th><th>Type</th><th>Result rows</th><th>Models</th><th>Benchmarks</th><th>Cross-source evidence</th></tr></thead><tbody>{rows.map(({ harness, results }) => {
-    const sources = new Set(results.map(({ sourceId }) => sourceId));
-    return <tr key={harness.id}><td><Link className="entity-link" to={`/harnesses/${harness.id}`}>{harness.name}</Link></td><td><span className={`kind kind-${harness.kind}`}>{harness.kind}</span></td><td className="number">{results.length}</td><td>{new Set(results.map(({ modelId }) => modelId)).size}</td><td>{new Set(results.map(({ benchmarkId }) => benchmarkId)).size}</td><td>{sources.size > 1 ? `${sources.size} sources` : <span className="muted">Single source</span>}</td></tr>;
-  })}</tbody></table></div></>;
+  const scores = harnessIndex(bundle).filter(({ eligible }) => eligible).sort((a, b) => b.score - a.score); const names = new Map(bundle.catalog.harnesses.map(({ id, name }) => [id, name]));
+  return <><PageHeader title="Agent Harness Cybersecurity Index" aside={<div className="mini-definition"><b>{scores.length}</b><span>ranked harnesses</span><p>Observed model + harness systems; controlled lift is shown where matched evidence exists.</p></div>}>Compare the execution layer around a model. Agent harness scores are kept separate from evaluation and defense harnesses.</PageHeader><div className="subnav"><a href="#harness-chart">Harness Index</a><a href="#harness-table">Leaderboard</a><Link to="/methodology">Methodology</Link></div><section id="harness-chart" className="chart-card full"><header><span className="swatch swatch-orange" /><div><h2>Harness Cybersecurity Index</h2><p>Average observed performance across indexed benchmarks · Higher is better</p></div></header><BarChart linkBase="/harnesses" data={scores.map((score) => ({ id: score.id, label: names.get(score.id) ?? score.id, value: score.score, sub: `${score.models} models` }))} /></section><section id="harness-table" className="performance"><div className="section-title"><span className="swatch swatch-black" /><div><h2>Harness leaderboard</h2><p>Controlled lift compares harnesses only where the same model appears on the same benchmark.</p></div></div><HarnessLeaderboard bundle={bundle} /></section><section className="harness-kinds"><article><b>Agent harness</b><span>Runs model, tools, context, and control loop.</span></article><article><b>Evaluation harness</b><span>Defines tasks, environment, and scoring.</span></article><article><b>Defense harness</b><span>Changes the agent’s resistance to attacks.</span></article></section></>;
+}
+
+function BenchmarksPage({ bundle }: { bundle: DataBundle }): ReactNode {
+  const [query, setQuery] = useState(""); const [sort, setSort] = useState("rows"); const [direction, setDirection] = useState<SortDirection>("desc");
+  const changeSort = (name: string): void => { if (sort === name) setDirection(direction === "desc" ? "asc" : "desc"); else { setSort(name); setDirection(name === "benchmark" || name === "category" ? "asc" : "desc"); } };
+  const rows = bundle.catalog.benchmarks.map((benchmark) => ({ benchmark, results: bundle.results.results.filter(({ benchmarkId }) => benchmarkId === benchmark.id), indexed: INDEX_SOURCES.some(({ sourceId }) => sourceId === benchmark.id) })).filter(({ benchmark }) => `${benchmark.name} ${benchmark.description}`.toLowerCase().includes(query.toLowerCase()));
+  const sorted = sortBy(rows, (row) => sort === "benchmark" ? row.benchmark.name : sort === "category" ? row.benchmark.category : sort === "models" ? new Set(row.results.map(({ modelId }) => modelId)).size : sort === "harnesses" ? new Set(row.results.flatMap(({ harnessIds }) => harnessIds)).size : row.results.length, direction);
+  return <><PageHeader title="Cybersecurity Benchmarks">Browse the public evaluations behind the index and the wider source catalog. Indexed benchmarks expose a comparable 0–100 headline outcome.</PageHeader><div className="table-controls"><Search value={query} onChange={setQuery} placeholder="Filter benchmarks" /><span>{sorted.length} benchmarks</span></div><div className="table-wrap"><table className="leaderboard"><thead><tr><SortHeader label="Benchmark" name="benchmark" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Domain" name="category" active={sort} direction={direction} onSort={changeSort} /><th>Index</th><SortHeader label="Rows" name="rows" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Models" name="models" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Harnesses" name="harnesses" active={sort} direction={direction} onSort={changeSort} /></tr></thead><tbody>{sorted.map(({ benchmark, results, indexed }) => <tr key={benchmark.id}><td><Link className="entity-link" to={`/benchmarks/${benchmark.id}`}>{benchmark.name}</Link><small>{benchmark.description}</small></td><td>{categoryNames[benchmark.category]}</td><td>{indexed ? <span className="index-included">Included</span> : <span className="muted">Catalog only</span>}</td><td>{results.length}</td><td>{new Set(results.map(({ modelId }) => modelId)).size}</td><td>{new Set(results.flatMap(({ harnessIds }) => harnessIds)).size}</td></tr>)}</tbody></table></div></>;
 }
 
 function SourcesPage({ bundle }: { bundle: DataBundle }): ReactNode {
-  const [query, setQuery] = useState("");
-  const rows = bundle.catalog.sources.filter((source) => `${source.name} ${source.publisher} ${source.category} ${source.status}`.toLowerCase().includes(query.toLowerCase()));
-  return <><PageHeader eyebrow="Completeness audit" title="Sources">The full catalog distinguishes known public result sites from sources that are automated, manual, stale, empty, or unavailable.</PageHeader><Search value={query} onChange={setQuery} placeholder="Search sources, publishers, or status" /><div className="table-wrap"><table><thead><tr><th>Source</th><th>Category</th><th>Catalog status</th><th>Ingestion</th><th>Rows</th><th>Last success</th></tr></thead><tbody>{rows.map((source) => {
-    const coverage = bundle.coverage.sources.find(({ sourceId }) => sourceId === source.id);
-    return <tr key={source.id}><td><Link className="entity-link" to={`/sources/${source.id}`}>{source.name}</Link><small>{source.publisher}</small></td><td>{categoryNames[source.category]}</td><td><Status status={source.status} /></td><td>{coverage && <Status status={coverage.crawlStatus} />}</td><td className="number">{coverage?.rowCount ?? 0}</td><td>{coverage?.lastSuccessAt ? dateTime(coverage.lastSuccessAt) : <span className="muted">Not ingested</span>}</td></tr>;
-  })}</tbody></table></div></>;
+  const [query, setQuery] = useState(""); const [sort, setSort] = useState("rows"); const [direction, setDirection] = useState<SortDirection>("desc");
+  const changeSort = (name: string): void => { if (sort === name) setDirection(direction === "desc" ? "asc" : "desc"); else { setSort(name); setDirection(name === "source" || name === "status" ? "asc" : "desc"); } };
+  const rows = bundle.catalog.sources.map((source) => ({ source, coverage: bundle.coverage.sources.find(({ sourceId }) => sourceId === source.id) })).filter(({ source }) => `${source.name} ${source.publisher} ${source.status}`.toLowerCase().includes(query.toLowerCase()));
+  const sorted = sortBy(rows, (row) => sort === "source" ? row.source.name : sort === "status" ? row.source.status : sort === "completeness" ? row.coverage?.fieldCompleteness ?? 0 : row.coverage?.rowCount ?? 0, direction);
+  return <><PageHeader title="Sources & Coverage">Audit the complete catalog, crawl health, result coverage, and unresolved identities. A missing result is never treated as zero.</PageHeader><div className="coverage-summary"><b>{bundle.coverage.summary.automatedSources}/{bundle.coverage.summary.catalogSources}</b><span>sources automated</span><i><b style={{ width: percent(bundle.coverage.summary.automatedSources / bundle.coverage.summary.catalogSources) }} /></i></div><div className="table-controls"><Search value={query} onChange={setQuery} placeholder="Filter sources, publishers, status" /><span>{sorted.length} sources</span></div><div className="table-wrap"><table className="leaderboard"><thead><tr><SortHeader label="Source" name="source" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Catalog status" name="status" active={sort} direction={direction} onSort={changeSort} /><th>Ingestion</th><SortHeader label="Rows" name="rows" active={sort} direction={direction} onSort={changeSort} /><SortHeader label="Field completeness" name="completeness" active={sort} direction={direction} onSort={changeSort} /><th>Last success</th></tr></thead><tbody>{sorted.map(({ source, coverage }) => <tr key={source.id}><td><Link className="entity-link" to={`/sources/${source.id}`}>{source.name}</Link><small>{source.publisher} · {categoryNames[source.category]}</small></td><td><Status status={source.status} /></td><td>{coverage && <Status status={coverage.crawlStatus} />}</td><td>{coverage?.rowCount ?? 0}</td><td>{coverage ? percent(coverage.fieldCompleteness) : "—"}</td><td>{coverage?.lastSuccessAt ? dateTime(coverage.lastSuccessAt) : <span className="muted">Not ingested</span>}</td></tr>)}</tbody></table></div></>;
+}
+
+function ComparePage({ bundle }: { bundle: DataBundle }): ReactNode {
+  const ranked = modelIndex(bundle).filter(({ eligible }) => eligible).sort((a, b) => b.score - a.score); const [leftId, setLeftId] = useState(ranked[0]?.id ?? ""); const [rightId, setRightId] = useState(ranked[1]?.id ?? ranked[0]?.id ?? "");
+  const modelMap = new Map(bundle.catalog.models.map((model) => [model.id, model])); const left = ranked.find(({ id }) => id === leftId); const right = ranked.find(({ id }) => id === rightId);
+  return <><PageHeader title="Compare cybersecurity performance">Compare two ranked models across the index, domains, and individual benchmark components.</PageHeader><div className="compare-selectors"><label>Model A<select value={leftId} onChange={(event) => setLeftId(event.target.value)}>{ranked.map((score) => <option value={score.id} key={score.id}>{modelMap.get(score.id)?.name} · {score.score}</option>)}</select></label><span>vs.</span><label>Model B<select value={rightId} onChange={(event) => setRightId(event.target.value)}>{ranked.map((score) => <option value={score.id} key={score.id}>{modelMap.get(score.id)?.name} · {score.score}</option>)}</select></label></div>{left && right && <><div className="comparison-head"><article><span>{modelMap.get(left.id)?.provider ?? "Provider unresolved"}</span><h2>{modelMap.get(left.id)?.name}</h2><b>{left.score.toFixed(1)}</b><CoverageBadge score={left} /></article><article><span>{modelMap.get(right.id)?.provider ?? "Provider unresolved"}</span><h2>{modelMap.get(right.id)?.name}</h2><b>{right.score.toFixed(1)}</b><CoverageBadge score={right} /></article></div><div className="comparison-domains"><article><h3>{modelMap.get(left.id)?.name}</h3><ScoreBars score={left} /></article><article><h3>{modelMap.get(right.id)?.name}</h3><ScoreBars score={right} /></article></div><div className="table-wrap"><table className="comparison-table"><thead><tr><th>Benchmark component</th><th>{modelMap.get(left.id)?.name}</th><th>{modelMap.get(right.id)?.name}</th><th>Difference</th></tr></thead><tbody>{INDEX_SOURCES.map((source) => { const a = left.components.find(({ sourceId }) => sourceId === source.sourceId)?.score; const b = right.components.find(({ sourceId }) => sourceId === source.sourceId)?.score; const difference = a === undefined || b === undefined ? null : a - b; return <tr key={source.sourceId}><td><Link to={`/benchmarks/${source.sourceId}`} className="entity-link">{source.label}</Link><small>{categoryNames[source.category]} · {source.metric}</small></td><td>{scoreText(a)}</td><td>{scoreText(b)}</td><td className={difference === null ? "" : difference >= 0 ? "positive" : "negative"}>{difference === null ? "—" : `${difference > 0 ? "+" : ""}${difference.toFixed(1)} pp`}</td></tr>; })}</tbody></table></div></>}</>;
+}
+
+function MethodologyPage(): ReactNode {
+  return <><PageHeader title={`Cybersecurity Index v${INDEX_VERSION} Methodology`}>A transparent, provisional synthesis of independently published AI cybersecurity benchmark results.</PageHeader><article className="methodology"><section><h2>Overview</h2><p>The Cybersecurity Index is a 0–100 composite for quick comparison. It preserves the six component scores underneath because a single number cannot explain whether a system is better at exploitation, secure code repair, or resisting attacks against an AI agent.</p></section><section><h2>Index construction</h2><ol><li>Extract one source-defined headline outcome for each model or model–harness configuration.</li><li>For a model, retain its best published configuration on each benchmark. For a harness, average all observed configurations within each benchmark.</li><li>Average available benchmark scores inside each of three domains.</li><li>Average the available domain scores with equal domain weight. Missing results are excluded, never imputed as zero.</li></ol><div className="formula">Cybersecurity Index = mean(Offensive capability, Secure engineering, AI resilience)</div><p>A model is ranked only with at least three benchmark components and evidence in all three domains. Scores with less evidence remain visible as provisional. This is less controlled than an independently run common suite, so coverage is displayed beside every score.</p></section><section><h2>Components</h2><div className="table-wrap"><table><thead><tr><th>Domain</th><th>Benchmark</th><th>Index component</th><th>Interpretation</th></tr></thead><tbody>{INDEX_SOURCES.map((source) => <tr key={source.sourceId}><td>{categoryNames[source.category]}</td><td><Link className="entity-link" to={`/benchmarks/${source.sourceId}`}>{source.label}</Link></td><td>{source.metric}</td><td>{source.sourceId === "agentdojo" ? "Mean of utility under attack and attack resistance (100 − targeted ASR)." : source.sourceId === "cybergym-e2e" ? "S3: discovers a crashing PoC, patches it, and preserves functionality." : "The source’s published 0–100 headline result; higher is better."}</td></tr>)}</tbody></table></div></section><section><h2>Harness interpretation</h2><p>The Harness Index describes observed model + harness systems. It is not a causal estimate of harness quality because model mix, budgets, and benchmark coverage differ. The separate controlled-lift column uses only cases where the same model appears with multiple harnesses on the same benchmark.</p></section><section><h2>Limitations and versioning</h2><ul><li>The six sources were not run under one common protocol.</li><li>Task counts, budgets, dates, and model settings differ.</li><li>Best-configuration model scores measure demonstrated ceiling, not default behavior.</li><li>Only 6 of 40 cataloged sources are automated in v1.0.</li><li>Major versions may change components or interpretation; compare scores within the same version.</li></ul></section></article></>;
 }
 
 function DetailPage({ bundle, kind }: { bundle: DataBundle; kind: "benchmarks" | "models" | "harnesses" | "sources" }): ReactNode {
-  const { id = "" } = useParams();
-  let title = "Unknown entity";
-  let eyebrow = kind.slice(0, -1);
-  let description = "No description available.";
-  let rows: Result[] = [];
-  let externalUrl: string | null = null;
-  if (kind === "benchmarks") {
-    const item = bundle.catalog.benchmarks.find((benchmark) => benchmark.id === id);
-    if (item) { title = item.name; description = item.description; rows = bundle.results.results.filter(({ benchmarkId }) => benchmarkId === id); }
-  } else if (kind === "models") {
-    const item = bundle.catalog.models.find((model) => model.id === id);
-    if (item) { title = item.name; description = `${item.provider ?? "Provider unresolved"} · ${item.aliases.length ? `Aliases: ${item.aliases.join(", ")}` : "No source aliases"}`; rows = bundle.results.results.filter(({ modelId }) => modelId === id); }
-  } else if (kind === "harnesses") {
-    const item = bundle.catalog.harnesses.find((harness) => harness.id === id);
-    if (item) { title = item.name; eyebrow = `${item.kind} harness`; description = `Published evidence involving this ${item.kind} harness. Results remain grouped by their original benchmark context.`; rows = bundle.results.results.filter(({ harnessIds }) => harnessIds.includes(id)); }
-  } else {
-    const item = bundle.catalog.sources.find((source) => source.id === id);
-    if (item) { title = item.name; description = item.description; rows = bundle.results.results.filter(({ sourceId }) => sourceId === id); externalUrl = item.url; }
-  }
-  return <><div className="breadcrumbs"><Link to={`/${kind}`}>← All {kind}</Link></div><PageHeader eyebrow={eyebrow} title={title}>{description}</PageHeader><div className="detail-stats"><span><b>{rows.length}</b> result rows</span><span><b>{new Set(rows.map(({ modelId }) => modelId)).size}</b> models</span><span><b>{new Set(rows.flatMap(({ harnessIds }) => harnessIds)).size}</b> harnesses</span>{externalUrl && <a href={externalUrl}>Open original source ↗</a>}</div><ResultsTable bundle={bundle} rows={rows} /></>;
+  const { id = "" } = useParams(); let title = "Unknown entity"; let description = "No description available."; let rows: Result[] = []; let externalUrl: string | null = null; let score: IndexScore | HarnessIndexScore | undefined;
+  if (kind === "benchmarks") { const item = bundle.catalog.benchmarks.find((benchmark) => benchmark.id === id); if (item) { title = item.name; description = item.description; rows = bundle.results.results.filter(({ benchmarkId }) => benchmarkId === id); } }
+  else if (kind === "models") { const item = bundle.catalog.models.find((model) => model.id === id); if (item) { title = item.name; description = `${item.provider ?? "Provider unresolved"} · best published configuration per benchmark`; rows = bundle.results.results.filter(({ modelId }) => modelId === id); score = modelIndex(bundle).find((itemScore) => itemScore.id === id); } }
+  else if (kind === "harnesses") { const item = bundle.catalog.harnesses.find((harness) => harness.id === id); if (item) { title = item.name; description = `${item.kind} harness · published model and benchmark evidence`; rows = bundle.results.results.filter(({ harnessIds }) => harnessIds.includes(id)); score = harnessIndex(bundle).find((itemScore) => itemScore.id === id); } }
+  else { const item = bundle.catalog.sources.find((source) => source.id === id); if (item) { title = item.name; description = item.description; rows = bundle.results.results.filter(({ sourceId }) => sourceId === id); externalUrl = item.url; } }
+  const aside = score ? <div className="detail-score"><span>Cybersecurity Index</span><b>{score.score.toFixed(1)}</b><CoverageBadge score={score} /></div> : undefined;
+  return <><div className="breadcrumbs"><Link to={`/${kind}`}>← All {kind}</Link></div><PageHeader title={title} aside={aside}>{description}</PageHeader>{score && <section className="detail-breakdown"><div><h2>Domain breakdown</h2><p>Higher is better · missing domains are not scored</p></div><ScoreBars score={score} /></section>}<div className="detail-stats"><span><b>{rows.length}</b> result rows</span><span><b>{new Set(rows.map(({ modelId }) => modelId)).size}</b> models</span><span><b>{new Set(rows.flatMap(({ harnessIds }) => harnessIds)).size}</b> harnesses</span>{externalUrl && <a href={externalUrl}>Open original source ↗</a>}</div><ResultsTable bundle={bundle} rows={rows} /></>;
 }
 
 export default function App(): ReactNode {
-  const [bundle, setBundle] = useState<DataBundle | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [bundle, setBundle] = useState<DataBundle | null>(null); const [error, setError] = useState<string | null>(null);
   useEffect(() => { loadData().then(setBundle).catch((reason: unknown) => setError(reason instanceof Error ? reason.message : "Could not load benchmark data")); }, []);
-  const content = useMemo(() => {
-    if (error) return <main><div className="load-state"><b>Data validation failed</b><span>{error}</span></div></main>;
-    if (!bundle) return <main><div className="load-state"><span className="spinner" />Loading validated snapshot…</div></main>;
-    return <main><Routes>
-      <Route path="/overview" element={<Overview bundle={bundle} />} />
-      <Route path="/benchmarks" element={<BenchmarksPage bundle={bundle} />} />
-      <Route path="/models" element={<ModelsPage bundle={bundle} />} />
-      <Route path="/harnesses" element={<HarnessesPage bundle={bundle} />} />
-      <Route path="/sources" element={<SourcesPage bundle={bundle} />} />
-      {(["benchmarks", "models", "harnesses", "sources"] as const).map((kind) => <Route key={kind} path={`/${kind}/:id`} element={<DetailPage bundle={bundle} kind={kind} />} />)}
-      <Route path="*" element={<Navigate replace to="/overview" />} />
-    </Routes></main>;
-  }, [bundle, error]);
-  return <div className="app"><Header />{content}<footer><span>AI Security Index · source-faithful benchmark evidence</span><span>Data is informational, not a safety certification.</span></footer></div>;
+  const content = useMemo(() => { if (error) return <main><div className="load-state"><b>Data validation failed</b><span>{error}</span></div></main>; if (!bundle) return <main><div className="load-state"><span className="spinner" />Loading validated snapshot…</div></main>; return <main><Routes><Route path="/overview" element={<Overview bundle={bundle} />} /><Route path="/models" element={<ModelsPage bundle={bundle} />} /><Route path="/harnesses" element={<HarnessesPage bundle={bundle} />} /><Route path="/benchmarks" element={<BenchmarksPage bundle={bundle} />} /><Route path="/sources" element={<SourcesPage bundle={bundle} />} /><Route path="/compare" element={<ComparePage bundle={bundle} />} /><Route path="/methodology" element={<MethodologyPage />} />{(["benchmarks", "models", "harnesses", "sources"] as const).map((kind) => <Route key={kind} path={`/${kind}/:id`} element={<DetailPage bundle={bundle} kind={kind} />} />)}<Route path="*" element={<Navigate replace to="/overview" />} /></Routes></main>; }, [bundle, error]);
+  return <div className="app"><Header />{content}<footer><span>Cybersecurity Index v{INDEX_VERSION} · independent public benchmark aggregation</span><span>Scores are comparative evidence, not a safety certification.</span></footer></div>;
 }
