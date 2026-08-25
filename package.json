@@ -1,0 +1,31 @@
+{
+  "name": "ai-security-benchmark-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "crawl": "tsx scripts/crawl.ts",
+    "validate:data": "tsx scripts/validate-data.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build": "pnpm validate:data && pnpm typecheck && vite build",
+    "check": "pnpm test && pnpm build"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.3.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "@vitejs/plugin-react": "^6.1.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11"
+  }
+}

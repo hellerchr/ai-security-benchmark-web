@@ -1,0 +1,1414 @@
+{
+  "generatedAt": "2026-08-25T22:25:30.178Z",
+  "sources": [
+    {
+      "id": "cisco-llm-security",
+      "name": "Cisco LLM Security Leaderboard",
+      "publisher": "Cisco AI Defense",
+      "url": "https://leaderboard.aidefense.cisco.com/",
+      "category": "ai-system-security",
+      "status": "live",
+      "description": "Model resistance to single-turn and multi-turn adversarial prompts.",
+      "adapter": "cisco"
+    },
+    {
+      "id": "cybergym-e2e",
+      "name": "CyberGym-E2E",
+      "publisher": "CyberGym",
+      "url": "https://www.cybergym.io/e2e",
+      "category": "secure-coding",
+      "status": "live",
+      "description": "End-to-end vulnerability reproduction and patching by model-agent configurations.",
+      "adapter": "cybergym-e2e"
+    },
+    {
+      "id": "wiz-cyber-model-arena",
+      "name": "Cyber Model Arena",
+      "publisher": "Wiz Research",
+      "url": "https://www.wiz.io/cyber-model-arena",
+      "category": "offensive",
+      "status": "live",
+      "description": "Cybersecurity task performance across models and coding agents.",
+      "adapter": "wiz"
+    },
+    {
+      "id": "sec-bench",
+      "name": "SEC-bench / SEC-bench Pro",
+      "publisher": "SEC-bench",
+      "url": "https://sec-bench.github.io/",
+      "category": "offensive",
+      "status": "live",
+      "description": "Autonomous cybersecurity agent performance on reproducible security tasks.",
+      "adapter": "sec-bench"
+    },
+    {
+      "id": "agentdojo",
+      "name": "AgentDojo Results",
+      "publisher": "ETH Zurich SPY Lab",
+      "url": "https://agentdojo.spylab.ai/results/",
+      "category": "ai-system-security",
+      "status": "live",
+      "description": "Agent utility and prompt-injection attack success under defenses.",
+      "adapter": "agentdojo"
+    },
+    {
+      "id": "agent-security-league",
+      "name": "Agent Security League",
+      "publisher": "Endor Labs",
+      "url": "https://www.endorlabs.com/research/ai-code-security-benchmark",
+      "category": "secure-coding",
+      "status": "live",
+      "description": "Functional and secure coding scores for model-agent configurations.",
+      "adapter": "agent-security-league"
+    },
+    {
+      "id": "frontier-observatory",
+      "name": "Frontier AI Cybersecurity Observatory",
+      "publisher": "CAIS",
+      "url": "https://frontier-cybersecurity-observatory.org/",
+      "category": "offensive",
+      "status": "manual",
+      "description": "Frontier model cyber capability evaluations and reports.",
+      "adapter": null
+    },
+    {
+      "id": "cybergym",
+      "name": "CyberGym",
+      "publisher": "CyberGym",
+      "url": "https://www.cybergym.io/",
+      "category": "secure-coding",
+      "status": "manual",
+      "description": "Cyber vulnerability task suite and model results.",
+      "adapter": null
+    },
+    {
+      "id": "exploitgym",
+      "name": "ExploitGym",
+      "publisher": "ExploitGym",
+      "url": "https://exploitgym.com/",
+      "category": "offensive",
+      "status": "manual",
+      "description": "Exploit generation benchmark and results.",
+      "adapter": null
+    },
+    {
+      "id": "exploitbench",
+      "name": "ExploitBench",
+      "publisher": "ExploitBench",
+      "url": "https://exploitbench.github.io/",
+      "category": "offensive",
+      "status": "manual",
+      "description": "LLM exploit generation evaluation.",
+      "adapter": null
+    },
+    {
+      "id": "cve-bench",
+      "name": "CVE-Bench",
+      "publisher": "CVE-Bench",
+      "url": "https://cve-bench.github.io/",
+      "category": "offensive",
+      "status": "manual",
+      "description": "Real-world CVE exploitation benchmark.",
+      "adapter": null
+    },
+    {
+      "id": "cwe-bench",
+      "name": "CWE-Bench",
+      "publisher": "CWE-Bench",
+      "url": "https://cwe-bench.github.io/",
+      "category": "secure-coding",
+      "status": "manual",
+      "description": "Software weakness detection and repair benchmark.",
+      "adapter": null
+    },
+    {
+      "id": "patcheval-verified",
+      "name": "PatchEval-Verified",
+      "publisher": "PatchEval",
+      "url": "https://patcheval.com/",
+      "category": "secure-coding",
+      "status": "manual",
+      "description": "Verified security patch generation benchmark.",
+      "adapter": null
+    },
+    {
+      "id": "secrepobench",
+      "name": "SecRepoBench",
+      "publisher": "SecRepoBench",
+      "url": "https://secrepobench.github.io/",
+      "category": "secure-coding",
+      "status": "manual",
+      "description": "Repository-level secure code reasoning benchmark.",
+      "adapter": null
+    },
+    {
+      "id": "cybench",
+      "name": "Cybench",
+      "publisher": "Cybench",
+      "url": "https://cybench.github.io/",
+      "category": "offensive",
+      "status": "manual",
+      "description": "Professional-level cybersecurity task benchmark.",
+      "adapter": null
+    },
+    {
+      "id": "agentcyberrange",
+      "name": "AgentCyberRange",
+      "publisher": "AgentCyberRange",
+      "url": "https://agentcyberrange.github.io/",
+      "category": "offensive",
+      "status": "manual",
+      "description": "Autonomous cyber agents in instrumented ranges.",
+      "adapter": null
+    },
+    {
+      "id": "3cb",
+      "name": "3CB",
+      "publisher": "3CB",
+      "url": "https://3cb.ai/",
+      "category": "offensive",
+      "status": "manual",
+      "description": "Cyber capability benchmark for language models.",
+      "adapter": null
+    },
+    {
+      "id": "hackbench",
+      "name": "HackBench",
+      "publisher": "HackBench",
+      "url": "https://hackbench.ai/",
+      "category": "offensive",
+      "status": "manual",
+      "description": "Offensive cyber task benchmark.",
+      "adapter": null
+    },
+    {
+      "id": "nyu-ctf-bench",
+      "name": "NYU CTF Bench",
+      "publisher": "NYU",
+      "url": "https://nyu-llm-ctf.github.io/",
+      "category": "offensive",
+      "status": "empty",
+      "description": "CTF benchmark site without current published result rows.",
+      "adapter": null
+    },
+    {
+      "id": "intercode-ctf",
+      "name": "InterCode CTF",
+      "publisher": "InterCode",
+      "url": "https://intercode-benchmark.github.io/",
+      "category": "offensive",
+      "status": "stale",
+      "description": "Interactive coding benchmark with a CTF environment.",
+      "adapter": null
+    },
+    {
+      "id": "boxpwnr",
+      "name": "BoxPwnr",
+      "publisher": "0ca",
+      "url": "https://github.com/0ca/BoxPwnr",
+      "category": "offensive",
+      "status": "manual",
+      "description": "Open-source harness and results for hacking virtual machines.",
+      "adapter": null
+    },
+    {
+      "id": "defensebench",
+      "name": "DefenseBench",
+      "publisher": "DefenseBench",
+      "url": "https://defensebench.github.io/",
+      "category": "defensive",
+      "status": "manual",
+      "description": "Defensive cybersecurity reasoning benchmark.",
+      "adapter": null
+    },
+    {
+      "id": "socbench",
+      "name": "SOCBench",
+      "publisher": "SOCBench",
+      "url": "https://socbench.github.io/",
+      "category": "defensive",
+      "status": "manual",
+      "description": "Security operations center task benchmark.",
+      "adapter": null
+    },
+    {
+      "id": "security-llm-leaderboard",
+      "name": "Security LLM Leaderboard",
+      "publisher": "Open Security Index",
+      "url": "https://huggingface.co/spaces/AI-Secure/llm-security-leaderboard",
+      "category": "knowledge",
+      "status": "manual",
+      "description": "Security knowledge and reasoning leaderboard.",
+      "adapter": null
+    },
+    {
+      "id": "seceval",
+      "name": "SecEval",
+      "publisher": "SecEval",
+      "url": "https://seceval.github.io/",
+      "category": "knowledge",
+      "status": "manual",
+      "description": "Cybersecurity knowledge evaluation.",
+      "adapter": null
+    },
+    {
+      "id": "cyberseceval-3",
+      "name": "CyberSecEval 3 / The Aggregate",
+      "publisher": "Meta",
+      "url": "https://meta-llama.github.io/PurpleLlama/CyberSecEval/",
+      "category": "ai-system-security",
+      "status": "manual",
+      "description": "Cyber risk, prompt injection, and capability evaluations.",
+      "adapter": null
+    },
+    {
+      "id": "agent-security-bench",
+      "name": "Agent Security Bench",
+      "publisher": "Agent Security Bench",
+      "url": "https://agent-security-bench.github.io/",
+      "category": "ai-system-security",
+      "status": "manual",
+      "description": "Security evaluation for tool-using agents.",
+      "adapter": null
+    },
+    {
+      "id": "b3",
+      "name": "B3",
+      "publisher": "B3",
+      "url": "https://b3-benchmark.com/",
+      "category": "ai-system-security",
+      "status": "manual",
+      "description": "Benchmark for agentic browser security.",
+      "adapter": null
+    },
+    {
+      "id": "f5-casi",
+      "name": "F5 CASI / ARS",
+      "publisher": "F5",
+      "url": "https://www.f5.com/labs",
+      "category": "ai-system-security",
+      "status": "manual",
+      "description": "AI red teaming and security evaluation results.",
+      "adapter": null
+    },
+    {
+      "id": "jailbreakbench",
+      "name": "JailbreakBench",
+      "publisher": "JailbreakBench",
+      "url": "https://jailbreakbench.github.io/",
+      "category": "ai-system-security",
+      "status": "manual",
+      "description": "Standardized jailbreak attack and defense evaluation.",
+      "adapter": null
+    },
+    {
+      "id": "phare",
+      "name": "Phare",
+      "publisher": "Giskard",
+      "url": "https://phare.giskard.ai/",
+      "category": "ai-system-security",
+      "status": "manual",
+      "description": "LLM safety and security evaluation results.",
+      "adapter": null
+    },
+    {
+      "id": "bountybench",
+      "name": "BountyBench",
+      "publisher": "BountyBench",
+      "url": "https://bountybench.github.io/",
+      "category": "offensive",
+      "status": "dead",
+      "description": "Bug bounty agent benchmark whose result site is currently unavailable.",
+      "adapter": null
+    },
+    {
+      "id": "securevibebench",
+      "name": "SecureVibeBench",
+      "publisher": "SecureVibeBench",
+      "url": "https://securevibebench.github.io/",
+      "category": "secure-coding",
+      "status": "dead",
+      "description": "Secure vibe-coding benchmark whose linked leaderboard is unavailable.",
+      "adapter": null
+    },
+    {
+      "id": "cyberseceval-4",
+      "name": "CyberSecEval 4",
+      "publisher": "Meta",
+      "url": "https://github.com/meta-llama/PurpleLlama",
+      "category": "ai-system-security",
+      "status": "manual",
+      "description": "Cybersecurity evaluation suite without a single canonical result board.",
+      "adapter": null
+    },
+    {
+      "id": "pacebench",
+      "name": "PACEbench",
+      "publisher": "PACEbench",
+      "url": "https://pacebench.github.io/",
+      "category": "defensive",
+      "status": "manual",
+      "description": "Cyber defense agent benchmark.",
+      "adapter": null
+    },
+    {
+      "id": "cyber-defense-benchmark",
+      "name": "Cyber Defense Benchmark",
+      "publisher": "Cyber Defense Benchmark",
+      "url": "https://cyber-defense-benchmark.github.io/",
+      "category": "defensive",
+      "status": "manual",
+      "description": "Defensive cyber task evaluation.",
+      "adapter": null
+    },
+    {
+      "id": "open-security-benchmark",
+      "name": "Open Security Benchmark",
+      "publisher": "Open Security Benchmark",
+      "url": "https://open-security-benchmark.github.io/",
+      "category": "knowledge",
+      "status": "manual",
+      "description": "Open cybersecurity model benchmark.",
+      "adapter": null
+    },
+    {
+      "id": "netinjectbench",
+      "name": "NetInjectBench",
+      "publisher": "NetInjectBench",
+      "url": "https://netinjectbench.github.io/",
+      "category": "ai-system-security",
+      "status": "manual",
+      "description": "Network prompt-injection benchmark.",
+      "adapter": null
+    },
+    {
+      "id": "livepi",
+      "name": "LivePI",
+      "publisher": "LivePI",
+      "url": "https://livepi.github.io/",
+      "category": "ai-system-security",
+      "status": "manual",
+      "description": "Live prompt-injection evaluation.",
+      "adapter": null
+    },
+    {
+      "id": "xbow-validation",
+      "name": "XBOW Validation Benchmark",
+      "publisher": "XBOW",
+      "url": "https://xbow.com/",
+      "category": "offensive",
+      "status": "manual",
+      "description": "Validation benchmark without a canonical public result board.",
+      "adapter": null
+    }
+  ],
+  "benchmarks": [
+    {
+      "id": "cisco-llm-security",
+      "sourceId": "cisco-llm-security",
+      "name": "Cisco LLM Security Leaderboard",
+      "category": "ai-system-security",
+      "description": "Model resistance to single-turn and multi-turn adversarial prompts."
+    },
+    {
+      "id": "cybergym-e2e",
+      "sourceId": "cybergym-e2e",
+      "name": "CyberGym-E2E",
+      "category": "secure-coding",
+      "description": "End-to-end vulnerability reproduction and patching by model-agent configurations."
+    },
+    {
+      "id": "wiz-cyber-model-arena",
+      "sourceId": "wiz-cyber-model-arena",
+      "name": "Cyber Model Arena",
+      "category": "offensive",
+      "description": "Cybersecurity task performance across models and coding agents."
+    },
+    {
+      "id": "sec-bench",
+      "sourceId": "sec-bench",
+      "name": "SEC-bench / SEC-bench Pro",
+      "category": "offensive",
+      "description": "Autonomous cybersecurity agent performance on reproducible security tasks."
+    },
+    {
+      "id": "agentdojo",
+      "sourceId": "agentdojo",
+      "name": "AgentDojo Results",
+      "category": "ai-system-security",
+      "description": "Agent utility and prompt-injection attack success under defenses."
+    },
+    {
+      "id": "agent-security-league",
+      "sourceId": "agent-security-league",
+      "name": "Agent Security League",
+      "category": "secure-coding",
+      "description": "Functional and secure coding scores for model-agent configurations."
+    },
+    {
+      "id": "frontier-observatory",
+      "sourceId": "frontier-observatory",
+      "name": "Frontier AI Cybersecurity Observatory",
+      "category": "offensive",
+      "description": "Frontier model cyber capability evaluations and reports."
+    },
+    {
+      "id": "cybergym",
+      "sourceId": "cybergym",
+      "name": "CyberGym",
+      "category": "secure-coding",
+      "description": "Cyber vulnerability task suite and model results."
+    },
+    {
+      "id": "exploitgym",
+      "sourceId": "exploitgym",
+      "name": "ExploitGym",
+      "category": "offensive",
+      "description": "Exploit generation benchmark and results."
+    },
+    {
+      "id": "exploitbench",
+      "sourceId": "exploitbench",
+      "name": "ExploitBench",
+      "category": "offensive",
+      "description": "LLM exploit generation evaluation."
+    },
+    {
+      "id": "cve-bench",
+      "sourceId": "cve-bench",
+      "name": "CVE-Bench",
+      "category": "offensive",
+      "description": "Real-world CVE exploitation benchmark."
+    },
+    {
+      "id": "cwe-bench",
+      "sourceId": "cwe-bench",
+      "name": "CWE-Bench",
+      "category": "secure-coding",
+      "description": "Software weakness detection and repair benchmark."
+    },
+    {
+      "id": "patcheval-verified",
+      "sourceId": "patcheval-verified",
+      "name": "PatchEval-Verified",
+      "category": "secure-coding",
+      "description": "Verified security patch generation benchmark."
+    },
+    {
+      "id": "secrepobench",
+      "sourceId": "secrepobench",
+      "name": "SecRepoBench",
+      "category": "secure-coding",
+      "description": "Repository-level secure code reasoning benchmark."
+    },
+    {
+      "id": "cybench",
+      "sourceId": "cybench",
+      "name": "Cybench",
+      "category": "offensive",
+      "description": "Professional-level cybersecurity task benchmark."
+    },
+    {
+      "id": "agentcyberrange",
+      "sourceId": "agentcyberrange",
+      "name": "AgentCyberRange",
+      "category": "offensive",
+      "description": "Autonomous cyber agents in instrumented ranges."
+    },
+    {
+      "id": "3cb",
+      "sourceId": "3cb",
+      "name": "3CB",
+      "category": "offensive",
+      "description": "Cyber capability benchmark for language models."
+    },
+    {
+      "id": "hackbench",
+      "sourceId": "hackbench",
+      "name": "HackBench",
+      "category": "offensive",
+      "description": "Offensive cyber task benchmark."
+    },
+    {
+      "id": "nyu-ctf-bench",
+      "sourceId": "nyu-ctf-bench",
+      "name": "NYU CTF Bench",
+      "category": "offensive",
+      "description": "CTF benchmark site without current published result rows."
+    },
+    {
+      "id": "intercode-ctf",
+      "sourceId": "intercode-ctf",
+      "name": "InterCode CTF",
+      "category": "offensive",
+      "description": "Interactive coding benchmark with a CTF environment."
+    },
+    {
+      "id": "boxpwnr",
+      "sourceId": "boxpwnr",
+      "name": "BoxPwnr",
+      "category": "offensive",
+      "description": "Open-source harness and results for hacking virtual machines."
+    },
+    {
+      "id": "defensebench",
+      "sourceId": "defensebench",
+      "name": "DefenseBench",
+      "category": "defensive",
+      "description": "Defensive cybersecurity reasoning benchmark."
+    },
+    {
+      "id": "socbench",
+      "sourceId": "socbench",
+      "name": "SOCBench",
+      "category": "defensive",
+      "description": "Security operations center task benchmark."
+    },
+    {
+      "id": "security-llm-leaderboard",
+      "sourceId": "security-llm-leaderboard",
+      "name": "Security LLM Leaderboard",
+      "category": "knowledge",
+      "description": "Security knowledge and reasoning leaderboard."
+    },
+    {
+      "id": "seceval",
+      "sourceId": "seceval",
+      "name": "SecEval",
+      "category": "knowledge",
+      "description": "Cybersecurity knowledge evaluation."
+    },
+    {
+      "id": "cyberseceval-3",
+      "sourceId": "cyberseceval-3",
+      "name": "CyberSecEval 3 / The Aggregate",
+      "category": "ai-system-security",
+      "description": "Cyber risk, prompt injection, and capability evaluations."
+    },
+    {
+      "id": "agent-security-bench",
+      "sourceId": "agent-security-bench",
+      "name": "Agent Security Bench",
+      "category": "ai-system-security",
+      "description": "Security evaluation for tool-using agents."
+    },
+    {
+      "id": "b3",
+      "sourceId": "b3",
+      "name": "B3",
+      "category": "ai-system-security",
+      "description": "Benchmark for agentic browser security."
+    },
+    {
+      "id": "f5-casi",
+      "sourceId": "f5-casi",
+      "name": "F5 CASI / ARS",
+      "category": "ai-system-security",
+      "description": "AI red teaming and security evaluation results."
+    },
+    {
+      "id": "jailbreakbench",
+      "sourceId": "jailbreakbench",
+      "name": "JailbreakBench",
+      "category": "ai-system-security",
+      "description": "Standardized jailbreak attack and defense evaluation."
+    },
+    {
+      "id": "phare",
+      "sourceId": "phare",
+      "name": "Phare",
+      "category": "ai-system-security",
+      "description": "LLM safety and security evaluation results."
+    },
+    {
+      "id": "bountybench",
+      "sourceId": "bountybench",
+      "name": "BountyBench",
+      "category": "offensive",
+      "description": "Bug bounty agent benchmark whose result site is currently unavailable."
+    },
+    {
+      "id": "securevibebench",
+      "sourceId": "securevibebench",
+      "name": "SecureVibeBench",
+      "category": "secure-coding",
+      "description": "Secure vibe-coding benchmark whose linked leaderboard is unavailable."
+    },
+    {
+      "id": "cyberseceval-4",
+      "sourceId": "cyberseceval-4",
+      "name": "CyberSecEval 4",
+      "category": "ai-system-security",
+      "description": "Cybersecurity evaluation suite without a single canonical result board."
+    },
+    {
+      "id": "pacebench",
+      "sourceId": "pacebench",
+      "name": "PACEbench",
+      "category": "defensive",
+      "description": "Cyber defense agent benchmark."
+    },
+    {
+      "id": "cyber-defense-benchmark",
+      "sourceId": "cyber-defense-benchmark",
+      "name": "Cyber Defense Benchmark",
+      "category": "defensive",
+      "description": "Defensive cyber task evaluation."
+    },
+    {
+      "id": "open-security-benchmark",
+      "sourceId": "open-security-benchmark",
+      "name": "Open Security Benchmark",
+      "category": "knowledge",
+      "description": "Open cybersecurity model benchmark."
+    },
+    {
+      "id": "netinjectbench",
+      "sourceId": "netinjectbench",
+      "name": "NetInjectBench",
+      "category": "ai-system-security",
+      "description": "Network prompt-injection benchmark."
+    },
+    {
+      "id": "livepi",
+      "sourceId": "livepi",
+      "name": "LivePI",
+      "category": "ai-system-security",
+      "description": "Live prompt-injection evaluation."
+    },
+    {
+      "id": "xbow-validation",
+      "sourceId": "xbow-validation",
+      "name": "XBOW Validation Benchmark",
+      "category": "offensive",
+      "description": "Validation benchmark without a canonical public result board."
+    }
+  ],
+  "models": [
+    {
+      "id": "claude-3-haiku",
+      "name": "Claude 3 Haiku",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude 3 Haiku"
+      ]
+    },
+    {
+      "id": "claude-3-opus",
+      "name": "Claude 3 Opus",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude 3 Opus"
+      ]
+    },
+    {
+      "id": "claude-3-sonnet",
+      "name": "Claude 3 Sonnet",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude 3 Sonnet"
+      ]
+    },
+    {
+      "id": "claude-3-5-haiku",
+      "name": "Claude 3.5 Haiku",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude 3.5 Haiku"
+      ]
+    },
+    {
+      "id": "claude-3-5-sonnet",
+      "name": "Claude 3.5 Sonnet",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude 3.5 Sonnet"
+      ]
+    },
+    {
+      "id": "claude-3-7-sonnet",
+      "name": "Claude 3.7 Sonnet",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude 3.7 Sonnet"
+      ]
+    },
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "name": "Claude Haiku 4.5",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude Haiku 4.5"
+      ]
+    },
+    {
+      "id": "claude-opus-4",
+      "name": "Claude Opus 4",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude Opus 4"
+      ]
+    },
+    {
+      "id": "claude-opus-4-1",
+      "name": "Claude Opus 4.1",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude Opus 4.1"
+      ]
+    },
+    {
+      "id": "claude-opus-4-5",
+      "name": "Claude Opus 4.5",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude Opus 4.5"
+      ]
+    },
+    {
+      "id": "claude-opus-4-6",
+      "name": "Claude Opus 4.6",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude Opus 4.6"
+      ]
+    },
+    {
+      "id": "claude-opus-4-7",
+      "name": "Claude Opus 4.7",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude Opus 4.7"
+      ]
+    },
+    {
+      "id": "claude-opus-4-8",
+      "name": "Claude Opus 4.8",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude Opus 4.8"
+      ]
+    },
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "claude-sonnet-4",
+      "name": "Claude Sonnet 4",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude Sonnet 4"
+      ]
+    },
+    {
+      "id": "claude-sonnet-4-5",
+      "name": "Claude Sonnet 4.5",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude Sonnet 4.5"
+      ]
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude Sonnet 4.6"
+      ]
+    },
+    {
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "provider": "Anthropic",
+      "aliases": [
+        "Anthropic Claude Sonnet 5"
+      ]
+    },
+    {
+      "id": "claude-3-5-sonnet-20240620",
+      "name": "claude-3-5-sonnet-20240620",
+      "provider": "anthropic",
+      "aliases": []
+    },
+    {
+      "id": "claude-3-5-sonnet-20241022",
+      "name": "claude-3-5-sonnet-20241022",
+      "provider": "anthropic",
+      "aliases": []
+    },
+    {
+      "id": "claude-3-7-sonnet-20250219",
+      "name": "claude-3-7-sonnet-20250219",
+      "provider": "anthropic",
+      "aliases": []
+    },
+    {
+      "id": "claude-3-haiku-20240307",
+      "name": "claude-3-haiku-20240307",
+      "provider": "anthropic",
+      "aliases": []
+    },
+    {
+      "id": "claude-3-opus-20240229",
+      "name": "claude-3-opus-20240229",
+      "provider": "anthropic",
+      "aliases": []
+    },
+    {
+      "id": "claude-3-sonnet-20240229",
+      "name": "claude-3-sonnet-20240229",
+      "provider": "anthropic",
+      "aliases": []
+    },
+    {
+      "id": "command-r",
+      "name": "command-r",
+      "provider": "cohere",
+      "aliases": []
+    },
+    {
+      "id": "command-r-plus",
+      "name": "command-r-plus",
+      "provider": "cohere",
+      "aliases": []
+    },
+    {
+      "id": "composer-2-5",
+      "name": "Composer 2.5",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-2-5-pro",
+      "name": "Gemini 2.5 Pro",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-3-flash",
+      "name": "Gemini 3 Flash",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-3-pro",
+      "name": "Gemini 3 Pro",
+      "provider": "Google",
+      "aliases": [
+        "Google Gemini 3 Pro"
+      ]
+    },
+    {
+      "id": "gemini-3-1-pro",
+      "name": "Gemini 3.1 Pro",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-3-5-flash",
+      "name": "Gemini 3.5 Flash",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-1-5-flash-001",
+      "name": "gemini-1.5-flash-001",
+      "provider": "google",
+      "aliases": []
+    },
+    {
+      "id": "gemini-1-5-flash-002",
+      "name": "gemini-1.5-flash-002",
+      "provider": "google",
+      "aliases": []
+    },
+    {
+      "id": "gemini-1-5-pro-001",
+      "name": "gemini-1.5-pro-001",
+      "provider": "google",
+      "aliases": []
+    },
+    {
+      "id": "gemini-1-5-pro-002",
+      "name": "gemini-1.5-pro-002",
+      "provider": "google",
+      "aliases": []
+    },
+    {
+      "id": "gemini-2-0-flash-001",
+      "name": "gemini-2.0-flash-001",
+      "provider": "google",
+      "aliases": []
+    },
+    {
+      "id": "gemini-2-0-flash-exp",
+      "name": "gemini-2.0-flash-exp",
+      "provider": "google",
+      "aliases": []
+    },
+    {
+      "id": "glm-5-2",
+      "name": "GLM 5.2",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "glm-5-high",
+      "name": "GLM-5 (high)",
+      "provider": "Z.ai",
+      "aliases": []
+    },
+    {
+      "id": "gpt-5",
+      "name": "Gpt 5",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt 5"
+      ]
+    },
+    {
+      "id": "gpt-5-mini",
+      "name": "Gpt 5 Mini",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt 5 Mini"
+      ]
+    },
+    {
+      "id": "gpt-5-nano",
+      "name": "Gpt 5 Nano",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt 5 Nano"
+      ]
+    },
+    {
+      "id": "gpt-5-1-chat",
+      "name": "Gpt 5.1 Chat",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt 5.1 Chat"
+      ]
+    },
+    {
+      "id": "gpt-5-2",
+      "name": "Gpt 5.2",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt 5.2",
+        "GPT-5.2"
+      ]
+    },
+    {
+      "id": "gpt-5-3-chat",
+      "name": "Gpt 5.3 Chat",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt 5.3 Chat"
+      ]
+    },
+    {
+      "id": "gpt-5-4",
+      "name": "Gpt 5.4",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt 5.4",
+        "GPT-5.4"
+      ]
+    },
+    {
+      "id": "gpt-5-4-mini",
+      "name": "Gpt 5.4 Mini",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt 5.4 Mini"
+      ]
+    },
+    {
+      "id": "gpt-5-4-nano",
+      "name": "Gpt 5.4 Nano",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt 5.4 Nano"
+      ]
+    },
+    {
+      "id": "gpt-5-5",
+      "name": "Gpt 5.5",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt 5.5",
+        "GPT-5.5"
+      ]
+    },
+    {
+      "id": "gpt-5-6-sol",
+      "name": "GPT 5.6 Sol",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "Gpt Oss 120b",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt Oss 120b"
+      ]
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "Gpt Oss 20b",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt Oss 20b"
+      ]
+    },
+    {
+      "id": "gpt-oss-safeguard-120b",
+      "name": "Gpt Oss Safeguard 120b",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt Oss Safeguard 120b"
+      ]
+    },
+    {
+      "id": "gpt-oss-safeguard-20b",
+      "name": "Gpt Oss Safeguard 20b",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai Gpt Oss Safeguard 20b"
+      ]
+    },
+    {
+      "id": "gpt-3-5-turbo-0125",
+      "name": "gpt-3.5-turbo-0125",
+      "provider": "openai",
+      "aliases": []
+    },
+    {
+      "id": "gpt-4-0125-preview",
+      "name": "gpt-4-0125-preview",
+      "provider": "openai",
+      "aliases": []
+    },
+    {
+      "id": "gpt-4-turbo-2024-04-09",
+      "name": "gpt-4-turbo-2024-04-09",
+      "provider": "openai",
+      "aliases": []
+    },
+    {
+      "id": "gpt-4o-2024-05-13",
+      "name": "gpt-4o-2024-05-13",
+      "provider": "openai",
+      "aliases": []
+    },
+    {
+      "id": "gpt-4o-mini-2024-07-18",
+      "name": "gpt-4o-mini-2024-07-18",
+      "provider": "openai",
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-3",
+      "name": "GPT-5.3",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-4-xhigh",
+      "name": "GPT-5.4 (xhigh)",
+      "provider": "OpenAI",
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-5-xhigh",
+      "name": "GPT-5.5 (xhigh)",
+      "provider": "OpenAI",
+      "aliases": []
+    },
+    {
+      "id": "grok-4",
+      "name": "Grok 4",
+      "provider": "XAI",
+      "aliases": [
+        "Xai Grok 4"
+      ]
+    },
+    {
+      "id": "grok-4-fast-reasoning",
+      "name": "Grok 4 Fast Reasoning",
+      "provider": "XAI",
+      "aliases": [
+        "Xai Grok 4 Fast Reasoning"
+      ]
+    },
+    {
+      "id": "grok-4-1-fast-reasoning",
+      "name": "Grok 4.1 Fast Reasoning",
+      "provider": "XAI",
+      "aliases": [
+        "Xai Grok 4.1 Fast Reasoning"
+      ]
+    },
+    {
+      "id": "grok-4-20-non-reasoning",
+      "name": "Grok 4.20 Non Reasoning",
+      "provider": "XAI",
+      "aliases": [
+        "Xai Grok 4.20 Non Reasoning"
+      ]
+    },
+    {
+      "id": "grok-4-3",
+      "name": "Grok 4.3",
+      "provider": "XAI",
+      "aliases": [
+        "Xai Grok 4.3"
+      ]
+    },
+    {
+      "id": "grok-4-5",
+      "name": "Grok 4.5",
+      "provider": "XAI",
+      "aliases": [
+        "Xai Grok 4.5"
+      ]
+    },
+    {
+      "id": "kimi-k2-thinking",
+      "name": "Kimi K2 Thinking",
+      "provider": "Moonshot",
+      "aliases": [
+        "Moonshot Kimi K2 Thinking"
+      ]
+    },
+    {
+      "id": "kimi-k2-5",
+      "name": "Kimi K2.5",
+      "provider": "Moonshot",
+      "aliases": [
+        "Moonshot Kimi K2.5"
+      ]
+    },
+    {
+      "id": "kimi-k2-5-high",
+      "name": "Kimi K2.5 (high)",
+      "provider": "Moonshot AI",
+      "aliases": []
+    },
+    {
+      "id": "llama3-2-1b-instruct",
+      "name": "Llama3 2 1B Instruct",
+      "provider": "Meta",
+      "aliases": [
+        "Meta Llama3 2 1B Instruct"
+      ]
+    },
+    {
+      "id": "m2-5-high",
+      "name": "M2.5 (high)",
+      "provider": "MiniMax",
+      "aliases": [
+        "MiniMax M2.5 (high)"
+      ]
+    },
+    {
+      "id": "meta-llama-llama-3-70b-chat-hf",
+      "name": "meta-llama/Llama-3-70b-chat-hf",
+      "provider": "together-prompting",
+      "aliases": []
+    },
+    {
+      "id": "minimax-m2",
+      "name": "Minimax M2",
+      "provider": "MiniMax",
+      "aliases": [
+        "Minimax Minimax M2"
+      ]
+    },
+    {
+      "id": "minimax-m2-1",
+      "name": "Minimax M2.1",
+      "provider": "MiniMax",
+      "aliases": [
+        "Minimax Minimax M2.1"
+      ]
+    },
+    {
+      "id": "minimax-m2-5",
+      "name": "Minimax M2.5",
+      "provider": "MiniMax",
+      "aliases": [
+        "Minimax Minimax M2.5"
+      ]
+    },
+    {
+      "id": "nova-2-lite",
+      "name": "Nova 2 Lite",
+      "provider": "Amazon",
+      "aliases": [
+        "Amazon Nova 2 Lite"
+      ]
+    },
+    {
+      "id": "nova-lite",
+      "name": "Nova Lite",
+      "provider": "Amazon",
+      "aliases": [
+        "Amazon Nova Lite"
+      ]
+    },
+    {
+      "id": "nova-micro",
+      "name": "Nova Micro",
+      "provider": "Amazon",
+      "aliases": [
+        "Amazon Nova Micro"
+      ]
+    },
+    {
+      "id": "nova-premier",
+      "name": "Nova Premier",
+      "provider": "Amazon",
+      "aliases": [
+        "Amazon Nova Premier"
+      ]
+    },
+    {
+      "id": "nova-pro",
+      "name": "Nova Pro",
+      "provider": "Amazon",
+      "aliases": [
+        "Amazon Nova Pro"
+      ]
+    },
+    {
+      "id": "o4-mini",
+      "name": "O4 Mini",
+      "provider": "OpenAI",
+      "aliases": [
+        "Openai O4 Mini"
+      ]
+    },
+    {
+      "id": "opus-4-6-max",
+      "name": "Opus 4.6 (max)",
+      "provider": "Anthropic",
+      "aliases": []
+    }
+  ],
+  "harnesses": [
+    {
+      "id": "evaluation-agent-security-league",
+      "name": "Agent Security League",
+      "kind": "evaluation",
+      "aliases": []
+    },
+    {
+      "id": "evaluation-agentdojo-results",
+      "name": "AgentDojo Results",
+      "kind": "evaluation",
+      "aliases": []
+    },
+    {
+      "id": "evaluation-cisco-llm-security-leaderboard",
+      "name": "Cisco LLM Security Leaderboard",
+      "kind": "evaluation",
+      "aliases": []
+    },
+    {
+      "id": "agent-claude-code",
+      "name": "Claude Code",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "agent-codex",
+      "name": "Codex",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "agent-cursor",
+      "name": "Cursor",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "evaluation-cyber-model-arena",
+      "name": "Cyber Model Arena",
+      "kind": "evaluation",
+      "aliases": []
+    },
+    {
+      "id": "evaluation-cybergym-e2e",
+      "name": "CyberGym-E2E",
+      "kind": "evaluation",
+      "aliases": []
+    },
+    {
+      "id": "agent-gemini-cli",
+      "name": "Gemini CLI",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "agent-opencode",
+      "name": "OpenCode",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "agent-openhands",
+      "name": "OpenHands",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "defense-repeat-user-prompt",
+      "name": "repeat_user_prompt",
+      "kind": "defense",
+      "aliases": []
+    },
+    {
+      "id": "evaluation-sec-bench-sec-bench-pro",
+      "name": "SEC-bench / SEC-bench Pro",
+      "kind": "evaluation",
+      "aliases": []
+    },
+    {
+      "id": "defense-spotlighting-with-delimiting",
+      "name": "spotlighting_with_delimiting",
+      "kind": "defense",
+      "aliases": []
+    },
+    {
+      "id": "agent-swe-agent",
+      "name": "SWE-Agent",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "defense-tool-filter",
+      "name": "tool_filter",
+      "kind": "defense",
+      "aliases": []
+    },
+    {
+      "id": "defense-transformers-pi-detector",
+      "name": "transformers_pi_detector",
+      "kind": "defense",
+      "aliases": []
+    }
+  ]
+}
