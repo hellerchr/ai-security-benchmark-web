@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T08:50:35.226Z",
+  "generatedAt": "2026-09-05T08:21:02.471Z",
   "sources": [
     {
       "id": "cisco-llm-security",
@@ -736,6 +736,12 @@
     {
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "claude-fable-5-1",
+      "name": "Claude Fable 5.1",
       "provider": null,
       "aliases": []
     },
