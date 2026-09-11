@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T08:56:41.573Z",
+  "generatedAt": "2026-09-11T08:54:53.957Z",
   "sources": [
     {
       "id": "cisco-llm-security",
@@ -802,8 +802,32 @@
       ]
     },
     {
+      "id": "claude-opus-4-8-adk-react",
+      "name": "Claude Opus 4.8?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "claude-opus-4-8-claude-code",
+      "name": "Claude Opus 4.8?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "claude-opus-5",
       "name": "Claude Opus 5",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "claude-opus-5-adk-react",
+      "name": "Claude Opus 5?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "claude-opus-5-claude-code",
+      "name": "Claude Opus 5?Claude Code",
       "provider": null,
       "aliases": []
     },
@@ -824,6 +848,18 @@
       ]
     },
     {
+      "id": "claude-sonnet-4-5-adk-react",
+      "name": "Claude Sonnet 4.5?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "claude-sonnet-4-5-claude-code",
+      "name": "Claude Sonnet 4.5?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "provider": "Anthropic",
@@ -838,6 +874,18 @@
       "aliases": [
         "Anthropic Claude Sonnet 5"
       ]
+    },
+    {
+      "id": "claude-sonnet-5-adk-react",
+      "name": "Claude Sonnet 5?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "claude-sonnet-5-claude-code",
+      "name": "Claude Sonnet 5?Claude Code",
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-3-5-sonnet-20240620",
@@ -894,14 +942,20 @@
       "aliases": []
     },
     {
-      "id": "gemini-2-5-pro",
-      "name": "Gemini 2.5 Pro",
+      "id": "deepseek-v4-pro-adk-react",
+      "name": "DeepSeek V4 Pro?ADK React",
       "provider": null,
       "aliases": []
     },
     {
-      "id": "gemini-3-flash",
-      "name": "Gemini 3 Flash",
+      "id": "deepseek-v4-pro-claude-code",
+      "name": "DeepSeek V4 Pro?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-2-5-pro",
+      "name": "Gemini 2.5 Pro",
       "provider": null,
       "aliases": []
     },
@@ -922,6 +976,54 @@
     {
       "id": "gemini-3-5-flash",
       "name": "Gemini 3.5 Flash",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-3-5-flash-adk-react",
+      "name": "Gemini 3.5 Flash?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-3-5-flash-claude-code",
+      "name": "Gemini 3.5 Flash?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-3-6-flash-adk-react",
+      "name": "Gemini 3.6 Flash?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-3-6-flash-claude-code",
+      "name": "Gemini 3.6 Flash?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-3-7-flash-adk-react",
+      "name": "Gemini 3.7 Flash?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-3-7-flash-claude-code",
+      "name": "Gemini 3.7 Flash?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-3-8-flash-cyber-adk-react",
+      "name": "Gemini 3.8 Flash Cyber?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-3-8-flash-cyber-claude-code",
+      "name": "Gemini 3.8 Flash Cyber?Claude Code",
       "provider": null,
       "aliases": []
     },
@@ -971,6 +1073,18 @@
       "id": "glm-5-high",
       "name": "GLM-5 (high)",
       "provider": "Z.ai",
+      "aliases": []
+    },
+    {
+      "id": "glm-5-3-adk-react",
+      "name": "GLM-5.3?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "glm-5-3-claude-code",
+      "name": "GLM-5.3?Claude Code",
+      "provider": null,
       "aliases": []
     },
     {
@@ -1143,6 +1257,30 @@
       "aliases": []
     },
     {
+      "id": "gpt-5-6-sol-adk-react",
+      "name": "GPT-5.6 Sol?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-6-sol-claude-code",
+      "name": "GPT-5.6 Sol?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-6-terra-adk-react",
+      "name": "GPT-5.6 Terra?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-6-terra-claude-code",
+      "name": "GPT-5.6 Terra?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "gpt-6-astra",
       "name": "GPT-6 Astra",
       "provider": null,
@@ -1197,6 +1335,18 @@
       ]
     },
     {
+      "id": "grok-4-6-adk-react",
+      "name": "Grok 4.6?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "grok-4-6-claude-code",
+      "name": "Grok 4.6?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "kimi-k2-thinking",
       "name": "Kimi K2 Thinking",
       "provider": "Moonshot",
@@ -1216,6 +1366,18 @@
       "id": "kimi-k2-5-high",
       "name": "Kimi K2.5 (high)",
       "provider": "Moonshot AI",
+      "aliases": []
+    },
+    {
+      "id": "kimi-k3-adk-react",
+      "name": "Kimi K3?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "kimi-k3-claude-code",
+      "name": "Kimi K3?Claude Code",
+      "provider": null,
       "aliases": []
     },
     {
@@ -1320,6 +1482,12 @@
     }
   ],
   "harnesses": [
+    {
+      "id": "agent-",
+      "name": "?",
+      "kind": "agent",
+      "aliases": []
+    },
     {
       "id": "evaluation-agent-security-league",
       "name": "Agent Security League",
