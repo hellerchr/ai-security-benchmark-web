@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T09:18:27.443Z",
+  "generatedAt": "2026-09-24T09:18:19.192Z",
   "sources": [
     {
       "id": "cisco-llm-security",
@@ -688,50 +688,32 @@
     {
       "id": "claude-3-haiku",
       "name": "Claude 3 Haiku",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude 3 Haiku"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-3-opus",
       "name": "Claude 3 Opus",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude 3 Opus"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-3-sonnet",
       "name": "Claude 3 Sonnet",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude 3 Sonnet"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-3-5-haiku",
       "name": "Claude 3.5 Haiku",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude 3.5 Haiku"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-3-5-sonnet",
       "name": "Claude 3.5 Sonnet",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude 3.5 Sonnet"
-      ]
-    },
-    {
-      "id": "claude-3-7-sonnet",
-      "name": "Claude 3.7 Sonnet",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude 3.7 Sonnet"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-fable-5",
@@ -748,58 +730,38 @@
     {
       "id": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude Haiku 4.5"
-      ]
-    },
-    {
-      "id": "claude-opus-4",
-      "name": "Claude Opus 4",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude Opus 4"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-opus-4-1",
       "name": "Claude Opus 4.1",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude Opus 4.1"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-opus-4-5",
       "name": "Claude Opus 4.5",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude Opus 4.5"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-opus-4-6",
       "name": "Claude Opus 4.6",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude Opus 4.6"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-opus-4-7",
       "name": "Claude Opus 4.7",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude Opus 4.7"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-opus-4-8",
       "name": "Claude Opus 4.8",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude Opus 4.8"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-opus-4-8-adk-react",
@@ -834,18 +796,14 @@
     {
       "id": "claude-sonnet-4",
       "name": "Claude Sonnet 4",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude Sonnet 4"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-sonnet-4-5",
       "name": "Claude Sonnet 4.5",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude Sonnet 4.5"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-sonnet-4-5-adk-react",
@@ -862,18 +820,14 @@
     {
       "id": "claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude Sonnet 4.6"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
-      "provider": "Anthropic",
-      "aliases": [
-        "Anthropic Claude Sonnet 5"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "claude-sonnet-5-adk-react",
@@ -962,10 +916,8 @@
     {
       "id": "gemini-3-pro",
       "name": "Gemini 3 Pro",
-      "provider": "Google",
-      "aliases": [
-        "Google Gemini 3 Pro"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "gemini-3-1-pro",
@@ -1076,6 +1028,18 @@
       "aliases": []
     },
     {
+      "id": "glm-5-3",
+      "name": "GLM-5.3",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3-Flash",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "glm-5-3-adk-react",
       "name": "GLM-5.3?ADK React",
       "provider": null,
@@ -1086,127 +1050,6 @@
       "name": "GLM-5.3?Claude Code",
       "provider": null,
       "aliases": []
-    },
-    {
-      "id": "gpt-5",
-      "name": "Gpt 5",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt 5"
-      ]
-    },
-    {
-      "id": "gpt-5-mini",
-      "name": "Gpt 5 Mini",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt 5 Mini"
-      ]
-    },
-    {
-      "id": "gpt-5-nano",
-      "name": "Gpt 5 Nano",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt 5 Nano"
-      ]
-    },
-    {
-      "id": "gpt-5-1-chat",
-      "name": "Gpt 5.1 Chat",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt 5.1 Chat"
-      ]
-    },
-    {
-      "id": "gpt-5-2",
-      "name": "Gpt 5.2",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt 5.2",
-        "GPT-5.2"
-      ]
-    },
-    {
-      "id": "gpt-5-3-chat",
-      "name": "Gpt 5.3 Chat",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt 5.3 Chat"
-      ]
-    },
-    {
-      "id": "gpt-5-4",
-      "name": "Gpt 5.4",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt 5.4",
-        "GPT-5.4"
-      ]
-    },
-    {
-      "id": "gpt-5-4-mini",
-      "name": "Gpt 5.4 Mini",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt 5.4 Mini"
-      ]
-    },
-    {
-      "id": "gpt-5-4-nano",
-      "name": "Gpt 5.4 Nano",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt 5.4 Nano"
-      ]
-    },
-    {
-      "id": "gpt-5-5",
-      "name": "Gpt 5.5",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt 5.5",
-        "GPT-5.5"
-      ]
-    },
-    {
-      "id": "gpt-5-6-sol",
-      "name": "GPT 5.6 Sol",
-      "provider": null,
-      "aliases": []
-    },
-    {
-      "id": "gpt-oss-120b",
-      "name": "Gpt Oss 120b",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt Oss 120b"
-      ]
-    },
-    {
-      "id": "gpt-oss-20b",
-      "name": "Gpt Oss 20b",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt Oss 20b"
-      ]
-    },
-    {
-      "id": "gpt-oss-safeguard-120b",
-      "name": "Gpt Oss Safeguard 120b",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt Oss Safeguard 120b"
-      ]
-    },
-    {
-      "id": "gpt-oss-safeguard-20b",
-      "name": "Gpt Oss Safeguard 20b",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai Gpt Oss Safeguard 20b"
-      ]
     },
     {
       "id": "gpt-3-5-turbo-0125",
@@ -1239,8 +1082,50 @@
       "aliases": []
     },
     {
+      "id": "gpt-5",
+      "name": "GPT-5",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-mini",
+      "name": "GPT-5 mini",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-nano",
+      "name": "GPT-5 nano",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-1-chat",
+      "name": "GPT-5.1 Chat",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-2",
+      "name": "GPT-5.2",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "gpt-5-3",
       "name": "GPT-5.3",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-3-chat",
+      "name": "GPT-5.3 Chat",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-4",
+      "name": "GPT-5.4",
       "provider": null,
       "aliases": []
     },
@@ -1251,10 +1136,42 @@
       "aliases": []
     },
     {
+      "id": "gpt-5-4-mini",
+      "name": "GPT-5.4 mini",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-4-nano",
+      "name": "GPT-5.4 nano",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-5",
+      "name": "GPT-5.5",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "gpt-5-5-xhigh",
       "name": "GPT-5.5 (xhigh)",
       "provider": "OpenAI",
       "aliases": []
+    },
+    {
+      "id": "gpt-5-6-luna",
+      "name": "GPT-5.6 Luna",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-6-sol",
+      "name": "GPT-5.6 Sol",
+      "provider": null,
+      "aliases": [
+        "GPT 5.6 Sol"
+      ]
     },
     {
       "id": "gpt-5-6-sol-adk-react",
@@ -1265,6 +1182,12 @@
     {
       "id": "gpt-5-6-sol-claude-code",
       "name": "GPT-5.6 Sol?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-5-6-terra",
+      "name": "GPT-5.6 Terra",
       "provider": null,
       "aliases": []
     },
@@ -1287,52 +1210,52 @@
       "aliases": []
     },
     {
-      "id": "grok-4",
-      "name": "Grok 4",
-      "provider": "XAI",
-      "aliases": [
-        "Xai Grok 4"
-      ]
+      "id": "gpt-oss-120b",
+      "name": "gpt-oss-120b",
+      "provider": null,
+      "aliases": []
     },
     {
-      "id": "grok-4-fast-reasoning",
-      "name": "Grok 4 Fast Reasoning",
-      "provider": "XAI",
-      "aliases": [
-        "Xai Grok 4 Fast Reasoning"
-      ]
+      "id": "gpt-oss-20b",
+      "name": "gpt-oss-20b",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-oss-safeguard-120b",
+      "name": "gpt-oss-safeguard-120b",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-oss-safeguard-20b",
+      "name": "gpt-oss-safeguard-20b",
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "grok-4-1-fast-reasoning",
-      "name": "Grok 4.1 Fast Reasoning",
-      "provider": "XAI",
-      "aliases": [
-        "Xai Grok 4.1 Fast Reasoning"
-      ]
-    },
-    {
-      "id": "grok-4-20-non-reasoning",
-      "name": "Grok 4.20 Non Reasoning",
-      "provider": "XAI",
-      "aliases": [
-        "Xai Grok 4.20 Non Reasoning"
-      ]
+      "name": "Grok 4.1 Fast (Reasoning)",
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "grok-4-3",
       "name": "Grok 4.3",
-      "provider": "XAI",
-      "aliases": [
-        "Xai Grok 4.3"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "grok-4-5",
       "name": "Grok 4.5",
-      "provider": "XAI",
-      "aliases": [
-        "Xai Grok 4.5"
-      ]
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "grok-4-6",
+      "name": "Grok 4.6",
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "grok-4-6-adk-react",
@@ -1347,20 +1270,10 @@
       "aliases": []
     },
     {
-      "id": "kimi-k2-thinking",
-      "name": "Kimi K2 Thinking",
-      "provider": "Moonshot",
-      "aliases": [
-        "Moonshot Kimi K2 Thinking"
-      ]
-    },
-    {
-      "id": "kimi-k2-5",
-      "name": "Kimi K2.5",
-      "provider": "Moonshot",
-      "aliases": [
-        "Moonshot Kimi K2.5"
-      ]
+      "id": "inkling",
+      "name": "Inkling",
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "kimi-k2-5-high",
@@ -1381,11 +1294,27 @@
       "aliases": []
     },
     {
-      "id": "llama3-2-1b-instruct",
-      "name": "Llama3 2 1B Instruct",
-      "provider": "Meta",
+      "id": "m2",
+      "name": "M2",
+      "provider": "MiniMax",
       "aliases": [
-        "Meta Llama3 2 1B Instruct"
+        "MiniMax M2"
+      ]
+    },
+    {
+      "id": "m2-1",
+      "name": "M2.1",
+      "provider": "MiniMax",
+      "aliases": [
+        "MiniMax M2.1"
+      ]
+    },
+    {
+      "id": "m2-5",
+      "name": "M2.5",
+      "provider": "MiniMax",
+      "aliases": [
+        "MiniMax M2.5"
       ]
     },
     {
@@ -1397,87 +1326,59 @@
       ]
     },
     {
+      "id": "m3",
+      "name": "M3",
+      "provider": "MiniMax",
+      "aliases": [
+        "MiniMax M3"
+      ]
+    },
+    {
       "id": "meta-llama-llama-3-70b-chat-hf",
       "name": "meta-llama/Llama-3-70b-chat-hf",
       "provider": "together-prompting",
       "aliases": []
     },
     {
-      "id": "minimax-m2",
-      "name": "Minimax M2",
-      "provider": "MiniMax",
-      "aliases": [
-        "Minimax Minimax M2"
-      ]
-    },
-    {
-      "id": "minimax-m2-1",
-      "name": "Minimax M2.1",
-      "provider": "MiniMax",
-      "aliases": [
-        "Minimax Minimax M2.1"
-      ]
-    },
-    {
-      "id": "minimax-m2-5",
-      "name": "Minimax M2.5",
-      "provider": "MiniMax",
-      "aliases": [
-        "Minimax Minimax M2.5"
-      ]
+      "id": "nemotron-3-ultra-550b-a55b",
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "nova-2-lite",
       "name": "Nova 2 Lite",
-      "provider": "Amazon",
-      "aliases": [
-        "Amazon Nova 2 Lite"
-      ]
-    },
-    {
-      "id": "nova-lite",
-      "name": "Nova Lite",
-      "provider": "Amazon",
-      "aliases": [
-        "Amazon Nova Lite"
-      ]
-    },
-    {
-      "id": "nova-micro",
-      "name": "Nova Micro",
-      "provider": "Amazon",
-      "aliases": [
-        "Amazon Nova Micro"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "nova-premier",
       "name": "Nova Premier",
-      "provider": "Amazon",
-      "aliases": [
-        "Amazon Nova Premier"
-      ]
-    },
-    {
-      "id": "nova-pro",
-      "name": "Nova Pro",
-      "provider": "Amazon",
-      "aliases": [
-        "Amazon Nova Pro"
-      ]
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "o4-mini",
-      "name": "O4 Mini",
-      "provider": "OpenAI",
-      "aliases": [
-        "Openai O4 Mini"
-      ]
+      "name": "o4-mini",
+      "provider": null,
+      "aliases": []
     },
     {
       "id": "opus-4-6-max",
       "name": "Opus 4.6 (max)",
       "provider": "Anthropic",
+      "aliases": []
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "qwen3-8-flash-next",
+      "name": "Qwen3.8 Flash Next",
+      "provider": null,
       "aliases": []
     }
   ],
