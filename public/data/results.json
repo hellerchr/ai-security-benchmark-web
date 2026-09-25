@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T09:18:19.192Z",
+  "generatedAt": "2026-09-25T09:36:20.710Z",
   "results": [
     {
       "id": "cisco-llm-security-claude-opus-4-5-1",
@@ -3595,7 +3595,7 @@
         {
           "name": "Average time",
           "value": 5,
-          "displayValue": "5 min",
+          "displayValue": "5 min$1.6258 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -3657,7 +3657,7 @@
         {
           "name": "Average time",
           "value": 12.2,
-          "displayValue": "12.2 min",
+          "displayValue": "12.2 min$2.6319 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -3719,7 +3719,7 @@
         {
           "name": "Average time",
           "value": 5.7,
-          "displayValue": "5.7 min",
+          "displayValue": "5.7 min$1.5258 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -3781,7 +3781,7 @@
         {
           "name": "Average time",
           "value": 15.3,
-          "displayValue": "15.3 min",
+          "displayValue": "15.3 min$7.4612 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -3843,7 +3843,7 @@
         {
           "name": "Average time",
           "value": 11.9,
-          "displayValue": "11.9 min",
+          "displayValue": "11.9 min$2.7715 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -3905,7 +3905,7 @@
         {
           "name": "Average time",
           "value": 22.4,
-          "displayValue": "22.4 min",
+          "displayValue": "22.4 min$3.4847 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -3967,7 +3967,7 @@
         {
           "name": "Average time",
           "value": 27.2,
-          "displayValue": "27.2 min",
+          "displayValue": "27.2 min$8.2957 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4029,7 +4029,7 @@
         {
           "name": "Average time",
           "value": 30.6,
-          "displayValue": "30.6 min",
+          "displayValue": "30.6 min$2.3139 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4091,7 +4091,7 @@
         {
           "name": "Average time",
           "value": 15.7,
-          "displayValue": "15.7 min",
+          "displayValue": "15.7 min$4.1612 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4153,7 +4153,7 @@
         {
           "name": "Average time",
           "value": 22.5,
-          "displayValue": "22.5 min",
+          "displayValue": "22.5 min$8.9947 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4215,7 +4215,7 @@
         {
           "name": "Average time",
           "value": 38.7,
-          "displayValue": "38.7 min",
+          "displayValue": "38.7 min$0.9537 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4277,7 +4277,7 @@
         {
           "name": "Average time",
           "value": 14.1,
-          "displayValue": "14.1 min",
+          "displayValue": "14.1 min$1.5816 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4339,7 +4339,7 @@
         {
           "name": "Average time",
           "value": 27.4,
-          "displayValue": "27.4 min",
+          "displayValue": "27.4 min$6.4738 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4401,7 +4401,7 @@
         {
           "name": "Average time",
           "value": 16,
-          "displayValue": "16 min",
+          "displayValue": "16 min$9.3240 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4463,7 +4463,7 @@
         {
           "name": "Average time",
           "value": 26.3,
-          "displayValue": "26.3 min",
+          "displayValue": "26.3 min$2.3719 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4525,7 +4525,7 @@
         {
           "name": "Average time",
           "value": 28,
-          "displayValue": "28 min",
+          "displayValue": "28 min$3.1333 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4587,7 +4587,7 @@
         {
           "name": "Average time",
           "value": 12.1,
-          "displayValue": "12.1 min",
+          "displayValue": "12.1 min$0.6720 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4649,7 +4649,7 @@
         {
           "name": "Average time",
           "value": 41.6,
-          "displayValue": "41.6 min",
+          "displayValue": "41.6 min$2.3546 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4711,7 +4711,7 @@
         {
           "name": "Average time",
           "value": 31.9,
-          "displayValue": "31.9 min",
+          "displayValue": "31.9 min$1.6149 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4773,7 +4773,7 @@
         {
           "name": "Average time",
           "value": 19.2,
-          "displayValue": "19.2 min",
+          "displayValue": "19.2 min$1.5317 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4835,7 +4835,7 @@
         {
           "name": "Average time",
           "value": 21.7,
-          "displayValue": "21.7 min",
+          "displayValue": "21.7 min$1.0920 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4897,7 +4897,7 @@
         {
           "name": "Average time",
           "value": 28.6,
-          "displayValue": "28.6 min",
+          "displayValue": "28.6 min$1.8921 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -4959,7 +4959,7 @@
         {
           "name": "Average time",
           "value": 17.7,
-          "displayValue": "17.7 min",
+          "displayValue": "17.7 min$2.3932 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -5021,7 +5021,7 @@
         {
           "name": "Average time",
           "value": 40.1,
-          "displayValue": "40.1 min",
+          "displayValue": "40.1 min$1.4028 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -5083,7 +5083,7 @@
         {
           "name": "Average time",
           "value": 43,
-          "displayValue": "43 min",
+          "displayValue": "43 min$2.3916 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -5145,7 +5145,7 @@
         {
           "name": "Average time",
           "value": 46,
-          "displayValue": "46 min",
+          "displayValue": "46 min$1.7559 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -5207,7 +5207,7 @@
         {
           "name": "Average time",
           "value": 51.2,
-          "displayValue": "51.2 min",
+          "displayValue": "51.2 min$2.8515 steps",
           "unit": "seconds",
           "direction": "lower"
         }
@@ -5269,7 +5269,7 @@
         {
           "name": "Average time",
           "value": 42.5,
-          "displayValue": "42.5 min",
+          "displayValue": "42.5 min$1.6926 steps",
           "unit": "seconds",
           "direction": "lower"
         }
