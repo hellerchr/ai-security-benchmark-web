@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T09:36:20.710Z",
+  "generatedAt": "2026-09-26T09:20:51.230Z",
   "results": [
     {
       "id": "cisco-llm-security-claude-opus-4-5-1",
@@ -6679,7 +6679,41 @@
       "publishedAt": "2026-09-09"
     },
     {
-      "id": "agent-security-league-claude-opus-5-3",
+      "id": "agent-security-league-claude-opus-5-5-3",
+      "sourceId": "agent-security-league",
+      "benchmarkId": "agent-security-league",
+      "modelId": "claude-opus-5-5",
+      "modelLabel": "Claude Opus 5.5",
+      "harnessIds": [
+        "agent-claude-code",
+        "evaluation-agent-security-league"
+      ],
+      "metrics": [
+        {
+          "name": "Functional",
+          "value": 68.7,
+          "displayValue": "68.7",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Secure",
+          "value": 33.5,
+          "displayValue": "33.5",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://www.endorlabs.com/research/ai-code-security-benchmark",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": "2026-09-24"
+    },
+    {
+      "id": "agent-security-league-claude-opus-5-4",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-opus-5",
@@ -6713,7 +6747,7 @@
       "publishedAt": "2026-07-31"
     },
     {
-      "id": "agent-security-league-claude-fable-5-4",
+      "id": "agent-security-league-claude-fable-5-5",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-fable-5",
@@ -6747,7 +6781,7 @@
       "publishedAt": "2026-06-12"
     },
     {
-      "id": "agent-security-league-gpt-5-5-5",
+      "id": "agent-security-league-gpt-5-5-6",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "gpt-5-5",
@@ -6781,7 +6815,7 @@
       "publishedAt": "2026-04-25"
     },
     {
-      "id": "agent-security-league-gpt-5-6-sol-6",
+      "id": "agent-security-league-gpt-5-6-sol-7",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "gpt-5-6-sol",
@@ -6815,7 +6849,7 @@
       "publishedAt": "2026-07-17"
     },
     {
-      "id": "agent-security-league-gpt-5-5-7",
+      "id": "agent-security-league-gpt-5-5-8",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "gpt-5-5",
@@ -6849,7 +6883,7 @@
       "publishedAt": "2026-04-25"
     },
     {
-      "id": "agent-security-league-gpt-5-4-8",
+      "id": "agent-security-league-gpt-5-4-9",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "gpt-5-4",
@@ -6883,7 +6917,7 @@
       "publishedAt": "2026-03-18"
     },
     {
-      "id": "agent-security-league-claude-opus-4-8-9",
+      "id": "agent-security-league-claude-opus-4-8-10",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-opus-4-8",
@@ -6917,7 +6951,7 @@
       "publishedAt": "2026-05-30"
     },
     {
-      "id": "agent-security-league-claude-sonnet-5-10",
+      "id": "agent-security-league-claude-sonnet-5-11",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-sonnet-5",
@@ -6951,7 +6985,7 @@
       "publishedAt": "2026-07-02"
     },
     {
-      "id": "agent-security-league-claude-fable-5-11",
+      "id": "agent-security-league-claude-fable-5-12",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-fable-5",
@@ -6985,7 +7019,7 @@
       "publishedAt": "2026-06-10"
     },
     {
-      "id": "agent-security-league-claude-opus-4-7-12",
+      "id": "agent-security-league-claude-opus-4-7-13",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-opus-4-7",
@@ -7019,7 +7053,7 @@
       "publishedAt": "2026-04-17"
     },
     {
-      "id": "agent-security-league-gemini-3-5-flash-13",
+      "id": "agent-security-league-gemini-3-5-flash-14",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "gemini-3-5-flash",
@@ -7053,7 +7087,7 @@
       "publishedAt": "2026-05-20"
     },
     {
-      "id": "agent-security-league-claude-opus-4-7-14",
+      "id": "agent-security-league-claude-opus-4-7-15",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-opus-4-7",
@@ -7087,7 +7121,7 @@
       "publishedAt": "2026-04-16"
     },
     {
-      "id": "agent-security-league-gemini-3-1-pro-15",
+      "id": "agent-security-league-gemini-3-1-pro-16",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "gemini-3-1-pro",
@@ -7121,7 +7155,7 @@
       "publishedAt": "2026-03-24"
     },
     {
-      "id": "agent-security-league-claude-opus-4-8-16",
+      "id": "agent-security-league-claude-opus-4-8-17",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-opus-4-8",
@@ -7155,7 +7189,7 @@
       "publishedAt": "2026-05-29"
     },
     {
-      "id": "agent-security-league-gpt-5-3-17",
+      "id": "agent-security-league-gpt-5-3-18",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "gpt-5-3",
@@ -7189,7 +7223,7 @@
       "publishedAt": "2026-02-27"
     },
     {
-      "id": "agent-security-league-composer-2-5-18",
+      "id": "agent-security-league-composer-2-5-19",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "composer-2-5",
@@ -7223,7 +7257,7 @@
       "publishedAt": "2026-05-19"
     },
     {
-      "id": "agent-security-league-claude-sonnet-4-6-19",
+      "id": "agent-security-league-claude-sonnet-4-6-20",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-sonnet-4-6",
@@ -7257,7 +7291,7 @@
       "publishedAt": "2026-02-20"
     },
     {
-      "id": "agent-security-league-glm-5-2-20",
+      "id": "agent-security-league-glm-5-2-21",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "glm-5-2",
@@ -7291,7 +7325,7 @@
       "publishedAt": "2026-07-09"
     },
     {
-      "id": "agent-security-league-claude-opus-4-6-21",
+      "id": "agent-security-league-claude-opus-4-6-22",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-opus-4-6",
@@ -7325,7 +7359,7 @@
       "publishedAt": "2026-03-19"
     },
     {
-      "id": "agent-security-league-claude-opus-4-6-22",
+      "id": "agent-security-league-claude-opus-4-6-23",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-opus-4-6",
@@ -7359,7 +7393,7 @@
       "publishedAt": "2026-03-16"
     },
     {
-      "id": "agent-security-league-gemini-3-pro-23",
+      "id": "agent-security-league-gemini-3-pro-24",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "gemini-3-pro",
@@ -7393,7 +7427,7 @@
       "publishedAt": "2026-02-23"
     },
     {
-      "id": "agent-security-league-claude-opus-4-5-24",
+      "id": "agent-security-league-claude-opus-4-5-25",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-opus-4-5",
@@ -7427,7 +7461,7 @@
       "publishedAt": "2026-02-25"
     },
     {
-      "id": "agent-security-league-gemini-3-pro-25",
+      "id": "agent-security-league-gemini-3-pro-26",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "gemini-3-pro",
@@ -7461,7 +7495,7 @@
       "publishedAt": "2026-02-24"
     },
     {
-      "id": "agent-security-league-claude-sonnet-4-26",
+      "id": "agent-security-league-claude-sonnet-4-27",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-sonnet-4",
@@ -7495,7 +7529,7 @@
       "publishedAt": "2026-02-11"
     },
     {
-      "id": "agent-security-league-gemini-2-5-pro-27",
+      "id": "agent-security-league-gemini-2-5-pro-28",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "gemini-2-5-pro",
@@ -7529,7 +7563,7 @@
       "publishedAt": "2026-02-11"
     },
     {
-      "id": "agent-security-league-claude-sonnet-4-28",
+      "id": "agent-security-league-claude-sonnet-4-29",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "claude-sonnet-4",
@@ -7563,7 +7597,7 @@
       "publishedAt": "2026-02-19"
     },
     {
-      "id": "agent-security-league-gemini-2-5-pro-29",
+      "id": "agent-security-league-gemini-2-5-pro-30",
       "sourceId": "agent-security-league",
       "benchmarkId": "agent-security-league",
       "modelId": "gemini-2-5-pro",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T09:36:20.710Z",
+  "generatedAt": "2026-09-26T09:20:51.230Z",
   "sources": [
     {
       "id": "cisco-llm-security",
@@ -790,6 +790,12 @@
     {
       "id": "claude-opus-5-claude-code",
       "name": "Claude Opus 5?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "claude-opus-5-5",
+      "name": "Claude Opus 5.5",
       "provider": null,
       "aliases": []
     },
