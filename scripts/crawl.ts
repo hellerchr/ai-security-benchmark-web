@@ -3,41 +3,12 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { catalogSchema, coverageSchema, resultsDocumentSchema, type Catalog, type Coverage, type Harness, type Model, type Result, type ResultsDocument, type SourceCoverage } from "../src/schema.js";
 import { crawlSource, type RawResult } from "./adapters.js";
+import { fieldCompleteness, normalizeHarness, normalizeModel } from "./identity.js";
 import { sources } from "./registry.js";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dataDirectory = join(root, "public", "data");
 const generatedAt = new Date().toISOString();
-
-export const slug = (value: string): string => value
-  .normalize("NFKD")
-  .toLowerCase()
-  .replace(/[^a-z0-9]+/g, "-")
-  .replace(/^-|-$/g, "");
-
-const providerPrefixes = ["Anthropic", "OpenAI", "Google", "XAI", "Meta", "Amazon", "Mistral", "Moonshot", "MiniMax"];
-const harnessAliases = new Map([
-  ["claudecode", "Claude Code"],
-  ["claude-code", "Claude Code"],
-  ["sweagent", "SWE-Agent"],
-  ["swe-agent", "SWE-Agent"],
-  ["gemini-cli", "Gemini CLI"],
-  ["open-hands", "OpenHands"],
-  ["openhands", "OpenHands"],
-]);
-
-const normalizeModel = (label: string, suppliedProvider: string | null): { id: string; name: string; provider: string | null; resolved: boolean } => {
-  const prefix = providerPrefixes.find((candidate) => label.toLowerCase().startsWith(`${candidate.toLowerCase()} `));
-  const name = prefix ? label.slice(prefix.length).trim() : label.trim();
-  const provider = suppliedProvider || prefix || null;
-  return { id: slug(name), name, provider, resolved: provider !== null };
-};
-
-const normalizeHarness = (label: string, kind: Harness["kind"]): Harness => {
-  const key = slug(label);
-  const name = harnessAliases.get(key) ?? label.trim();
-  return { id: `${kind}-${slug(name)}`, name, kind, aliases: name === label.trim() ? [] : [label.trim()] };
-};
 
 const readPrevious = async (): Promise<{ results: ResultsDocument | null; coverage: Coverage | null }> => {
   try {
@@ -49,12 +20,6 @@ const readPrevious = async (): Promise<{ results: ResultsDocument | null; covera
   } catch {
     return { results: null, coverage: null };
   }
-};
-
-const fieldCompleteness = (rows: Result[]): number => {
-  if (!rows.length) return 0;
-  const fields = rows.flatMap((row) => [row.modelLabel, row.harnessIds.length ? "yes" : null, row.metrics.length ? "yes" : null, row.taskSet, row.budget, row.backend, row.defense, row.attack, row.publishedAt]);
-  return fields.filter((value) => value !== null && value !== "").length / fields.length;
 };
 
 const convert = (sourceId: string, sourceUrl: string, rows: RawResult[], models: Map<string, Model>, harnesses: Map<string, Harness>): { results: Result[]; unresolvedModels: number } => {
