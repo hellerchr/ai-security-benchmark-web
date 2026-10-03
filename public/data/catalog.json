@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T10:30:00.470Z",
+  "generatedAt": "2026-10-03T09:51:48.432Z",
   "sources": [
     {
       "id": "cisco-llm-security",
@@ -1212,6 +1212,18 @@
     {
       "id": "gpt-6-astra",
       "name": "GPT-6 Astra",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-sol",
+      "name": "GPT-6 Sol",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-1-sol",
+      "name": "GPT-6.1 Sol",
       "provider": null,
       "aliases": []
     },
