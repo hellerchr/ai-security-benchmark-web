@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T11:27:33.234Z",
+  "generatedAt": "2026-10-06T11:15:53.904Z",
   "results": [
     {
       "id": "cisco-llm-security-claude-opus-4-5-1",
@@ -3052,7 +3052,117 @@
       "publishedAt": null
     },
     {
-      "id": "cybergym-e2e-claude-opus-4-5-1",
+      "id": "cybergym-e2e-claude-opus-5-1",
+      "sourceId": "cybergym-e2e",
+      "benchmarkId": "cybergym-e2e",
+      "modelId": "claude-opus-5",
+      "modelLabel": "Claude Opus 5",
+      "harnessIds": [
+        "agent-aws-continuum",
+        "evaluation-cybergym-e2e"
+      ],
+      "metrics": [
+        {
+          "name": "Patch only",
+          "value": 93.4,
+          "displayValue": "93.4%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "S1",
+          "value": 92.5,
+          "displayValue": "92.5%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "S2",
+          "value": 89.6,
+          "displayValue": "89.6%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "S3",
+          "value": 89,
+          "displayValue": "89%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "S4",
+          "value": 37.8,
+          "displayValue": "37.8%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://www.cybergym.io/e2e",
+      "taskSet": "920",
+      "budget": "No cost cap / 90 min",
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "cybergym-e2e-deepseek-v4-flash-0731-2",
+      "sourceId": "cybergym-e2e",
+      "benchmarkId": "cybergym-e2e",
+      "modelId": "deepseek-v4-flash-0731",
+      "modelLabel": "DeepSeek-V4-Flash-0731",
+      "harnessIds": [
+        "agent-aegis",
+        "evaluation-cybergym-e2e"
+      ],
+      "metrics": [
+        {
+          "name": "Patch only",
+          "value": 55.7,
+          "displayValue": "55.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "S1",
+          "value": 32.5,
+          "displayValue": "32.5%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "S2",
+          "value": 29.2,
+          "displayValue": "29.2%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "S3",
+          "value": 28.4,
+          "displayValue": "28.4%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "S4",
+          "value": 10.3,
+          "displayValue": "10.3%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://www.cybergym.io/e2e",
+      "taskSet": "920",
+      "budget": "self-hosted / 90 min",
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "cybergym-e2e-claude-opus-4-5-3",
       "sourceId": "cybergym-e2e",
       "benchmarkId": "cybergym-e2e",
       "modelId": "claude-opus-4-5",
@@ -3107,7 +3217,7 @@
       "publishedAt": null
     },
     {
-      "id": "cybergym-e2e-claude-sonnet-4-5-2",
+      "id": "cybergym-e2e-claude-sonnet-4-5-4",
       "sourceId": "cybergym-e2e",
       "benchmarkId": "cybergym-e2e",
       "modelId": "claude-sonnet-4-5",
@@ -3162,7 +3272,7 @@
       "publishedAt": null
     },
     {
-      "id": "cybergym-e2e-claude-sonnet-4-5-3",
+      "id": "cybergym-e2e-claude-sonnet-4-5-5",
       "sourceId": "cybergym-e2e",
       "benchmarkId": "cybergym-e2e",
       "modelId": "claude-sonnet-4-5",
@@ -3217,7 +3327,7 @@
       "publishedAt": null
     },
     {
-      "id": "cybergym-e2e-gpt-5-2-4",
+      "id": "cybergym-e2e-gpt-5-2-6",
       "sourceId": "cybergym-e2e",
       "benchmarkId": "cybergym-e2e",
       "modelId": "gpt-5-2",
@@ -3272,7 +3382,7 @@
       "publishedAt": null
     },
     {
-      "id": "cybergym-e2e-gemini-3-pro-5",
+      "id": "cybergym-e2e-gemini-3-pro-7",
       "sourceId": "cybergym-e2e",
       "benchmarkId": "cybergym-e2e",
       "modelId": "gemini-3-pro",
@@ -3327,7 +3437,7 @@
       "publishedAt": null
     },
     {
-      "id": "cybergym-e2e-claude-opus-4-6-6",
+      "id": "cybergym-e2e-claude-opus-4-6-8",
       "sourceId": "cybergym-e2e",
       "benchmarkId": "cybergym-e2e",
       "modelId": "claude-opus-4-6",
@@ -3382,7 +3492,7 @@
       "publishedAt": null
     },
     {
-      "id": "cybergym-e2e-gpt-5-4-7",
+      "id": "cybergym-e2e-gpt-5-4-9",
       "sourceId": "cybergym-e2e",
       "benchmarkId": "cybergym-e2e",
       "modelId": "gpt-5-4",
@@ -3437,7 +3547,7 @@
       "publishedAt": null
     },
     {
-      "id": "cybergym-e2e-gemini-3-1-pro-8",
+      "id": "cybergym-e2e-gemini-3-1-pro-10",
       "sourceId": "cybergym-e2e",
       "benchmarkId": "cybergym-e2e",
       "modelId": "gemini-3-1-pro",
@@ -3492,7 +3602,7 @@
       "publishedAt": null
     },
     {
-      "id": "cybergym-e2e-claude-opus-4-6-9",
+      "id": "cybergym-e2e-claude-opus-4-6-11",
       "sourceId": "cybergym-e2e",
       "benchmarkId": "cybergym-e2e",
       "modelId": "claude-opus-4-6",

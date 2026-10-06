@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T11:27:33.234Z",
+  "generatedAt": "2026-10-06T11:15:53.904Z",
   "sources": [
     {
       "id": "cisco-llm-security",
@@ -914,6 +914,12 @@
       "aliases": []
     },
     {
+      "id": "deepseek-v4-flash-0731",
+      "name": "DeepSeek-V4-Flash-0731",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "gemini-2-5-pro",
       "name": "Gemini 2.5 Pro",
       "provider": null,
@@ -1408,6 +1414,12 @@
       "aliases": []
     },
     {
+      "id": "agent-aegis",
+      "name": "Aegis",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
       "id": "evaluation-agent-security-league",
       "name": "Agent Security League",
       "kind": "evaluation",
@@ -1417,6 +1429,12 @@
       "id": "evaluation-agentdojo-results",
       "name": "AgentDojo Results",
       "kind": "evaluation",
+      "aliases": []
+    },
+    {
+      "id": "agent-aws-continuum",
+      "name": "AWS Continuum",
+      "kind": "agent",
       "aliases": []
     },
     {
