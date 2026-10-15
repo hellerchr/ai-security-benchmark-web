@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T09:30:11.085Z",
+  "generatedAt": "2026-10-15T09:08:08.407Z",
   "sources": [
     {
       "id": "cisco-llm-security",
@@ -914,6 +914,18 @@
       "aliases": []
     },
     {
+      "id": "deepseek-v4-1-flash-adk-react",
+      "name": "DeepSeek V4.1 Flash?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "deepseek-v4-1-flash-claude-code",
+      "name": "DeepSeek V4.1 Flash?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "deepseek-v4-flash-0731",
       "name": "DeepSeek-V4-Flash-0731",
       "provider": null,
@@ -950,6 +962,12 @@
       "aliases": []
     },
     {
+      "id": "gemini-3-5-flash-antigravity",
+      "name": "Gemini 3.5 Flash?Antigravity",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "gemini-3-5-flash-claude-code",
       "name": "Gemini 3.5 Flash?Claude Code",
       "provider": null,
@@ -958,6 +976,12 @@
     {
       "id": "gemini-3-6-flash-adk-react",
       "name": "Gemini 3.6 Flash?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-3-6-flash-antigravity",
+      "name": "Gemini 3.6 Flash?Antigravity",
       "provider": null,
       "aliases": []
     },
@@ -974,6 +998,12 @@
       "aliases": []
     },
     {
+      "id": "gemini-3-7-flash-antigravity",
+      "name": "Gemini 3.7 Flash?Antigravity",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "gemini-3-7-flash-claude-code",
       "name": "Gemini 3.7 Flash?Claude Code",
       "provider": null,
@@ -986,8 +1016,32 @@
       "aliases": []
     },
     {
+      "id": "gemini-3-8-flash-cyber-antigravity",
+      "name": "Gemini 3.8 Flash Cyber?Antigravity",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "gemini-3-8-flash-cyber-claude-code",
       "name": "Gemini 3.8 Flash Cyber?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-4-argon-adk-react",
+      "name": "Gemini 4 Argon?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-4-argon-antigravity",
+      "name": "Gemini 4 Argon?Antigravity",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-4-argon-claude-code",
+      "name": "Gemini 4 Argon?Claude Code",
       "provider": null,
       "aliases": []
     },
@@ -1030,6 +1084,18 @@
     {
       "id": "glm-5-2",
       "name": "GLM 5.2",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "glm-5-3-flash-adk-react",
+      "name": "GLM 5.3 Flash?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "glm-5-3-flash-claude-code",
+      "name": "GLM 5.3 Flash?Claude Code",
       "provider": null,
       "aliases": []
     },
@@ -1196,6 +1262,12 @@
       "aliases": []
     },
     {
+      "id": "gpt-5-6-sol-codex",
+      "name": "GPT-5.6 Sol?Codex",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "gpt-5-6-terra",
       "name": "GPT-5.6 Terra",
       "provider": null,
@@ -1214,14 +1286,44 @@
       "aliases": []
     },
     {
+      "id": "gpt-5-6-terra-codex",
+      "name": "GPT-5.6 Terra?Codex",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "gpt-6-astra",
       "name": "GPT-6 Astra",
       "provider": null,
       "aliases": []
     },
     {
+      "id": "gpt-6-luna-claude-code",
+      "name": "GPT-6 Luna?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-luna-codex",
+      "name": "GPT-6 Luna?Codex",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "gpt-6-sol",
       "name": "GPT-6 Sol",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-sol-claude-code",
+      "name": "GPT-6 Sol?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-sol-codex",
+      "name": "GPT-6 Sol?Codex",
       "provider": null,
       "aliases": []
     },
@@ -1359,6 +1461,18 @@
       "id": "meta-llama-llama-3-70b-chat-hf",
       "name": "meta-llama/Llama-3-70b-chat-hf",
       "provider": "together-prompting",
+      "aliases": []
+    },
+    {
+      "id": "mimo-v2-6-pro-adk-react",
+      "name": "MiMo V2.6 Pro?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "mimo-v2-6-pro-claude-code",
+      "name": "MiMo V2.6 Pro?Claude Code",
+      "provider": null,
       "aliases": []
     },
     {
