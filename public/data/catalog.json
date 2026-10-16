@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T09:08:08.407Z",
+  "generatedAt": "2026-10-16T09:01:18.858Z",
   "sources": [
     {
       "id": "cisco-llm-security",
@@ -1476,6 +1476,12 @@
       "aliases": []
     },
     {
+      "id": "multi-model-deepseek-v4-flash-zhian-27b",
+      "name": "Multi-model (DeepSeek-V4-Flash, Zhian-27B)",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "nemotron-3-ultra-550b-a55b",
       "name": "Nemotron 3 Ultra 550B A55B",
       "provider": null,
@@ -1637,6 +1643,12 @@
       "id": "defense-transformers-pi-detector",
       "name": "transformers_pi_detector",
       "kind": "defense",
+      "aliases": []
+    },
+    {
+      "id": "agent-zhian-changying",
+      "name": "Zhian·Changying (智安·长缨)",
+      "kind": "agent",
       "aliases": []
     }
   ]
