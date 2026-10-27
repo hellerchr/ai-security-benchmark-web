@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T10:06:13.657Z",
+  "generatedAt": "2026-10-27T09:48:13.722Z",
   "results": [
     {
       "id": "cisco-llm-security-claude-opus-4-5-1",
@@ -4084,7 +4084,193 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gpt-5-6-sol-codex-7",
+      "id": "wiz-cyber-model-arena-gpt-6-1-sol-claude-code-7",
+      "sourceId": "wiz-cyber-model-arena",
+      "benchmarkId": "wiz-cyber-model-arena",
+      "modelId": "gpt-6-1-sol-claude-code",
+      "modelLabel": "GPT-6.1 Sol?Claude Code",
+      "harnessIds": [
+        "agent-",
+        "evaluation-cyber-model-arena"
+      ],
+      "metrics": [
+        {
+          "name": "Code vulnerabilities",
+          "value": 70.7,
+          "displayValue": "70.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "API security",
+          "value": 56.6,
+          "displayValue": "56.6%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Web security",
+          "value": 80.2,
+          "displayValue": "80.2%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Cloud security",
+          "value": 79.3,
+          "displayValue": "79.3%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Overall",
+          "value": 66.7,
+          "displayValue": "66.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Average time",
+          "value": 8.1,
+          "displayValue": "8.1 min$1.2316 steps",
+          "unit": "seconds",
+          "direction": "lower"
+        }
+      ],
+      "sourceUrl": "https://www.wiz.io/cyber-model-arena",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "wiz-cyber-model-arena-gpt-6-1-sol-codex-8",
+      "sourceId": "wiz-cyber-model-arena",
+      "benchmarkId": "wiz-cyber-model-arena",
+      "modelId": "gpt-6-1-sol-codex",
+      "modelLabel": "GPT-6.1 Sol?Codex",
+      "harnessIds": [
+        "agent-",
+        "evaluation-cyber-model-arena"
+      ],
+      "metrics": [
+        {
+          "name": "Code vulnerabilities",
+          "value": 70.6,
+          "displayValue": "70.6%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "API security",
+          "value": 56.4,
+          "displayValue": "56.4%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Web security",
+          "value": 80.9,
+          "displayValue": "80.9%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Cloud security",
+          "value": 77,
+          "displayValue": "77%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Overall",
+          "value": 68.1,
+          "displayValue": "68.1%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Average time",
+          "value": 4.9,
+          "displayValue": "4.9 min$0.4418 steps",
+          "unit": "seconds",
+          "direction": "lower"
+        }
+      ],
+      "sourceUrl": "https://www.wiz.io/cyber-model-arena",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "wiz-cyber-model-arena-gpt-6-astra-claude-code-9",
+      "sourceId": "wiz-cyber-model-arena",
+      "benchmarkId": "wiz-cyber-model-arena",
+      "modelId": "gpt-6-astra-claude-code",
+      "modelLabel": "GPT-6 Astra?Claude Code",
+      "harnessIds": [
+        "agent-",
+        "evaluation-cyber-model-arena"
+      ],
+      "metrics": [
+        {
+          "name": "Code vulnerabilities",
+          "value": 70.2,
+          "displayValue": "70.2%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "API security",
+          "value": 56.6,
+          "displayValue": "56.6%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Web security",
+          "value": 81.5,
+          "displayValue": "81.5%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Cloud security",
+          "value": 70.1,
+          "displayValue": "70.1%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Overall",
+          "value": 72.5,
+          "displayValue": "72.5%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Average time",
+          "value": 6.8,
+          "displayValue": "6.8 min$6.4816 steps",
+          "unit": "seconds",
+          "direction": "lower"
+        }
+      ],
+      "sourceUrl": "https://www.wiz.io/cyber-model-arena",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "wiz-cyber-model-arena-gpt-5-6-sol-codex-10",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gpt-5-6-sol-codex",
@@ -4146,7 +4332,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gpt-6-sol-claude-code-8",
+      "id": "wiz-cyber-model-arena-gpt-6-sol-claude-code-11",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gpt-6-sol-claude-code",
@@ -4208,7 +4394,69 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gemini-3-8-flash-cyber-claude-code-9",
+      "id": "wiz-cyber-model-arena-gpt-6-astra-codex-12",
+      "sourceId": "wiz-cyber-model-arena",
+      "benchmarkId": "wiz-cyber-model-arena",
+      "modelId": "gpt-6-astra-codex",
+      "modelLabel": "GPT-6 Astra?Codex",
+      "harnessIds": [
+        "agent-",
+        "evaluation-cyber-model-arena"
+      ],
+      "metrics": [
+        {
+          "name": "Code vulnerabilities",
+          "value": 69.2,
+          "displayValue": "69.2%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "API security",
+          "value": 56.1,
+          "displayValue": "56.1%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Web security",
+          "value": 81.5,
+          "displayValue": "81.5%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Cloud security",
+          "value": 71.3,
+          "displayValue": "71.3%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Overall",
+          "value": 68.1,
+          "displayValue": "68.1%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Average time",
+          "value": 4.1,
+          "displayValue": "4.1 min$2.6818 steps",
+          "unit": "seconds",
+          "direction": "lower"
+        }
+      ],
+      "sourceUrl": "https://www.wiz.io/cyber-model-arena",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "wiz-cyber-model-arena-gemini-3-8-flash-cyber-claude-code-13",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gemini-3-8-flash-cyber-claude-code",
@@ -4270,7 +4518,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gemini-3-8-flash-cyber-antigravity-10",
+      "id": "wiz-cyber-model-arena-gemini-3-8-flash-cyber-antigravity-14",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gemini-3-8-flash-cyber-antigravity",
@@ -4332,7 +4580,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gpt-5-6-sol-adk-react-11",
+      "id": "wiz-cyber-model-arena-gpt-5-6-sol-adk-react-15",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gpt-5-6-sol-adk-react",
@@ -4394,7 +4642,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gemini-3-7-flash-antigravity-12",
+      "id": "wiz-cyber-model-arena-gemini-3-7-flash-antigravity-16",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gemini-3-7-flash-antigravity",
@@ -4456,7 +4704,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-claude-opus-4-8-claude-code-13",
+      "id": "wiz-cyber-model-arena-claude-opus-4-8-claude-code-17",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "claude-opus-4-8-claude-code",
@@ -4518,7 +4766,131 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gpt-6-luna-codex-14",
+      "id": "wiz-cyber-model-arena-claude-opus-5-5-adk-react-18",
+      "sourceId": "wiz-cyber-model-arena",
+      "benchmarkId": "wiz-cyber-model-arena",
+      "modelId": "claude-opus-5-5-adk-react",
+      "modelLabel": "Claude Opus 5.5?ADK React",
+      "harnessIds": [
+        "agent-",
+        "evaluation-cyber-model-arena"
+      ],
+      "metrics": [
+        {
+          "name": "Code vulnerabilities",
+          "value": 64.7,
+          "displayValue": "64.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "API security",
+          "value": 58.7,
+          "displayValue": "58.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Web security",
+          "value": 75.9,
+          "displayValue": "75.9%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Cloud security",
+          "value": 57.5,
+          "displayValue": "57.5%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Overall",
+          "value": 66.7,
+          "displayValue": "66.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Average time",
+          "value": 5.3,
+          "displayValue": "5.3 min$2.5612 steps",
+          "unit": "seconds",
+          "direction": "lower"
+        }
+      ],
+      "sourceUrl": "https://www.wiz.io/cyber-model-arena",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "wiz-cyber-model-arena-claude-opus-5-5-claude-code-19",
+      "sourceId": "wiz-cyber-model-arena",
+      "benchmarkId": "wiz-cyber-model-arena",
+      "modelId": "claude-opus-5-5-claude-code",
+      "modelLabel": "Claude Opus 5.5?Claude Code",
+      "harnessIds": [
+        "agent-",
+        "evaluation-cyber-model-arena"
+      ],
+      "metrics": [
+        {
+          "name": "Code vulnerabilities",
+          "value": 64.5,
+          "displayValue": "64.5%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "API security",
+          "value": 58.5,
+          "displayValue": "58.5%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Web security",
+          "value": 77.8,
+          "displayValue": "77.8%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Cloud security",
+          "value": 55.2,
+          "displayValue": "55.2%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Overall",
+          "value": 66.7,
+          "displayValue": "66.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Average time",
+          "value": 3.2,
+          "displayValue": "3.2 min$0.789 steps",
+          "unit": "seconds",
+          "direction": "lower"
+        }
+      ],
+      "sourceUrl": "https://www.wiz.io/cyber-model-arena",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "wiz-cyber-model-arena-gpt-6-luna-codex-20",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gpt-6-luna-codex",
@@ -4580,7 +4952,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gpt-5-6-terra-claude-code-15",
+      "id": "wiz-cyber-model-arena-gpt-5-6-terra-claude-code-21",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gpt-5-6-terra-claude-code",
@@ -4642,7 +5014,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gpt-5-6-sol-claude-code-16",
+      "id": "wiz-cyber-model-arena-gpt-5-6-sol-claude-code-22",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gpt-5-6-sol-claude-code",
@@ -4704,7 +5076,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gpt-5-6-terra-codex-17",
+      "id": "wiz-cyber-model-arena-gpt-5-6-terra-codex-23",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gpt-5-6-terra-codex",
@@ -4766,7 +5138,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gemini-3-6-flash-adk-react-18",
+      "id": "wiz-cyber-model-arena-gemini-3-6-flash-adk-react-24",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gemini-3-6-flash-adk-react",
@@ -4828,7 +5200,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gpt-5-6-terra-adk-react-19",
+      "id": "wiz-cyber-model-arena-gpt-5-6-terra-adk-react-25",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gpt-5-6-terra-adk-react",
@@ -4890,7 +5262,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gemini-3-5-flash-claude-code-20",
+      "id": "wiz-cyber-model-arena-gemini-3-5-flash-claude-code-26",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gemini-3-5-flash-claude-code",
@@ -4952,7 +5324,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gpt-6-luna-claude-code-21",
+      "id": "wiz-cyber-model-arena-gpt-6-luna-claude-code-27",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gpt-6-luna-claude-code",
@@ -5014,7 +5386,69 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gemini-3-7-flash-adk-react-22",
+      "id": "wiz-cyber-model-arena-deepseek-v4-1-flash-1017-claude-code-28",
+      "sourceId": "wiz-cyber-model-arena",
+      "benchmarkId": "wiz-cyber-model-arena",
+      "modelId": "deepseek-v4-1-flash-1017-claude-code",
+      "modelLabel": "DeepSeek V4.1 Flash 1017?Claude Code",
+      "harnessIds": [
+        "agent-",
+        "evaluation-cyber-model-arena"
+      ],
+      "metrics": [
+        {
+          "name": "Code vulnerabilities",
+          "value": 60.3,
+          "displayValue": "60.3%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "API security",
+          "value": 37.1,
+          "displayValue": "37.1%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Web security",
+          "value": 83.3,
+          "displayValue": "83.3%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Cloud security",
+          "value": 58.6,
+          "displayValue": "58.6%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Overall",
+          "value": 62.3,
+          "displayValue": "62.3%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Average time",
+          "value": 24.4,
+          "displayValue": "24.4 min$0.1747 steps",
+          "unit": "seconds",
+          "direction": "lower"
+        }
+      ],
+      "sourceUrl": "https://www.wiz.io/cyber-model-arena",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "wiz-cyber-model-arena-gemini-3-7-flash-adk-react-29",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gemini-3-7-flash-adk-react",
@@ -5076,7 +5510,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gemini-3-6-flash-antigravity-23",
+      "id": "wiz-cyber-model-arena-gemini-3-6-flash-antigravity-30",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gemini-3-6-flash-antigravity",
@@ -5138,7 +5572,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-claude-sonnet-5-claude-code-24",
+      "id": "wiz-cyber-model-arena-claude-sonnet-5-claude-code-31",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "claude-sonnet-5-claude-code",
@@ -5200,7 +5634,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gemini-3-7-flash-claude-code-25",
+      "id": "wiz-cyber-model-arena-gemini-3-7-flash-claude-code-32",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gemini-3-7-flash-claude-code",
@@ -5262,7 +5696,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gemini-3-6-flash-claude-code-26",
+      "id": "wiz-cyber-model-arena-gemini-3-6-flash-claude-code-33",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gemini-3-6-flash-claude-code",
@@ -5324,7 +5758,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-claude-opus-5-adk-react-27",
+      "id": "wiz-cyber-model-arena-claude-opus-5-adk-react-34",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "claude-opus-5-adk-react",
@@ -5386,7 +5820,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-glm-5-3-claude-code-28",
+      "id": "wiz-cyber-model-arena-glm-5-3-claude-code-35",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "glm-5-3-claude-code",
@@ -5448,7 +5882,131 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-deepseek-v4-pro-claude-code-29",
+      "id": "wiz-cyber-model-arena-deepseek-v4-1-flash-1017-adk-react-36",
+      "sourceId": "wiz-cyber-model-arena",
+      "benchmarkId": "wiz-cyber-model-arena",
+      "modelId": "deepseek-v4-1-flash-1017-adk-react",
+      "modelLabel": "DeepSeek V4.1 Flash 1017?ADK React",
+      "harnessIds": [
+        "agent-",
+        "evaluation-cyber-model-arena"
+      ],
+      "metrics": [
+        {
+          "name": "Code vulnerabilities",
+          "value": 57.6,
+          "displayValue": "57.6%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "API security",
+          "value": 34.7,
+          "displayValue": "34.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Web security",
+          "value": 82.7,
+          "displayValue": "82.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Cloud security",
+          "value": 60.9,
+          "displayValue": "60.9%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Overall",
+          "value": 52.2,
+          "displayValue": "52.2%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Average time",
+          "value": 26.8,
+          "displayValue": "26.8 min$0.1544 steps",
+          "unit": "seconds",
+          "direction": "lower"
+        }
+      ],
+      "sourceUrl": "https://www.wiz.io/cyber-model-arena",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "wiz-cyber-model-arena-claude-haiku-5-5-claude-code-37",
+      "sourceId": "wiz-cyber-model-arena",
+      "benchmarkId": "wiz-cyber-model-arena",
+      "modelId": "claude-haiku-5-5-claude-code",
+      "modelLabel": "Claude Haiku 5.5?Claude Code",
+      "harnessIds": [
+        "agent-",
+        "evaluation-cyber-model-arena"
+      ],
+      "metrics": [
+        {
+          "name": "Code vulnerabilities",
+          "value": 57,
+          "displayValue": "57%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "API security",
+          "value": 46.6,
+          "displayValue": "46.6%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Web security",
+          "value": 77.8,
+          "displayValue": "77.8%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Cloud security",
+          "value": 52.9,
+          "displayValue": "52.9%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Overall",
+          "value": 50.7,
+          "displayValue": "50.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Average time",
+          "value": 6.6,
+          "displayValue": "6.6 min$0.2218 steps",
+          "unit": "seconds",
+          "direction": "lower"
+        }
+      ],
+      "sourceUrl": "https://www.wiz.io/cyber-model-arena",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "wiz-cyber-model-arena-deepseek-v4-pro-claude-code-38",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "deepseek-v4-pro-claude-code",
@@ -5510,7 +6068,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gemini-3-5-flash-adk-react-30",
+      "id": "wiz-cyber-model-arena-gemini-3-5-flash-adk-react-39",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gemini-3-5-flash-adk-react",
@@ -5572,7 +6130,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-deepseek-v4-pro-adk-react-31",
+      "id": "wiz-cyber-model-arena-deepseek-v4-pro-adk-react-40",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "deepseek-v4-pro-adk-react",
@@ -5634,7 +6192,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-claude-opus-4-8-adk-react-32",
+      "id": "wiz-cyber-model-arena-claude-opus-4-8-adk-react-41",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "claude-opus-4-8-adk-react",
@@ -5696,7 +6254,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-kimi-k3-adk-react-33",
+      "id": "wiz-cyber-model-arena-kimi-k3-adk-react-42",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "kimi-k3-adk-react",
@@ -5758,7 +6316,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-kimi-k3-claude-code-34",
+      "id": "wiz-cyber-model-arena-kimi-k3-claude-code-43",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "kimi-k3-claude-code",
@@ -5820,7 +6378,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-claude-sonnet-4-5-claude-code-35",
+      "id": "wiz-cyber-model-arena-claude-sonnet-4-5-claude-code-44",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "claude-sonnet-4-5-claude-code",
@@ -5882,7 +6440,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-deepseek-v4-1-flash-claude-code-36",
+      "id": "wiz-cyber-model-arena-deepseek-v4-1-flash-claude-code-45",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "deepseek-v4-1-flash-claude-code",
@@ -5944,7 +6502,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-glm-5-3-adk-react-37",
+      "id": "wiz-cyber-model-arena-glm-5-3-adk-react-46",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "glm-5-3-adk-react",
@@ -6006,7 +6564,69 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-glm-5-3-flash-claude-code-38",
+      "id": "wiz-cyber-model-arena-claude-haiku-5-5-adk-react-47",
+      "sourceId": "wiz-cyber-model-arena",
+      "benchmarkId": "wiz-cyber-model-arena",
+      "modelId": "claude-haiku-5-5-adk-react",
+      "modelLabel": "Claude Haiku 5.5?ADK React",
+      "harnessIds": [
+        "agent-",
+        "evaluation-cyber-model-arena"
+      ],
+      "metrics": [
+        {
+          "name": "Code vulnerabilities",
+          "value": 48.6,
+          "displayValue": "48.6%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "API security",
+          "value": 34.1,
+          "displayValue": "34.1%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Web security",
+          "value": 76.5,
+          "displayValue": "76.5%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Cloud security",
+          "value": 33.3,
+          "displayValue": "33.3%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Overall",
+          "value": 50.7,
+          "displayValue": "50.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Average time",
+          "value": 7.1,
+          "displayValue": "7.1 min$0.0516 steps",
+          "unit": "seconds",
+          "direction": "lower"
+        }
+      ],
+      "sourceUrl": "https://www.wiz.io/cyber-model-arena",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "wiz-cyber-model-arena-glm-5-3-flash-claude-code-48",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "glm-5-3-flash-claude-code",
@@ -6068,7 +6688,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-deepseek-v4-1-flash-adk-react-39",
+      "id": "wiz-cyber-model-arena-deepseek-v4-1-flash-adk-react-49",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "deepseek-v4-1-flash-adk-react",
@@ -6130,7 +6750,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-grok-4-6-adk-react-40",
+      "id": "wiz-cyber-model-arena-grok-4-6-adk-react-50",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "grok-4-6-adk-react",
@@ -6192,7 +6812,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-claude-sonnet-4-5-adk-react-41",
+      "id": "wiz-cyber-model-arena-claude-sonnet-4-5-adk-react-51",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "claude-sonnet-4-5-adk-react",
@@ -6254,7 +6874,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-grok-4-6-claude-code-42",
+      "id": "wiz-cyber-model-arena-grok-4-6-claude-code-52",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "grok-4-6-claude-code",
@@ -6316,7 +6936,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-gemini-3-5-flash-antigravity-43",
+      "id": "wiz-cyber-model-arena-gemini-3-5-flash-antigravity-53",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "gemini-3-5-flash-antigravity",
@@ -6378,7 +6998,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-claude-sonnet-5-adk-react-44",
+      "id": "wiz-cyber-model-arena-claude-sonnet-5-adk-react-54",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "claude-sonnet-5-adk-react",
@@ -6440,7 +7060,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-glm-5-3-flash-adk-react-45",
+      "id": "wiz-cyber-model-arena-glm-5-3-flash-adk-react-55",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "glm-5-3-flash-adk-react",
@@ -6502,7 +7122,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-mimo-v2-6-pro-adk-react-46",
+      "id": "wiz-cyber-model-arena-mimo-v2-6-pro-adk-react-56",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "mimo-v2-6-pro-adk-react",
@@ -6564,7 +7184,7 @@
       "publishedAt": null
     },
     {
-      "id": "wiz-cyber-model-arena-mimo-v2-6-pro-claude-code-47",
+      "id": "wiz-cyber-model-arena-mimo-v2-6-pro-claude-code-57",
       "sourceId": "wiz-cyber-model-arena",
       "benchmarkId": "wiz-cyber-model-arena",
       "modelId": "mimo-v2-6-pro-claude-code",

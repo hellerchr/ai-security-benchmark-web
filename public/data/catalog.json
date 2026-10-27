@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T10:06:13.657Z",
+  "generatedAt": "2026-10-27T09:48:13.722Z",
   "sources": [
     {
       "id": "cisco-llm-security",
@@ -734,6 +734,18 @@
       "aliases": []
     },
     {
+      "id": "claude-haiku-5-5-adk-react",
+      "name": "Claude Haiku 5.5?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "claude-haiku-5-5-claude-code",
+      "name": "Claude Haiku 5.5?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "claude-opus-4-1",
       "name": "Claude Opus 4.1",
       "provider": null,
@@ -796,6 +808,18 @@
     {
       "id": "claude-opus-5-5",
       "name": "Claude Opus 5.5",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "claude-opus-5-5-adk-react",
+      "name": "Claude Opus 5.5?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "claude-opus-5-5-claude-code",
+      "name": "Claude Opus 5.5?Claude Code",
       "provider": null,
       "aliases": []
     },
@@ -910,6 +934,18 @@
     {
       "id": "deepseek-v4-pro-claude-code",
       "name": "DeepSeek V4 Pro?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "deepseek-v4-1-flash-1017-adk-react",
+      "name": "DeepSeek V4.1 Flash 1017?ADK React",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "deepseek-v4-1-flash-1017-claude-code",
+      "name": "DeepSeek V4.1 Flash 1017?Claude Code",
       "provider": null,
       "aliases": []
     },
@@ -1298,6 +1334,18 @@
       "aliases": []
     },
     {
+      "id": "gpt-6-astra-claude-code",
+      "name": "GPT-6 Astra?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-astra-codex",
+      "name": "GPT-6 Astra?Codex",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "gpt-6-luna-claude-code",
       "name": "GPT-6 Luna?Claude Code",
       "provider": null,
@@ -1330,6 +1378,18 @@
     {
       "id": "gpt-6-1-sol",
       "name": "GPT-6.1 Sol",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-1-sol-claude-code",
+      "name": "GPT-6.1 Sol?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-1-sol-codex",
+      "name": "GPT-6.1 Sol?Codex",
       "provider": null,
       "aliases": []
     },
