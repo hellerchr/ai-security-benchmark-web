@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T12:11:48.665Z",
+  "generatedAt": "2026-11-14T11:27:27.261Z",
   "sources": [
     {
       "id": "cisco-llm-security",
@@ -734,6 +734,12 @@
       "aliases": []
     },
     {
+      "id": "claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "claude-haiku-5-5-adk-react",
       "name": "Claude Haiku 5.5?ADK React",
       "provider": null,
@@ -868,6 +874,12 @@
     {
       "id": "claude-sonnet-5-claude-code",
       "name": "Claude Sonnet 5?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
       "provider": null,
       "aliases": []
     },
@@ -1346,6 +1358,12 @@
       "aliases": []
     },
     {
+      "id": "gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "provider": null,
+      "aliases": []
+    },
+    {
       "id": "gpt-6-luna-claude-code",
       "name": "GPT-6 Luna?Claude Code",
       "provider": null,
@@ -1450,6 +1468,12 @@
     {
       "id": "grok-4-6-claude-code",
       "name": "Grok 4.6?Claude Code",
+      "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "grok-4-7",
+      "name": "Grok 4.7",
       "provider": null,
       "aliases": []
     },

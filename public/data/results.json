@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T12:11:48.665Z",
+  "generatedAt": "2026-11-14T11:27:27.261Z",
   "results": [
     {
       "id": "cisco-llm-security-claude-opus-4-5-1",
@@ -246,7 +246,68 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-claude-haiku-4-5-5",
+      "id": "cisco-llm-security-claude-haiku-5-5-5",
+      "sourceId": "cisco-llm-security",
+      "benchmarkId": "cisco-llm-security",
+      "modelId": "claude-haiku-5-5",
+      "modelLabel": "Claude Haiku 5.5",
+      "harnessIds": [
+        "evaluation-cisco-llm-security-leaderboard"
+      ],
+      "metrics": [
+        {
+          "name": "Pass rate",
+          "value": 97.70687936,
+          "displayValue": "97.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Validation score",
+          "value": 97.7068793619,
+          "displayValue": "97.7068793619",
+          "unit": "score",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn resistance",
+          "value": 85.7142857143,
+          "displayValue": "85.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn attack success",
+          "value": 14.2857142857,
+          "displayValue": "14.3%",
+          "unit": "percent",
+          "direction": "lower"
+        },
+        {
+          "name": "Multi-turn attacks",
+          "value": 469,
+          "displayValue": "469",
+          "unit": "count",
+          "direction": "neutral"
+        },
+        {
+          "name": "Combined score",
+          "value": 91.7105825381,
+          "displayValue": "91.7105825381",
+          "unit": "score",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "cisco-llm-security-claude-haiku-4-5-6",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "claude-haiku-4-5",
@@ -307,7 +368,68 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-claude-3-sonnet-6",
+      "id": "cisco-llm-security-grok-4-7-7",
+      "sourceId": "cisco-llm-security",
+      "benchmarkId": "cisco-llm-security",
+      "modelId": "grok-4-7",
+      "modelLabel": "Grok 4.7",
+      "harnessIds": [
+        "evaluation-cisco-llm-security-leaderboard"
+      ],
+      "metrics": [
+        {
+          "name": "Pass rate",
+          "value": 93.32003988000001,
+          "displayValue": "93.3%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Validation score",
+          "value": 93.3200398804,
+          "displayValue": "93.3200398804",
+          "unit": "score",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn resistance",
+          "value": 88.8888888889,
+          "displayValue": "88.9%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn attack success",
+          "value": 11.1111111111,
+          "displayValue": "11.1%",
+          "unit": "percent",
+          "direction": "lower"
+        },
+        {
+          "name": "Multi-turn attacks",
+          "value": 468,
+          "displayValue": "468",
+          "unit": "count",
+          "direction": "neutral"
+        },
+        {
+          "name": "Combined score",
+          "value": 91.1044643846,
+          "displayValue": "91.1044643846",
+          "unit": "score",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "cisco-llm-security-claude-3-sonnet-8",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "claude-3-sonnet",
@@ -368,7 +490,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-claude-opus-4-6-7",
+      "id": "cisco-llm-security-claude-opus-4-6-9",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "claude-opus-4-6",
@@ -429,7 +551,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-grok-4-6-8",
+      "id": "cisco-llm-security-grok-4-6-10",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "grok-4-6",
@@ -490,7 +612,68 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-claude-opus-4-7-9",
+      "id": "cisco-llm-security-gpt-6-luna-11",
+      "sourceId": "cisco-llm-security",
+      "benchmarkId": "cisco-llm-security",
+      "modelId": "gpt-6-luna",
+      "modelLabel": "GPT-6 Luna",
+      "harnessIds": [
+        "evaluation-cisco-llm-security-leaderboard"
+      ],
+      "metrics": [
+        {
+          "name": "Pass rate",
+          "value": 96.61016949,
+          "displayValue": "96.6%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Validation score",
+          "value": 96.6101694915,
+          "displayValue": "96.6101694915",
+          "unit": "score",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn resistance",
+          "value": 82.905982906,
+          "displayValue": "82.9%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn attack success",
+          "value": 17.094017094,
+          "displayValue": "17.1%",
+          "unit": "percent",
+          "direction": "lower"
+        },
+        {
+          "name": "Multi-turn attacks",
+          "value": 468,
+          "displayValue": "468",
+          "unit": "count",
+          "direction": "neutral"
+        },
+        {
+          "name": "Combined score",
+          "value": 89.7580761988,
+          "displayValue": "89.7580761988",
+          "unit": "score",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "cisco-llm-security-claude-opus-4-7-12",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "claude-opus-4-7",
@@ -551,7 +734,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-5-4-mini-10",
+      "id": "cisco-llm-security-gpt-5-4-mini-13",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-5-4-mini",
@@ -612,7 +795,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-5-4-nano-11",
+      "id": "cisco-llm-security-gpt-5-4-nano-14",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-5-4-nano",
@@ -673,7 +856,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-m2-5-12",
+      "id": "cisco-llm-security-m2-5-15",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "m2-5",
@@ -734,7 +917,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-5-4-13",
+      "id": "cisco-llm-security-gpt-5-4-16",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-5-4",
@@ -795,7 +978,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-claude-sonnet-5-14",
+      "id": "cisco-llm-security-claude-sonnet-5-17",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "claude-sonnet-5",
@@ -856,7 +1039,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-inkling-15",
+      "id": "cisco-llm-security-inkling-18",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "inkling",
@@ -917,7 +1100,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-claude-3-5-sonnet-16",
+      "id": "cisco-llm-security-claude-3-5-sonnet-19",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "claude-3-5-sonnet",
@@ -978,7 +1161,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-5-2-17",
+      "id": "cisco-llm-security-gpt-5-2-20",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-5-2",
@@ -1039,7 +1222,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-claude-opus-4-1-18",
+      "id": "cisco-llm-security-claude-opus-4-1-21",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "claude-opus-4-1",
@@ -1100,7 +1283,68 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-5-nano-19",
+      "id": "cisco-llm-security-gpt-6-sol-22",
+      "sourceId": "cisco-llm-security",
+      "benchmarkId": "cisco-llm-security",
+      "modelId": "gpt-6-sol",
+      "modelLabel": "GPT-6 Sol",
+      "harnessIds": [
+        "evaluation-cisco-llm-security-leaderboard"
+      ],
+      "metrics": [
+        {
+          "name": "Pass rate",
+          "value": 90.47856431,
+          "displayValue": "90.5%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Validation score",
+          "value": 90.4785643071,
+          "displayValue": "90.4785643071",
+          "unit": "score",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn resistance",
+          "value": 80.3382663848,
+          "displayValue": "80.3%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn attack success",
+          "value": 19.6617336152,
+          "displayValue": "19.7%",
+          "unit": "percent",
+          "direction": "lower"
+        },
+        {
+          "name": "Multi-turn attacks",
+          "value": 473,
+          "displayValue": "473",
+          "unit": "count",
+          "direction": "neutral"
+        },
+        {
+          "name": "Combined score",
+          "value": 85.4084153459,
+          "displayValue": "85.4084153459",
+          "unit": "score",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "cisco-llm-security-gpt-5-nano-23",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-5-nano",
@@ -1161,7 +1405,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-claude-3-haiku-20",
+      "id": "cisco-llm-security-claude-3-haiku-24",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "claude-3-haiku",
@@ -1222,7 +1466,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-oss-120b-21",
+      "id": "cisco-llm-security-gpt-oss-120b-25",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-oss-120b",
@@ -1283,7 +1527,68 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-claude-opus-4-8-22",
+      "id": "cisco-llm-security-claude-opus-5-5-26",
+      "sourceId": "cisco-llm-security",
+      "benchmarkId": "cisco-llm-security",
+      "modelId": "claude-opus-5-5",
+      "modelLabel": "Claude Opus 5.5",
+      "harnessIds": [
+        "evaluation-cisco-llm-security-leaderboard"
+      ],
+      "metrics": [
+        {
+          "name": "Pass rate",
+          "value": 94.06779661,
+          "displayValue": "94.1%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Validation score",
+          "value": 94.0677966102,
+          "displayValue": "94.0677966102",
+          "unit": "score",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn resistance",
+          "value": 73.5607675906,
+          "displayValue": "73.6%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn attack success",
+          "value": 26.4392324094,
+          "displayValue": "26.4%",
+          "unit": "percent",
+          "direction": "lower"
+        },
+        {
+          "name": "Multi-turn attacks",
+          "value": 469,
+          "displayValue": "469",
+          "unit": "count",
+          "direction": "neutral"
+        },
+        {
+          "name": "Combined score",
+          "value": 83.8142821004,
+          "displayValue": "83.8142821004",
+          "unit": "score",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "cisco-llm-security-claude-opus-4-8-27",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "claude-opus-4-8",
@@ -1344,7 +1649,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-claude-3-5-haiku-23",
+      "id": "cisco-llm-security-claude-3-5-haiku-28",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "claude-3-5-haiku",
@@ -1405,7 +1710,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-5-5-24",
+      "id": "cisco-llm-security-gpt-5-5-29",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-5-5",
@@ -1466,7 +1771,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-5-6-terra-25",
+      "id": "cisco-llm-security-gpt-5-6-terra-30",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-5-6-terra",
@@ -1527,7 +1832,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-m2-1-26",
+      "id": "cisco-llm-security-m2-1-31",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "m2-1",
@@ -1588,7 +1893,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-nemotron-3-ultra-550b-a55b-27",
+      "id": "cisco-llm-security-nemotron-3-ultra-550b-a55b-32",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "nemotron-3-ultra-550b-a55b",
@@ -1649,7 +1954,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-5-3-chat-28",
+      "id": "cisco-llm-security-gpt-5-3-chat-33",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-5-3-chat",
@@ -1710,7 +2015,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-5-1-chat-29",
+      "id": "cisco-llm-security-gpt-5-1-chat-34",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-5-1-chat",
@@ -1771,7 +2076,68 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-qwen3-8-27b-30",
+      "id": "cisco-llm-security-gpt-6-1-sol-35",
+      "sourceId": "cisco-llm-security",
+      "benchmarkId": "cisco-llm-security",
+      "modelId": "gpt-6-1-sol",
+      "modelLabel": "GPT-6.1 Sol",
+      "harnessIds": [
+        "evaluation-cisco-llm-security-leaderboard"
+      ],
+      "metrics": [
+        {
+          "name": "Pass rate",
+          "value": 88.68394816,
+          "displayValue": "88.7%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Validation score",
+          "value": 88.6839481555,
+          "displayValue": "88.6839481555",
+          "unit": "score",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn resistance",
+          "value": 71.5498938429,
+          "displayValue": "71.5%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn attack success",
+          "value": 28.4501061571,
+          "displayValue": "28.5%",
+          "unit": "percent",
+          "direction": "lower"
+        },
+        {
+          "name": "Multi-turn attacks",
+          "value": 471,
+          "displayValue": "471",
+          "unit": "count",
+          "direction": "neutral"
+        },
+        {
+          "name": "Combined score",
+          "value": 80.1169209992,
+          "displayValue": "80.1169209992",
+          "unit": "score",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "cisco-llm-security-qwen3-8-27b-36",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "qwen3-8-27b",
@@ -1832,7 +2198,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-nova-2-lite-31",
+      "id": "cisco-llm-security-nova-2-lite-37",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "nova-2-lite",
@@ -1893,7 +2259,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-5-6-sol-32",
+      "id": "cisco-llm-security-gpt-5-6-sol-38",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-5-6-sol",
@@ -1954,7 +2320,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-claude-3-opus-33",
+      "id": "cisco-llm-security-claude-3-opus-39",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "claude-3-opus",
@@ -2015,7 +2381,68 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-5-6-luna-34",
+      "id": "cisco-llm-security-claude-sonnet-5-5-40",
+      "sourceId": "cisco-llm-security",
+      "benchmarkId": "cisco-llm-security",
+      "modelId": "claude-sonnet-5-5",
+      "modelLabel": "Claude Sonnet 5.5",
+      "harnessIds": [
+        "evaluation-cisco-llm-security-leaderboard"
+      ],
+      "metrics": [
+        {
+          "name": "Pass rate",
+          "value": 93.56929212,
+          "displayValue": "93.6%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Validation score",
+          "value": 93.5692921236,
+          "displayValue": "93.5692921236",
+          "unit": "score",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn resistance",
+          "value": 62.4463519313,
+          "displayValue": "62.4%",
+          "unit": "percent",
+          "direction": "higher"
+        },
+        {
+          "name": "Multi-turn attack success",
+          "value": 37.5536480687,
+          "displayValue": "37.6%",
+          "unit": "percent",
+          "direction": "lower"
+        },
+        {
+          "name": "Multi-turn attacks",
+          "value": 466,
+          "displayValue": "466",
+          "unit": "count",
+          "direction": "neutral"
+        },
+        {
+          "name": "Combined score",
+          "value": 78.0078220275,
+          "displayValue": "78.0078220275",
+          "unit": "score",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "cisco-llm-security-gpt-5-6-luna-41",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-5-6-luna",
@@ -2076,7 +2503,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-glm-5-3-flash-35",
+      "id": "cisco-llm-security-glm-5-3-flash-42",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "glm-5-3-flash",
@@ -2137,7 +2564,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-qwen3-8-flash-next-36",
+      "id": "cisco-llm-security-qwen3-8-flash-next-43",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "qwen3-8-flash-next",
@@ -2198,7 +2625,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-m3-37",
+      "id": "cisco-llm-security-m3-44",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "m3",
@@ -2259,7 +2686,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-glm-5-3-38",
+      "id": "cisco-llm-security-glm-5-3-45",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "glm-5-3",
@@ -2320,7 +2747,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-m2-39",
+      "id": "cisco-llm-security-m2-46",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "m2",
@@ -2381,7 +2808,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-5-40",
+      "id": "cisco-llm-security-gpt-5-47",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-5",
@@ -2442,7 +2869,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-oss-20b-41",
+      "id": "cisco-llm-security-gpt-oss-20b-48",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-oss-20b",
@@ -2503,7 +2930,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-oss-safeguard-120b-42",
+      "id": "cisco-llm-security-gpt-oss-safeguard-120b-49",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-oss-safeguard-120b",
@@ -2564,7 +2991,7 @@
       "publishedAt": null
     },
     {
-      "id": "cisco-llm-security-gpt-5-mini-43",
+      "id": "cisco-llm-security-gpt-5-mini-50",
       "sourceId": "cisco-llm-security",
       "benchmarkId": "cisco-llm-security",
       "modelId": "gpt-5-mini",
@@ -2612,433 +3039,6 @@
           "name": "Combined score",
           "value": 72.3521418866,
           "displayValue": "72.3521418866",
-          "unit": "score",
-          "direction": "higher"
-        }
-      ],
-      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
-      "taskSet": null,
-      "budget": null,
-      "backend": null,
-      "defense": null,
-      "attack": null,
-      "publishedAt": null
-    },
-    {
-      "id": "cisco-llm-security-claude-sonnet-4-44",
-      "sourceId": "cisco-llm-security",
-      "benchmarkId": "cisco-llm-security",
-      "modelId": "claude-sonnet-4",
-      "modelLabel": "Claude Sonnet 4",
-      "harnessIds": [
-        "evaluation-cisco-llm-security-leaderboard"
-      ],
-      "metrics": [
-        {
-          "name": "Pass rate",
-          "value": 96.90927217999999,
-          "displayValue": "96.9%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Validation score",
-          "value": 96.9092721834,
-          "displayValue": "96.9092721834",
-          "unit": "score",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn resistance",
-          "value": 42.2746781116,
-          "displayValue": "42.3%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn attack success",
-          "value": 57.7253218884,
-          "displayValue": "57.7%",
-          "unit": "percent",
-          "direction": "lower"
-        },
-        {
-          "name": "Multi-turn attacks",
-          "value": 466,
-          "displayValue": "466",
-          "unit": "count",
-          "direction": "neutral"
-        },
-        {
-          "name": "Combined score",
-          "value": 69.5919751475,
-          "displayValue": "69.5919751475",
-          "unit": "score",
-          "direction": "higher"
-        }
-      ],
-      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
-      "taskSet": null,
-      "budget": null,
-      "backend": null,
-      "defense": null,
-      "attack": null,
-      "publishedAt": null
-    },
-    {
-      "id": "cisco-llm-security-grok-4-5-45",
-      "sourceId": "cisco-llm-security",
-      "benchmarkId": "cisco-llm-security",
-      "modelId": "grok-4-5",
-      "modelLabel": "Grok 4.5",
-      "harnessIds": [
-        "evaluation-cisco-llm-security-leaderboard"
-      ],
-      "metrics": [
-        {
-          "name": "Pass rate",
-          "value": 77.01894317,
-          "displayValue": "77.0%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Validation score",
-          "value": 77.0189431705,
-          "displayValue": "77.0189431705",
-          "unit": "score",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn resistance",
-          "value": 62.0985010707,
-          "displayValue": "62.1%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn attack success",
-          "value": 37.9014989293,
-          "displayValue": "37.9%",
-          "unit": "percent",
-          "direction": "lower"
-        },
-        {
-          "name": "Multi-turn attacks",
-          "value": 467,
-          "displayValue": "467",
-          "unit": "count",
-          "direction": "neutral"
-        },
-        {
-          "name": "Combined score",
-          "value": 69.5587221206,
-          "displayValue": "69.5587221206",
-          "unit": "score",
-          "direction": "higher"
-        }
-      ],
-      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
-      "taskSet": null,
-      "budget": null,
-      "backend": null,
-      "defense": null,
-      "attack": null,
-      "publishedAt": null
-    },
-    {
-      "id": "cisco-llm-security-o4-mini-46",
-      "sourceId": "cisco-llm-security",
-      "benchmarkId": "cisco-llm-security",
-      "modelId": "o4-mini",
-      "modelLabel": "o4-mini",
-      "harnessIds": [
-        "evaluation-cisco-llm-security-leaderboard"
-      ],
-      "metrics": [
-        {
-          "name": "Pass rate",
-          "value": 87.68693918,
-          "displayValue": "87.7%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Validation score",
-          "value": 87.6869391825,
-          "displayValue": "87.6869391825",
-          "unit": "score",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn resistance",
-          "value": 47.965738758,
-          "displayValue": "48.0%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn attack success",
-          "value": 52.034261242,
-          "displayValue": "52.0%",
-          "unit": "percent",
-          "direction": "lower"
-        },
-        {
-          "name": "Multi-turn attacks",
-          "value": 467,
-          "displayValue": "467",
-          "unit": "count",
-          "direction": "neutral"
-        },
-        {
-          "name": "Combined score",
-          "value": 67.8263389702,
-          "displayValue": "67.8263389702",
-          "unit": "score",
-          "direction": "higher"
-        }
-      ],
-      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
-      "taskSet": null,
-      "budget": null,
-      "backend": null,
-      "defense": null,
-      "attack": null,
-      "publishedAt": null
-    },
-    {
-      "id": "cisco-llm-security-grok-4-1-fast-reasoning-47",
-      "sourceId": "cisco-llm-security",
-      "benchmarkId": "cisco-llm-security",
-      "modelId": "grok-4-1-fast-reasoning",
-      "modelLabel": "Grok 4.1 Fast (Reasoning)",
-      "harnessIds": [
-        "evaluation-cisco-llm-security-leaderboard"
-      ],
-      "metrics": [
-        {
-          "name": "Pass rate",
-          "value": 76.02193419999999,
-          "displayValue": "76.0%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Validation score",
-          "value": 76.0219341974,
-          "displayValue": "76.0219341974",
-          "unit": "score",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn resistance",
-          "value": 56.5315315315,
-          "displayValue": "56.5%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn attack success",
-          "value": 43.4684684685,
-          "displayValue": "43.5%",
-          "unit": "percent",
-          "direction": "lower"
-        },
-        {
-          "name": "Multi-turn attacks",
-          "value": 444,
-          "displayValue": "444",
-          "unit": "count",
-          "direction": "neutral"
-        },
-        {
-          "name": "Combined score",
-          "value": 66.2767328645,
-          "displayValue": "66.2767328645",
-          "unit": "score",
-          "direction": "higher"
-        }
-      ],
-      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
-      "taskSet": null,
-      "budget": null,
-      "backend": null,
-      "defense": null,
-      "attack": null,
-      "publishedAt": null
-    },
-    {
-      "id": "cisco-llm-security-nova-premier-48",
-      "sourceId": "cisco-llm-security",
-      "benchmarkId": "cisco-llm-security",
-      "modelId": "nova-premier",
-      "modelLabel": "Nova Premier",
-      "harnessIds": [
-        "evaluation-cisco-llm-security-leaderboard"
-      ],
-      "metrics": [
-        {
-          "name": "Pass rate",
-          "value": 59.67098704,
-          "displayValue": "59.7%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Validation score",
-          "value": 59.6709870389,
-          "displayValue": "59.6709870389",
-          "unit": "score",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn resistance",
-          "value": 69.8072805139,
-          "displayValue": "69.8%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn attack success",
-          "value": 30.1927194861,
-          "displayValue": "30.2%",
-          "unit": "percent",
-          "direction": "lower"
-        },
-        {
-          "name": "Multi-turn attacks",
-          "value": 467,
-          "displayValue": "467",
-          "unit": "count",
-          "direction": "neutral"
-        },
-        {
-          "name": "Combined score",
-          "value": 64.7391337764,
-          "displayValue": "64.7391337764",
-          "unit": "score",
-          "direction": "higher"
-        }
-      ],
-      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
-      "taskSet": null,
-      "budget": null,
-      "backend": null,
-      "defense": null,
-      "attack": null,
-      "publishedAt": null
-    },
-    {
-      "id": "cisco-llm-security-gpt-oss-safeguard-20b-49",
-      "sourceId": "cisco-llm-security",
-      "benchmarkId": "cisco-llm-security",
-      "modelId": "gpt-oss-safeguard-20b",
-      "modelLabel": "gpt-oss-safeguard-20b",
-      "harnessIds": [
-        "evaluation-cisco-llm-security-leaderboard"
-      ],
-      "metrics": [
-        {
-          "name": "Pass rate",
-          "value": 82.45264207000001,
-          "displayValue": "82.5%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Validation score",
-          "value": 82.4526420738,
-          "displayValue": "82.4526420738",
-          "unit": "score",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn resistance",
-          "value": 46.3983050847,
-          "displayValue": "46.4%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn attack success",
-          "value": 53.6016949153,
-          "displayValue": "53.6%",
-          "unit": "percent",
-          "direction": "lower"
-        },
-        {
-          "name": "Multi-turn attacks",
-          "value": 472,
-          "displayValue": "472",
-          "unit": "count",
-          "direction": "neutral"
-        },
-        {
-          "name": "Combined score",
-          "value": 64.4254735793,
-          "displayValue": "64.4254735793",
-          "unit": "score",
-          "direction": "higher"
-        }
-      ],
-      "sourceUrl": "https://leaderboard.aidefense.cisco.com/",
-      "taskSet": null,
-      "budget": null,
-      "backend": null,
-      "defense": null,
-      "attack": null,
-      "publishedAt": null
-    },
-    {
-      "id": "cisco-llm-security-grok-4-3-50",
-      "sourceId": "cisco-llm-security",
-      "benchmarkId": "cisco-llm-security",
-      "modelId": "grok-4-3",
-      "modelLabel": "Grok 4.3",
-      "harnessIds": [
-        "evaluation-cisco-llm-security-leaderboard"
-      ],
-      "metrics": [
-        {
-          "name": "Pass rate",
-          "value": 67.04885344,
-          "displayValue": "67.0%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Validation score",
-          "value": 67.0488534397,
-          "displayValue": "67.0488534397",
-          "unit": "score",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn resistance",
-          "value": 60.5995717345,
-          "displayValue": "60.6%",
-          "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Multi-turn attack success",
-          "value": 39.4004282655,
-          "displayValue": "39.4%",
-          "unit": "percent",
-          "direction": "lower"
-        },
-        {
-          "name": "Multi-turn attacks",
-          "value": 467,
-          "displayValue": "467",
-          "unit": "count",
-          "direction": "neutral"
-        },
-        {
-          "name": "Combined score",
-          "value": 63.8242125871,
-          "displayValue": "63.8242125871",
           "unit": "score",
           "direction": "higher"
         }
