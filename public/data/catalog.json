@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T13:01:27.294Z",
+  "generatedAt": "2026-11-19T13:03:28.896Z",
   "sources": [
     {
       "id": "cisco-llm-security",
@@ -974,9 +974,27 @@
       "aliases": []
     },
     {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek-V4-Flash",
+      "provider": "DeepSeek",
+      "aliases": []
+    },
+    {
       "id": "deepseek-v4-flash-0731",
       "name": "DeepSeek-V4-Flash-0731",
       "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek-V4-Pro",
+      "provider": "DeepSeek",
+      "aliases": []
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek-V4.1-Flash",
+      "provider": "DeepSeek",
       "aliases": []
     },
     {
@@ -1076,6 +1094,12 @@
       "aliases": []
     },
     {
+      "id": "gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "provider": "Google",
+      "aliases": []
+    },
+    {
       "id": "gemini-4-argon-adk-react",
       "name": "Gemini 4 Argon?ADK React",
       "provider": null,
@@ -1091,6 +1115,18 @@
       "id": "gemini-4-argon-claude-code",
       "name": "Gemini 4 Argon?Claude Code",
       "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "provider": "Google",
+      "aliases": []
+    },
+    {
+      "id": "gemini-4-neon",
+      "name": "Gemini 4 Neon",
+      "provider": "Google",
       "aliases": []
     },
     {
@@ -1150,7 +1186,7 @@
     {
       "id": "glm-5-high",
       "name": "GLM-5 (high)",
-      "provider": "Z.ai",
+      "provider": "AWS Bedrock",
       "aliases": []
     },
     {
@@ -1294,7 +1330,7 @@
     {
       "id": "gpt-5-6-sol",
       "name": "GPT-5.6 Sol",
-      "provider": null,
+      "provider": "OpenAI",
       "aliases": []
     },
     {
@@ -1342,7 +1378,7 @@
     {
       "id": "gpt-6-astra",
       "name": "GPT-6 Astra",
-      "provider": null,
+      "provider": "OpenAI",
       "aliases": []
     },
     {
@@ -1358,9 +1394,33 @@
       "aliases": []
     },
     {
+      "id": "gpt-6-cyber",
+      "name": "GPT-6 Cyber",
+      "provider": "OpenAI",
+      "aliases": []
+    },
+    {
       "id": "gpt-6-luna",
       "name": "GPT-6 Luna",
       "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-luna-october-29",
+      "name": "GPT-6 Luna (October 29)",
+      "provider": "OpenAI",
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-luna-october-7",
+      "name": "GPT-6 Luna (October 7)",
+      "provider": "OpenAI",
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-luna-september",
+      "name": "GPT-6 Luna (September)",
+      "provider": "OpenAI",
       "aliases": []
     },
     {
@@ -1382,6 +1442,18 @@
       "aliases": []
     },
     {
+      "id": "gpt-6-sol-october-7",
+      "name": "GPT-6 Sol (October 7)",
+      "provider": "OpenAI",
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-sol-september",
+      "name": "GPT-6 Sol (September)",
+      "provider": "OpenAI",
+      "aliases": []
+    },
+    {
       "id": "gpt-6-sol-claude-code",
       "name": "GPT-6 Sol?Claude Code",
       "provider": null,
@@ -1396,7 +1468,7 @@
     {
       "id": "gpt-6-1-sol",
       "name": "GPT-6.1 Sol",
-      "provider": null,
+      "provider": "OpenAI",
       "aliases": []
     },
     {
@@ -1409,6 +1481,24 @@
       "id": "gpt-6-1-sol-codex",
       "name": "GPT-6.1 Sol?Codex",
       "provider": null,
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-1-terra",
+      "name": "GPT-6.1 Terra",
+      "provider": "OpenAI",
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-2-astra",
+      "name": "GPT-6.2 Astra",
+      "provider": "OpenAI",
+      "aliases": []
+    },
+    {
+      "id": "gpt-6-2-sol",
+      "name": "GPT-6.2 Sol",
+      "provider": "OpenAI",
       "aliases": []
     },
     {
@@ -1486,7 +1576,7 @@
     {
       "id": "kimi-k2-5-high",
       "name": "Kimi K2.5 (high)",
-      "provider": "Moonshot AI",
+      "provider": "AWS Bedrock",
       "aliases": []
     },
     {
@@ -1528,7 +1618,7 @@
     {
       "id": "m2-5-high",
       "name": "M2.5 (high)",
-      "provider": "MiniMax",
+      "provider": "AWS Bedrock",
       "aliases": [
         "MiniMax M2.5 (high)"
       ]
@@ -1592,7 +1682,19 @@
     {
       "id": "opus-4-6-max",
       "name": "Opus 4.6 (max)",
-      "provider": "Anthropic",
+      "provider": "AWS Bedrock",
+      "aliases": []
+    },
+    {
+      "id": "opus-5-max",
+      "name": "Opus 5 (max)",
+      "provider": "AWS Bedrock",
+      "aliases": []
+    },
+    {
+      "id": "opus-5-max-aws-continuum",
+      "name": "Opus 5 (max) · AWS Continuum",
+      "provider": "AWS Bedrock",
       "aliases": []
     },
     {
@@ -1612,6 +1714,12 @@
     {
       "id": "agent-",
       "name": "?",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "agent-131-183-subset-of-260617-run",
+      "name": "131/183 · Subset of 260617 run",
       "kind": "agent",
       "aliases": []
     },
@@ -1652,8 +1760,32 @@
       "aliases": []
     },
     {
+      "id": "agent-claude-code-118-183-submitted-by-aws-continuum-subset-of-260617-run",
+      "name": "Claude Code · 118/183 · Submitted by AWS continuum · Subset of 260617 run",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "agent-claude-code-47-183",
+      "name": "Claude Code · 47/183",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
       "id": "agent-codex",
       "name": "Codex",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "agent-codex-58-183",
+      "name": "Codex · 58/183",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "agent-codex-85-183",
+      "name": "Codex · 85/183",
       "kind": "agent",
       "aliases": []
     },
@@ -1684,6 +1816,24 @@
     {
       "id": "agent-opencode",
       "name": "OpenCode",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "agent-opencode-0-183",
+      "name": "OpenCode · 0/183",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "agent-opencode-4-183",
+      "name": "OpenCode · 4/183",
+      "kind": "agent",
+      "aliases": []
+    },
+    {
+      "id": "agent-opencode-7-183",
+      "name": "OpenCode · 7/183",
       "kind": "agent",
       "aliases": []
     },

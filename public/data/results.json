@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T13:01:27.294Z",
+  "generatedAt": "2026-11-19T13:03:28.896Z",
   "results": [
     {
       "id": "cisco-llm-security-claude-opus-4-5-1",
@@ -7246,205 +7246,685 @@
       "publishedAt": null
     },
     {
-      "id": "sec-bench-gpt-5-5-xhigh-1",
+      "id": "sec-bench-gemini-4-neon-1",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gemini-4-neon",
+      "modelLabel": "Gemini 4 Neon",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 90.5,
+          "displayValue": "90.5%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gpt-6-2-sol-2",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gpt-6-2-sol",
+      "modelLabel": "GPT-6.2 Sol",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 88.34,
+          "displayValue": "88.34%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gemini-4-carbon-3",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gemini-4-carbon",
+      "modelLabel": "Gemini 4 Carbon",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 88.2,
+          "displayValue": "88.2%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gpt-6-cyber-4",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gpt-6-cyber",
+      "modelLabel": "GPT-6 Cyber",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 87.02,
+          "displayValue": "87.02%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gpt-6-2-astra-5",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gpt-6-2-astra",
+      "modelLabel": "GPT-6.2 Astra",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 86.75,
+          "displayValue": "86.75%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gpt-6-astra-6",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gpt-6-astra",
+      "modelLabel": "GPT-6 Astra",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 85.4,
+          "displayValue": "85.4%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gemini-4-argon-7",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gemini-4-argon",
+      "modelLabel": "Gemini 4 Argon",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 83.4,
+          "displayValue": "83.4%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gpt-6-1-terra-8",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gpt-6-1-terra",
+      "modelLabel": "GPT-6.1 Terra",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 83.3,
+          "displayValue": "83.3%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gpt-5-6-sol-9",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gpt-5-6-sol",
+      "modelLabel": "GPT-5.6 Sol",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 79.1,
+          "displayValue": "79.1%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gpt-6-1-sol-10",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gpt-6-1-sol",
+      "modelLabel": "GPT-6.1 Sol",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 78.8,
+          "displayValue": "78.8%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-opus-5-max-aws-continuum-11",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "opus-5-max-aws-continuum",
+      "modelLabel": "Opus 5 (max) · AWS Continuum",
+      "harnessIds": [
+        "agent-131-183-subset-of-260617-run",
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 71.6,
+          "displayValue": "71.6%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gpt-6-sol-october-7-12",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gpt-6-sol-october-7",
+      "modelLabel": "GPT-6 Sol (October 7)",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 68.85,
+          "displayValue": "68.85%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gpt-6-sol-september-13",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gpt-6-sol-september",
+      "modelLabel": "GPT-6 Sol (September)",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 66.3,
+          "displayValue": "66.3%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-opus-5-max-14",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "opus-5-max",
+      "modelLabel": "Opus 5 (max)",
+      "harnessIds": [
+        "agent-claude-code-118-183-submitted-by-aws-continuum-subset-of-260617-run",
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 64.5,
+          "displayValue": "64.5%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-deepseek-v4-1-flash-15",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "deepseek-v4-1-flash",
+      "modelLabel": "DeepSeek-V4.1-Flash",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 62.8,
+          "displayValue": "62.8%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-deepseek-v4-pro-16",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "deepseek-v4-pro",
+      "modelLabel": "DeepSeek-V4-Pro",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 56.4,
+          "displayValue": "56.4%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gpt-6-luna-october-29-17",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gpt-6-luna-october-29",
+      "modelLabel": "GPT-6 Luna (October 29)",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 51.75,
+          "displayValue": "51.75%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gpt-6-luna-october-7-18",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gpt-6-luna-october-7",
+      "modelLabel": "GPT-6 Luna (October 7)",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 48.5,
+          "displayValue": "48.5%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gpt-5-5-xhigh-19",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "gpt-5-5-xhigh",
       "modelLabel": "GPT-5.5 (xhigh)",
       "harnessIds": [
-        "agent-codex",
+        "agent-codex-85-183",
         "evaluation-sec-bench-sec-bench-pro"
       ],
       "metrics": [
         {
           "name": "Success",
-          "value": 58.4,
-          "displayValue": "58.4% 201/344 V8 Firefox Linux",
+          "value": 46.4,
+          "displayValue": "46.4%",
           "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Completed",
-          "value": 330,
-          "displayValue": "330/344 14 timed out",
-          "unit": "count",
           "direction": "higher"
         }
       ],
       "sourceUrl": "https://sec-bench.github.io/",
       "taskSet": null,
       "budget": null,
-      "backend": "OpenAI",
+      "backend": null,
       "defense": null,
       "attack": null,
       "publishedAt": null
     },
     {
-      "id": "sec-bench-gpt-5-4-xhigh-2",
+      "id": "sec-bench-gpt-6-luna-september-20",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "gpt-6-luna-september",
+      "modelLabel": "GPT-6 Luna (September)",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 34.2,
+          "displayValue": "34.2%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-gpt-5-4-xhigh-21",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "gpt-5-4-xhigh",
       "modelLabel": "GPT-5.4 (xhigh)",
       "harnessIds": [
-        "agent-codex",
+        "agent-codex-58-183",
         "evaluation-sec-bench-sec-bench-pro"
       ],
       "metrics": [
         {
           "name": "Success",
-          "value": 39,
-          "displayValue": "39.0% 134/344 V8 Firefox Linux",
+          "value": 31.7,
+          "displayValue": "31.7%",
           "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Completed",
-          "value": 326,
-          "displayValue": "326/344 18 timed out",
-          "unit": "count",
           "direction": "higher"
         }
       ],
       "sourceUrl": "https://sec-bench.github.io/",
       "taskSet": null,
       "budget": null,
-      "backend": "OpenAI",
+      "backend": null,
       "defense": null,
       "attack": null,
       "publishedAt": null
     },
     {
-      "id": "sec-bench-opus-4-6-max-3",
+      "id": "sec-bench-deepseek-v4-flash-22",
+      "sourceId": "sec-bench",
+      "benchmarkId": "sec-bench",
+      "modelId": "deepseek-v4-flash",
+      "modelLabel": "DeepSeek-V4-Flash",
+      "harnessIds": [
+        "evaluation-sec-bench-sec-bench-pro"
+      ],
+      "metrics": [
+        {
+          "name": "Success",
+          "value": 30.9,
+          "displayValue": "30.9%",
+          "unit": "percent",
+          "direction": "higher"
+        }
+      ],
+      "sourceUrl": "https://sec-bench.github.io/",
+      "taskSet": null,
+      "budget": null,
+      "backend": null,
+      "defense": null,
+      "attack": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sec-bench-opus-4-6-max-23",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "opus-4-6-max",
       "modelLabel": "Opus 4.6 (max)",
       "harnessIds": [
-        "agent-claude-code",
+        "agent-claude-code-47-183",
         "evaluation-sec-bench-sec-bench-pro"
       ],
       "metrics": [
         {
           "name": "Success",
-          "value": 30.8,
-          "displayValue": "30.8% 106/344 V8 Firefox Linux",
+          "value": 25.7,
+          "displayValue": "25.7%",
           "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Completed",
-          "value": 136,
-          "displayValue": "136/344 208 timed out",
-          "unit": "count",
           "direction": "higher"
         }
       ],
       "sourceUrl": "https://sec-bench.github.io/",
       "taskSet": null,
       "budget": null,
-      "backend": "AWS Bedrock",
+      "backend": null,
       "defense": null,
       "attack": null,
       "publishedAt": null
     },
     {
-      "id": "sec-bench-glm-5-high-4",
+      "id": "sec-bench-glm-5-high-24",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "glm-5-high",
       "modelLabel": "GLM-5 (high)",
       "harnessIds": [
-        "agent-opencode",
+        "agent-opencode-7-183",
         "evaluation-sec-bench-sec-bench-pro"
       ],
       "metrics": [
         {
           "name": "Success",
           "value": 3.8,
-          "displayValue": "3.8% 13/344 V8 Firefox Linux",
+          "displayValue": "3.8%",
           "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Completed",
-          "value": 314,
-          "displayValue": "314/344 30 timed out",
-          "unit": "count",
           "direction": "higher"
         }
       ],
       "sourceUrl": "https://sec-bench.github.io/",
       "taskSet": null,
       "budget": null,
-      "backend": "AWS Bedrock",
+      "backend": null,
       "defense": null,
       "attack": null,
       "publishedAt": null
     },
     {
-      "id": "sec-bench-kimi-k2-5-high-5",
+      "id": "sec-bench-kimi-k2-5-high-25",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "kimi-k2-5-high",
       "modelLabel": "Kimi K2.5 (high)",
       "harnessIds": [
-        "agent-opencode",
+        "agent-opencode-4-183",
         "evaluation-sec-bench-sec-bench-pro"
       ],
       "metrics": [
         {
           "name": "Success",
-          "value": 2.3,
-          "displayValue": "2.3% 8/344 V8 Firefox Linux",
+          "value": 2.2,
+          "displayValue": "2.2%",
           "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Completed",
-          "value": 341,
-          "displayValue": "341/344 3 timed out",
-          "unit": "count",
           "direction": "higher"
         }
       ],
       "sourceUrl": "https://sec-bench.github.io/",
       "taskSet": null,
       "budget": null,
-      "backend": "AWS Bedrock",
+      "backend": null,
       "defense": null,
       "attack": null,
       "publishedAt": null
     },
     {
-      "id": "sec-bench-m2-5-high-6",
+      "id": "sec-bench-m2-5-high-26",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "m2-5-high",
       "modelLabel": "MiniMax M2.5 (high)",
       "harnessIds": [
-        "agent-opencode",
+        "agent-opencode-0-183",
         "evaluation-sec-bench-sec-bench-pro"
       ],
       "metrics": [
         {
           "name": "Success",
-          "value": 0.6,
-          "displayValue": "0.6% 2/344 V8 Firefox Linux",
+          "value": 0,
+          "displayValue": "0%",
           "unit": "percent",
-          "direction": "higher"
-        },
-        {
-          "name": "Completed",
-          "value": 330,
-          "displayValue": "330/344 14 timed out",
-          "unit": "count",
           "direction": "higher"
         }
       ],
       "sourceUrl": "https://sec-bench.github.io/",
       "taskSet": null,
       "budget": null,
-      "backend": "AWS Bedrock",
+      "backend": null,
       "defense": null,
       "attack": null,
       "publishedAt": null
