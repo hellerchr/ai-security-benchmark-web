@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T14:51:38.292Z",
+  "generatedAt": "2026-11-25T14:19:59.841Z",
   "results": [
     {
       "id": "cisco-llm-security-claude-opus-4-5-1",
@@ -7506,38 +7506,11 @@
       "publishedAt": null
     },
     {
-      "id": "sec-bench-opus-5-max-aws-continuum-11",
+      "id": "sec-bench-gpt-6-sol-11",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
-      "modelId": "opus-5-max-aws-continuum",
-      "modelLabel": "Opus 5 (max) · AWS Continuum",
-      "harnessIds": [
-        "agent-131-183-subset-of-260617-run",
-        "evaluation-sec-bench-sec-bench-pro"
-      ],
-      "metrics": [
-        {
-          "name": "Success",
-          "value": 71.6,
-          "displayValue": "71.6%",
-          "unit": "percent",
-          "direction": "higher"
-        }
-      ],
-      "sourceUrl": "https://sec-bench.github.io/",
-      "taskSet": null,
-      "budget": null,
-      "backend": null,
-      "defense": null,
-      "attack": null,
-      "publishedAt": null
-    },
-    {
-      "id": "sec-bench-gpt-6-sol-october-7-12",
-      "sourceId": "sec-bench",
-      "benchmarkId": "sec-bench",
-      "modelId": "gpt-6-sol-october-7",
-      "modelLabel": "GPT-6 Sol (October 7)",
+      "modelId": "gpt-6-sol",
+      "modelLabel": "GPT-6 Sol",
       "harnessIds": [
         "evaluation-sec-bench-sec-bench-pro"
       ],
@@ -7559,33 +7532,7 @@
       "publishedAt": null
     },
     {
-      "id": "sec-bench-gpt-6-sol-september-13",
-      "sourceId": "sec-bench",
-      "benchmarkId": "sec-bench",
-      "modelId": "gpt-6-sol-september",
-      "modelLabel": "GPT-6 Sol (September)",
-      "harnessIds": [
-        "evaluation-sec-bench-sec-bench-pro"
-      ],
-      "metrics": [
-        {
-          "name": "Success",
-          "value": 66.3,
-          "displayValue": "66.3%",
-          "unit": "percent",
-          "direction": "higher"
-        }
-      ],
-      "sourceUrl": "https://sec-bench.github.io/",
-      "taskSet": null,
-      "budget": null,
-      "backend": null,
-      "defense": null,
-      "attack": null,
-      "publishedAt": null
-    },
-    {
-      "id": "sec-bench-opus-5-max-14",
+      "id": "sec-bench-opus-5-max-12",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "opus-5-max",
@@ -7612,7 +7559,7 @@
       "publishedAt": null
     },
     {
-      "id": "sec-bench-deepseek-v4-1-flash-15",
+      "id": "sec-bench-deepseek-v4-1-flash-13",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "deepseek-v4-1-flash",
@@ -7638,7 +7585,7 @@
       "publishedAt": null
     },
     {
-      "id": "sec-bench-deepseek-v4-pro-16",
+      "id": "sec-bench-deepseek-v4-pro-14",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "deepseek-v4-pro",
@@ -7664,11 +7611,11 @@
       "publishedAt": null
     },
     {
-      "id": "sec-bench-gpt-6-luna-october-29-17",
+      "id": "sec-bench-gpt-6-luna-15",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
-      "modelId": "gpt-6-luna-october-29",
-      "modelLabel": "GPT-6 Luna (October 29)",
+      "modelId": "gpt-6-luna",
+      "modelLabel": "GPT-6 Luna",
       "harnessIds": [
         "evaluation-sec-bench-sec-bench-pro"
       ],
@@ -7690,33 +7637,7 @@
       "publishedAt": null
     },
     {
-      "id": "sec-bench-gpt-6-luna-october-7-18",
-      "sourceId": "sec-bench",
-      "benchmarkId": "sec-bench",
-      "modelId": "gpt-6-luna-october-7",
-      "modelLabel": "GPT-6 Luna (October 7)",
-      "harnessIds": [
-        "evaluation-sec-bench-sec-bench-pro"
-      ],
-      "metrics": [
-        {
-          "name": "Success",
-          "value": 48.5,
-          "displayValue": "48.5%",
-          "unit": "percent",
-          "direction": "higher"
-        }
-      ],
-      "sourceUrl": "https://sec-bench.github.io/",
-      "taskSet": null,
-      "budget": null,
-      "backend": null,
-      "defense": null,
-      "attack": null,
-      "publishedAt": null
-    },
-    {
-      "id": "sec-bench-gpt-5-5-xhigh-19",
+      "id": "sec-bench-gpt-5-5-xhigh-16",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "gpt-5-5-xhigh",
@@ -7743,33 +7664,7 @@
       "publishedAt": null
     },
     {
-      "id": "sec-bench-gpt-6-luna-september-20",
-      "sourceId": "sec-bench",
-      "benchmarkId": "sec-bench",
-      "modelId": "gpt-6-luna-september",
-      "modelLabel": "GPT-6 Luna (September)",
-      "harnessIds": [
-        "evaluation-sec-bench-sec-bench-pro"
-      ],
-      "metrics": [
-        {
-          "name": "Success",
-          "value": 34.2,
-          "displayValue": "34.2%",
-          "unit": "percent",
-          "direction": "higher"
-        }
-      ],
-      "sourceUrl": "https://sec-bench.github.io/",
-      "taskSet": null,
-      "budget": null,
-      "backend": null,
-      "defense": null,
-      "attack": null,
-      "publishedAt": null
-    },
-    {
-      "id": "sec-bench-gpt-5-4-xhigh-21",
+      "id": "sec-bench-gpt-5-4-xhigh-17",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "gpt-5-4-xhigh",
@@ -7796,7 +7691,7 @@
       "publishedAt": null
     },
     {
-      "id": "sec-bench-deepseek-v4-flash-22",
+      "id": "sec-bench-deepseek-v4-flash-18",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "deepseek-v4-flash",
@@ -7822,7 +7717,7 @@
       "publishedAt": null
     },
     {
-      "id": "sec-bench-opus-4-6-max-23",
+      "id": "sec-bench-opus-4-6-max-19",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "opus-4-6-max",
@@ -7849,7 +7744,7 @@
       "publishedAt": null
     },
     {
-      "id": "sec-bench-glm-5-high-24",
+      "id": "sec-bench-glm-5-high-20",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "glm-5-high",
@@ -7876,7 +7771,7 @@
       "publishedAt": null
     },
     {
-      "id": "sec-bench-kimi-k2-5-high-25",
+      "id": "sec-bench-kimi-k2-5-high-21",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "kimi-k2-5-high",
@@ -7903,7 +7798,7 @@
       "publishedAt": null
     },
     {
-      "id": "sec-bench-m2-5-high-26",
+      "id": "sec-bench-m2-5-high-22",
       "sourceId": "sec-bench",
       "benchmarkId": "sec-bench",
       "modelId": "m2-5-high",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T14:51:38.292Z",
+  "generatedAt": "2026-11-25T14:19:59.841Z",
   "sources": [
     {
       "id": "cisco-llm-security",
@@ -1402,7 +1402,7 @@
     {
       "id": "gpt-6-luna",
       "name": "GPT-6 Luna",
-      "provider": null,
+      "provider": "OpenAI",
       "aliases": []
     },
     {
@@ -1438,7 +1438,7 @@
     {
       "id": "gpt-6-sol",
       "name": "GPT-6 Sol",
-      "provider": null,
+      "provider": "OpenAI",
       "aliases": []
     },
     {
